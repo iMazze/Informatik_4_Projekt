@@ -1,0 +1,9 @@
+﻿  Complex.cpp
+c:\users\maximilian klug\desktop\informatik_4_projekt\source\complex_calculator\complex_calculator\complex.cpp(49): fatal error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  complex_calculator.cpp
+c:\users\maximilian klug\desktop\informatik_4_projekt\source\complex_calculator\complex_calculator\complex_calculator.cpp(12): fatal error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  Console_Handler.cpp
+c:\users\maximilian klug\desktop\informatik_4_projekt\source\complex_calculator\complex_calculator\console_handler.cpp(26): fatal error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  xml_io.cpp
+c:\users\maximilian klug\desktop\informatik_4_projekt\source\complex_calculator\complex_calculator\xml_io.cpp(35): fatal error C1010: Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie möglicherweise vergessen, im Quellcode "#include "pch.h"" einzufügen?
+  Code wird generiert...

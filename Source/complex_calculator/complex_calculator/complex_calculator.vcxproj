@@ -72,6 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>C:\Users\Maximilian Klug\Desktop\Informatik_4_Projekt\Source\complex_calculator\packages\libxml2.2.7.8.7\build\native\lib\v110\Win32\Release\dynamic\cdecl;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -91,10 +92,12 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>\\VBOXSVR\Downloads\libiconv-1.9.1.dll;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libxml2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -154,15 +157,43 @@
     <ClCompile Include="Complex.cpp" />
     <ClCompile Include="complex_calculator.cpp" />
     <ClCompile Include="Console_Handler.cpp" />
+    <ClCompile Include="xml_io.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Complex.h" />
     <ClInclude Include="Console_Handler.h" />
+    <ClInclude Include="xml_io.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\DoxyGen\DoxyFile" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\libxml2.redist.2.7.8.7\build\native\libxml2.redist.targets" Condition="Exists('..\packages\libxml2.redist.2.7.8.7\build\native\libxml2.redist.targets')" />
+    <Import Project="..\packages\libxml2.2.7.8.7\build\native\libxml2.targets" Condition="Exists('..\packages\libxml2.2.7.8.7\build\native\libxml2.targets')" />
+    <Import Project="..\packages\expat.redist.2.1.0.10\build\native\expat.redist.targets" Condition="Exists('..\packages\expat.redist.2.1.0.10\build\native\expat.redist.targets')" />
+    <Import Project="..\packages\expat.2.1.0.10\build\native\expat.targets" Condition="Exists('..\packages\expat.2.1.0.10\build\native\expat.targets')" />
+    <Import Project="..\packages\libapr-iconv.redist.1.2.1.2\build\native\libapr-iconv.redist.targets" Condition="Exists('..\packages\libapr-iconv.redist.1.2.1.2\build\native\libapr-iconv.redist.targets')" />
+    <Import Project="..\packages\libapr.redist.1.4.6.1\build\native\libapr.redist.targets" Condition="Exists('..\packages\libapr.redist.1.4.6.1\build\native\libapr.redist.targets')" />
+    <Import Project="..\packages\libapr.1.4.6.1\build\native\libapr.targets" Condition="Exists('..\packages\libapr.1.4.6.1\build\native\libapr.targets')" />
+    <Import Project="..\packages\libiconv.redist.1.14.0.11\build\native\libiconv.redist.targets" Condition="Exists('..\packages\libiconv.redist.1.14.0.11\build\native\libiconv.redist.targets')" />
+    <Import Project="..\packages\libiconv.1.14.0.11\build\native\libiconv.targets" Condition="Exists('..\packages\libiconv.1.14.0.11\build\native\libiconv.targets')" />
+    <Import Project="..\packages\zlib-msvc-x86.1.2.11.8900\build\native\zlib-msvc-x86.targets" Condition="Exists('..\packages\zlib-msvc-x86.1.2.11.8900\build\native\zlib-msvc-x86.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Dieses Projekt verweist auf mindestens ein NuGet-Paket, das auf diesem Computer fehlt. Verwenden Sie die Wiederherstellung von NuGet-Paketen, um die fehlenden Dateien herunterzuladen. Weitere Informationen finden Sie unter "http://go.microsoft.com/fwlink/?LinkID=322105". Die fehlende Datei ist "{0}".</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\libxml2.redist.2.7.8.7\build\native\libxml2.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libxml2.redist.2.7.8.7\build\native\libxml2.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\libxml2.2.7.8.7\build\native\libxml2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libxml2.2.7.8.7\build\native\libxml2.targets'))" />
+    <Error Condition="!Exists('..\packages\expat.redist.2.1.0.10\build\native\expat.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\expat.redist.2.1.0.10\build\native\expat.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\expat.2.1.0.10\build\native\expat.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\expat.2.1.0.10\build\native\expat.targets'))" />
+    <Error Condition="!Exists('..\packages\libapr-iconv.redist.1.2.1.2\build\native\libapr-iconv.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libapr-iconv.redist.1.2.1.2\build\native\libapr-iconv.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\libapr.redist.1.4.6.1\build\native\libapr.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libapr.redist.1.4.6.1\build\native\libapr.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\libapr.1.4.6.1\build\native\libapr.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libapr.1.4.6.1\build\native\libapr.targets'))" />
+    <Error Condition="!Exists('..\packages\libiconv.redist.1.14.0.11\build\native\libiconv.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libiconv.redist.1.14.0.11\build\native\libiconv.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\libiconv.1.14.0.11\build\native\libiconv.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libiconv.1.14.0.11\build\native\libiconv.targets'))" />
+    <Error Condition="!Exists('..\packages\zlib-msvc-x86.1.2.11.8900\build\native\zlib-msvc-x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\zlib-msvc-x86.1.2.11.8900\build\native\zlib-msvc-x86.targets'))" />
+  </Target>
 </Project>

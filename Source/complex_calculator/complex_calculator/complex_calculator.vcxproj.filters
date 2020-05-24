@@ -24,6 +24,9 @@
     <ClCompile Include="Console_Handler.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="xml_io.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Complex.h">
@@ -32,8 +35,12 @@
     <ClInclude Include="Console_Handler.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="xml_io.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\DoxyGen\DoxyFile" />
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
