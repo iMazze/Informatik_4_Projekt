@@ -1,0 +1,116 @@
+\hypertarget{structapr__getopt__t}{}\section{apr\+\_\+getopt\+\_\+t Struct Reference}
+\label{structapr__getopt__t}\index{apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}}
+
+
+{\ttfamily \#include $<$apr\+\_\+getopt.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t}} $\ast$ \mbox{\hyperlink{structapr__getopt__t_a63a073fb9c11bb2713b3d7f967e95a24}{cont}}
+\item 
+\mbox{\hyperlink{group__apr__getopt_gad0f6c9baec81bc84293e0f1e2262656e}{apr\+\_\+getopt\+\_\+err\+\_\+fn\+\_\+t}} $\ast$ \mbox{\hyperlink{structapr__getopt__t_a6bf3fd7ad92d1f0161cd895e1ad50d06}{errfn}}
+\item 
+void $\ast$ \mbox{\hyperlink{structapr__getopt__t_a46db55c58789ab7fa99bb49544b0776e}{errarg}}
+\item 
+int \mbox{\hyperlink{structapr__getopt__t_ab04d49d670f095c3244dc9792b70ff07}{ind}}
+\item 
+int \mbox{\hyperlink{structapr__getopt__t_a4f842391b8f8f19e562584fdd29d0654}{opt}}
+\item 
+int \mbox{\hyperlink{structapr__getopt__t_abc4e72bc761666c0b0d9015c3b0de8c3}{reset}}
+\item 
+int \mbox{\hyperlink{structapr__getopt__t_a58aeb33137aabdd5a00efbde05652094}{argc}}
+\item 
+const char $\ast$$\ast$ \mbox{\hyperlink{structapr__getopt__t_a296c27d8db2fe6d4b88c5c7a85c40c02}{argv}}
+\item 
+char const  $\ast$ \mbox{\hyperlink{structapr__getopt__t_a87961387d1c71bebfbdf69c7f392d2d5}{place}}
+\item 
+int \mbox{\hyperlink{structapr__getopt__t_a771dbef87345c731845dd63723fb34db}{interleave}}
+\item 
+int \mbox{\hyperlink{structapr__getopt__t_a0cd41eedf9ed82bf5d9dcc3491ee67dd}{skip\+\_\+start}}
+\item 
+int \mbox{\hyperlink{structapr__getopt__t_ae9e7e6eb1576820c7dc6e589cc3a28b7}{skip\+\_\+end}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure to store command line argument information. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structapr__getopt__t_a58aeb33137aabdd5a00efbde05652094}\label{structapr__getopt__t_a58aeb33137aabdd5a00efbde05652094}} 
+\index{apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}!argc@{argc}}
+\index{argc@{argc}!apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}}
+\subsubsection{\texorpdfstring{argc}{argc}}
+{\footnotesize\ttfamily int apr\+\_\+getopt\+\_\+t\+::argc}
+
+count of arguments \mbox{\Hypertarget{structapr__getopt__t_a296c27d8db2fe6d4b88c5c7a85c40c02}\label{structapr__getopt__t_a296c27d8db2fe6d4b88c5c7a85c40c02}} 
+\index{apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}!argv@{argv}}
+\index{argv@{argv}!apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}}
+\subsubsection{\texorpdfstring{argv}{argv}}
+{\footnotesize\ttfamily const char$\ast$$\ast$ apr\+\_\+getopt\+\_\+t\+::argv}
+
+array of pointers to arguments \mbox{\Hypertarget{structapr__getopt__t_a63a073fb9c11bb2713b3d7f967e95a24}\label{structapr__getopt__t_a63a073fb9c11bb2713b3d7f967e95a24}} 
+\index{apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}!cont@{cont}}
+\index{cont@{cont}!apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}}
+\subsubsection{\texorpdfstring{cont}{cont}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t}}$\ast$ apr\+\_\+getopt\+\_\+t\+::cont}
+
+context for processing \mbox{\Hypertarget{structapr__getopt__t_a46db55c58789ab7fa99bb49544b0776e}\label{structapr__getopt__t_a46db55c58789ab7fa99bb49544b0776e}} 
+\index{apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}!errarg@{errarg}}
+\index{errarg@{errarg}!apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}}
+\subsubsection{\texorpdfstring{errarg}{errarg}}
+{\footnotesize\ttfamily void$\ast$ apr\+\_\+getopt\+\_\+t\+::errarg}
+
+user defined first arg to pass to error message \mbox{\Hypertarget{structapr__getopt__t_a6bf3fd7ad92d1f0161cd895e1ad50d06}\label{structapr__getopt__t_a6bf3fd7ad92d1f0161cd895e1ad50d06}} 
+\index{apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}!errfn@{errfn}}
+\index{errfn@{errfn}!apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}}
+\subsubsection{\texorpdfstring{errfn}{errfn}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__apr__getopt_gad0f6c9baec81bc84293e0f1e2262656e}{apr\+\_\+getopt\+\_\+err\+\_\+fn\+\_\+t}}$\ast$ apr\+\_\+getopt\+\_\+t\+::errfn}
+
+function to print error message (N\+U\+LL == no messages) \mbox{\Hypertarget{structapr__getopt__t_ab04d49d670f095c3244dc9792b70ff07}\label{structapr__getopt__t_ab04d49d670f095c3244dc9792b70ff07}} 
+\index{apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}!ind@{ind}}
+\index{ind@{ind}!apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}}
+\subsubsection{\texorpdfstring{ind}{ind}}
+{\footnotesize\ttfamily int apr\+\_\+getopt\+\_\+t\+::ind}
+
+index into parent argv vector \mbox{\Hypertarget{structapr__getopt__t_a771dbef87345c731845dd63723fb34db}\label{structapr__getopt__t_a771dbef87345c731845dd63723fb34db}} 
+\index{apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}!interleave@{interleave}}
+\index{interleave@{interleave}!apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}}
+\subsubsection{\texorpdfstring{interleave}{interleave}}
+{\footnotesize\ttfamily int apr\+\_\+getopt\+\_\+t\+::interleave}
+
+set to nonzero to support interleaving options with regular args \mbox{\Hypertarget{structapr__getopt__t_a4f842391b8f8f19e562584fdd29d0654}\label{structapr__getopt__t_a4f842391b8f8f19e562584fdd29d0654}} 
+\index{apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}!opt@{opt}}
+\index{opt@{opt}!apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}}
+\subsubsection{\texorpdfstring{opt}{opt}}
+{\footnotesize\ttfamily int apr\+\_\+getopt\+\_\+t\+::opt}
+
+character checked for validity \mbox{\Hypertarget{structapr__getopt__t_a87961387d1c71bebfbdf69c7f392d2d5}\label{structapr__getopt__t_a87961387d1c71bebfbdf69c7f392d2d5}} 
+\index{apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}!place@{place}}
+\index{place@{place}!apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}}
+\subsubsection{\texorpdfstring{place}{place}}
+{\footnotesize\ttfamily char const$\ast$ apr\+\_\+getopt\+\_\+t\+::place}
+
+argument associated with option \mbox{\Hypertarget{structapr__getopt__t_abc4e72bc761666c0b0d9015c3b0de8c3}\label{structapr__getopt__t_abc4e72bc761666c0b0d9015c3b0de8c3}} 
+\index{apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}!reset@{reset}}
+\index{reset@{reset}!apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}}
+\subsubsection{\texorpdfstring{reset}{reset}}
+{\footnotesize\ttfamily int apr\+\_\+getopt\+\_\+t\+::reset}
+
+reset getopt \mbox{\Hypertarget{structapr__getopt__t_ae9e7e6eb1576820c7dc6e589cc3a28b7}\label{structapr__getopt__t_ae9e7e6eb1576820c7dc6e589cc3a28b7}} 
+\index{apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}!skip\+\_\+end@{skip\+\_\+end}}
+\index{skip\+\_\+end@{skip\+\_\+end}!apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}}
+\subsubsection{\texorpdfstring{skip\+\_\+end}{skip\_end}}
+{\footnotesize\ttfamily int apr\+\_\+getopt\+\_\+t\+::skip\+\_\+end}
+
+end of non-\/option arguments skipped for interleaving \mbox{\Hypertarget{structapr__getopt__t_a0cd41eedf9ed82bf5d9dcc3491ee67dd}\label{structapr__getopt__t_a0cd41eedf9ed82bf5d9dcc3491ee67dd}} 
+\index{apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}!skip\+\_\+start@{skip\+\_\+start}}
+\index{skip\+\_\+start@{skip\+\_\+start}!apr\+\_\+getopt\+\_\+t@{apr\+\_\+getopt\+\_\+t}}
+\subsubsection{\texorpdfstring{skip\+\_\+start}{skip\_start}}
+{\footnotesize\ttfamily int apr\+\_\+getopt\+\_\+t\+::skip\+\_\+start}
+
+start of non-\/option arguments skipped for interleaving 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Maximilian Klug/\+Desktop/\+Informatik\+\_\+4\+\_\+\+Projekt/\+Source/complex\+\_\+calculator/packages/libapr.\+1.\+4.\+6.\+1/build/native/include/\mbox{\hyperlink{apr__getopt_8h}{apr\+\_\+getopt.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,44 @@
+\hypertarget{group__apr__file__lock__types}{}\section{File Lock Types}
+\label{group__apr__file__lock__types}\index{File Lock Types@{File Lock Types}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__apr__file__lock__types_gaba177fe81cd70b389753ad2096b2ce7c}{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+S\+H\+A\+R\+ED}}~1
+\item 
+\#define \mbox{\hyperlink{group__apr__file__lock__types_gafbf0caa093b99bdf11e25360b9099852}{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+E\+X\+C\+L\+U\+S\+I\+VE}}~2
+\item 
+\#define \mbox{\hyperlink{group__apr__file__lock__types_ga40777e364fb20bb9a9ee57e74b19c13d}{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+T\+Y\+P\+E\+M\+A\+SK}}~0x000F
+\item 
+\#define \mbox{\hyperlink{group__apr__file__lock__types_gab327fa0250e19006f20d5ec65fe7f22a}{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+N\+O\+N\+B\+L\+O\+CK}}~0x0010
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__apr__file__lock__types_gafbf0caa093b99bdf11e25360b9099852}\label{group__apr__file__lock__types_gafbf0caa093b99bdf11e25360b9099852}} 
+\index{File Lock Types@{File Lock Types}!A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+E\+X\+C\+L\+U\+S\+I\+VE@{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+E\+X\+C\+L\+U\+S\+I\+VE}}
+\index{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+E\+X\+C\+L\+U\+S\+I\+VE@{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+E\+X\+C\+L\+U\+S\+I\+VE}!File Lock Types@{File Lock Types}}
+\subsubsection{\texorpdfstring{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+E\+X\+C\+L\+U\+S\+I\+VE}{APR\_FLOCK\_EXCLUSIVE}}
+{\footnotesize\ttfamily \#define A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+E\+X\+C\+L\+U\+S\+I\+VE~2}
+
+Exclusive lock. Only one process may hold an exclusive lock at any given time. This is analogous to a \char`\"{}write lock\char`\"{}. \mbox{\Hypertarget{group__apr__file__lock__types_gab327fa0250e19006f20d5ec65fe7f22a}\label{group__apr__file__lock__types_gab327fa0250e19006f20d5ec65fe7f22a}} 
+\index{File Lock Types@{File Lock Types}!A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+N\+O\+N\+B\+L\+O\+CK@{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+N\+O\+N\+B\+L\+O\+CK}}
+\index{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+N\+O\+N\+B\+L\+O\+CK@{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+N\+O\+N\+B\+L\+O\+CK}!File Lock Types@{File Lock Types}}
+\subsubsection{\texorpdfstring{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+N\+O\+N\+B\+L\+O\+CK}{APR\_FLOCK\_NONBLOCK}}
+{\footnotesize\ttfamily \#define A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+N\+O\+N\+B\+L\+O\+CK~0x0010}
+
+do not block while acquiring the file lock \mbox{\Hypertarget{group__apr__file__lock__types_gaba177fe81cd70b389753ad2096b2ce7c}\label{group__apr__file__lock__types_gaba177fe81cd70b389753ad2096b2ce7c}} 
+\index{File Lock Types@{File Lock Types}!A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+S\+H\+A\+R\+ED@{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+S\+H\+A\+R\+ED}}
+\index{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+S\+H\+A\+R\+ED@{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+S\+H\+A\+R\+ED}!File Lock Types@{File Lock Types}}
+\subsubsection{\texorpdfstring{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+S\+H\+A\+R\+ED}{APR\_FLOCK\_SHARED}}
+{\footnotesize\ttfamily \#define A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+S\+H\+A\+R\+ED~1}
+
+Shared lock. More than one process or thread can hold a shared lock at any given time. Essentially, this is a \char`\"{}read lock\char`\"{}, preventing writers from establishing an exclusive lock. \mbox{\Hypertarget{group__apr__file__lock__types_ga40777e364fb20bb9a9ee57e74b19c13d}\label{group__apr__file__lock__types_ga40777e364fb20bb9a9ee57e74b19c13d}} 
+\index{File Lock Types@{File Lock Types}!A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+T\+Y\+P\+E\+M\+A\+SK@{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+T\+Y\+P\+E\+M\+A\+SK}}
+\index{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+T\+Y\+P\+E\+M\+A\+SK@{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+T\+Y\+P\+E\+M\+A\+SK}!File Lock Types@{File Lock Types}}
+\subsubsection{\texorpdfstring{A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+T\+Y\+P\+E\+M\+A\+SK}{APR\_FLOCK\_TYPEMASK}}
+{\footnotesize\ttfamily \#define A\+P\+R\+\_\+\+F\+L\+O\+C\+K\+\_\+\+T\+Y\+P\+E\+M\+A\+SK~0x000F}
+
+mask to extract lock type 

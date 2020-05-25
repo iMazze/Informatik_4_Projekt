@@ -1,0 +1,141 @@
+\hypertarget{group___a_p_r___global_mutex}{}\section{Global Locking Routines}
+\label{group___a_p_r___global_mutex}\index{Global Locking Routines@{Global Locking Routines}}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structapr__global__mutex__t}{apr\+\_\+global\+\_\+mutex\+\_\+t}} \mbox{\hyperlink{group___a_p_r___global_mutex_ga3fc7dc5b076533ee566aa4888ac35ee7}{apr\+\_\+global\+\_\+mutex\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___a_p_r___global_mutex_ga47ced81b7cf255f94aa0c2857abe5300}{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+RE}} (\mbox{\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}}) apr\+\_\+global\+\_\+mutex\+\_\+create(\mbox{\hyperlink{structapr__global__mutex__t}{apr\+\_\+global\+\_\+mutex\+\_\+t}} $\ast$$\ast$mutex
+\item 
+\mbox{\hyperlink{group___a_p_r___global_mutex_gae52583174fa4e71624db3d4e9d617861}{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+RE}} (const char $\ast$) apr\+\_\+global\+\_\+mutex\+\_\+lockfile(\mbox{\hyperlink{structapr__global__mutex__t}{apr\+\_\+global\+\_\+mutex\+\_\+t}} $\ast$mutex)
+\item 
+\mbox{\hyperlink{group___a_p_r___global_mutex_ga722d0f9777257de10d37d174468bc881}{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+A\+C\+C\+E\+S\+S\+OR}} (global\+\_\+mutex)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___a_p_r___global_mutex_ga6a2fc0c236288b07ce5bd1335ca89fa2}\label{group___a_p_r___global_mutex_ga6a2fc0c236288b07ce5bd1335ca89fa2}} 
+const char $\ast$ {\bfseries fname}
+\item 
+\mbox{\Hypertarget{group___a_p_r___global_mutex_gac5f6e658672b8579da569b97a6ae82a2}\label{group___a_p_r___global_mutex_gac5f6e658672b8579da569b97a6ae82a2}} 
+const char \mbox{\hyperlink{group__apr__proc__mutex_ga75dd95a48a1e855a87b509b522746ed4}{apr\+\_\+lockmech\+\_\+e}} {\bfseries mech}
+\item 
+\mbox{\Hypertarget{group___a_p_r___global_mutex_ga51fbc0d90e2519e2e42e03c5dd9f441b}\label{group___a_p_r___global_mutex_ga51fbc0d90e2519e2e42e03c5dd9f441b}} 
+const char \mbox{\hyperlink{group__apr__proc__mutex_ga75dd95a48a1e855a87b509b522746ed4}{apr\+\_\+lockmech\+\_\+e}} \mbox{\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t}} $\ast$ {\bfseries pool}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group___a_p_r___global_mutex_ga3fc7dc5b076533ee566aa4888ac35ee7}\label{group___a_p_r___global_mutex_ga3fc7dc5b076533ee566aa4888ac35ee7}} 
+\index{Global Locking Routines@{Global Locking Routines}!apr\+\_\+global\+\_\+mutex\+\_\+t@{apr\+\_\+global\+\_\+mutex\+\_\+t}}
+\index{apr\+\_\+global\+\_\+mutex\+\_\+t@{apr\+\_\+global\+\_\+mutex\+\_\+t}!Global Locking Routines@{Global Locking Routines}}
+\subsubsection{\texorpdfstring{apr\+\_\+global\+\_\+mutex\+\_\+t}{apr\_global\_mutex\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structapr__global__mutex__t}{apr\+\_\+global\+\_\+mutex\+\_\+t}} \mbox{\hyperlink{structapr__global__mutex__t}{apr\+\_\+global\+\_\+mutex\+\_\+t}}}
+
+Opaque global mutex structure. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___a_p_r___global_mutex_ga47ced81b7cf255f94aa0c2857abe5300}\label{group___a_p_r___global_mutex_ga47ced81b7cf255f94aa0c2857abe5300}} 
+\index{Global Locking Routines@{Global Locking Routines}!A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+RE@{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+RE}}
+\index{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+RE@{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+RE}!Global Locking Routines@{Global Locking Routines}}
+\subsubsection{\texorpdfstring{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E()}{APR\_DECLARE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+RE (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}}}]{ }\end{DoxyParamCaption})}
+
+Create and initialize a mutex that can be used to synchronize both processes and threads. Note\+: There is considerable overhead in using this A\+PI if only cross-\/process or cross-\/thread mutual exclusion is required. See \mbox{\hyperlink{apr__proc__mutex_8h}{apr\+\_\+proc\+\_\+mutex.\+h}} and \mbox{\hyperlink{apr__thread__mutex_8h}{apr\+\_\+thread\+\_\+mutex.\+h}} for more specialized lock routines. 
+\begin{DoxyParams}{Parameters}
+{\em mutex} & the memory address where the newly created mutex will be stored. \\
+\hline
+{\em fname} & A file name to use if the lock mechanism requires one. This argument should always be provided. The lock code itself will determine if it should be used. \\
+\hline
+{\em mech} & The mechanism to use for the interprocess lock, if any; one of 
+\begin{DoxyPre}
+           APR\_LOCK\_FCNTL
+           APR\_LOCK\_FLOCK
+           APR\_LOCK\_SYSVSEM
+           APR\_LOCK\_POSIXSEM
+           APR\_LOCK\_PROC\_PTHREAD
+           APR\_LOCK\_DEFAULT     pick the default mechanism for the platform
+\end{DoxyPre}
+ \\
+\hline
+{\em pool} & the pool from which to allocate the mutex. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Check A\+P\+R\+\_\+\+H\+A\+S\+\_\+foo\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE defines to see if the platform supports A\+P\+R\+\_\+\+L\+O\+C\+K\+\_\+foo. Only A\+P\+R\+\_\+\+L\+O\+C\+K\+\_\+\+D\+E\+F\+A\+U\+LT is portable.
+\end{DoxyWarning}
+Re-\/open a mutex in a child process. 
+\begin{DoxyParams}{Parameters}
+{\em mutex} & The newly re-\/opened mutex structure. \\
+\hline
+{\em fname} & A file name to use if the mutex mechanism requires one. This argument should always be provided. The mutex code itself will determine if it should be used. This filename should be the same one that was passed to apr\+\_\+global\+\_\+mutex\+\_\+create(). \\
+\hline
+{\em pool} & The pool to operate on. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This function must be called to maintain portability, even if the underlying lock mechanism does not require it.
+\end{DoxyRemark}
+Acquire the lock for the given mutex. If the mutex is already locked, the current thread will be put to sleep until the lock becomes available. 
+\begin{DoxyParams}{Parameters}
+{\em mutex} & the mutex on which to acquire the lock.\\
+\hline
+\end{DoxyParams}
+Attempt to acquire the lock for the given mutex. If the mutex has already been acquired, the call returns immediately with A\+P\+R\+\_\+\+E\+B\+U\+SY. Note\+: it is important that the \mbox{\hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gabb92ad7b6ef304132de70e9e5cbaa896}{A\+P\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+I\+S\+\_\+\+E\+B\+U\+S\+Y(s)}} macro be used to determine if the return value was A\+P\+R\+\_\+\+E\+B\+U\+SY, for portability reasons. 
+\begin{DoxyParams}{Parameters}
+{\em mutex} & the mutex on which to attempt the lock acquiring.\\
+\hline
+\end{DoxyParams}
+Release the lock for the given mutex. 
+\begin{DoxyParams}{Parameters}
+{\em mutex} & the mutex from which to release the lock.\\
+\hline
+\end{DoxyParams}
+Destroy the mutex and free the memory associated with the lock. 
+\begin{DoxyParams}{Parameters}
+{\em mutex} & the mutex to destroy. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___a_p_r___global_mutex_gae52583174fa4e71624db3d4e9d617861}\label{group___a_p_r___global_mutex_gae52583174fa4e71624db3d4e9d617861}} 
+\index{Global Locking Routines@{Global Locking Routines}!A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+RE@{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+RE}}
+\index{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+RE@{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+RE}!Global Locking Routines@{Global Locking Routines}}
+\subsubsection{\texorpdfstring{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E()}{APR\_DECLARE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+RE (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ }\end{DoxyParamCaption})}
+
+Return the name of the lockfile for the mutex, or N\+U\+LL if the mutex doesn\textquotesingle{}t use a lock file
+
+Display the name of the mutex, as it relates to the actual method used for the underlying \mbox{\hyperlink{structapr__proc__mutex__t}{apr\+\_\+proc\+\_\+mutex\+\_\+t}}, if any. N\+U\+LL is returned if there is no underlying \mbox{\hyperlink{structapr__proc__mutex__t}{apr\+\_\+proc\+\_\+mutex\+\_\+t}}. 
+\begin{DoxyParams}{Parameters}
+{\em mutex} & the name of the mutex\\
+\hline
+\end{DoxyParams}
+Return a printable representation of the default pollset method (A\+P\+R\+\_\+\+P\+O\+L\+L\+S\+E\+T\+\_\+\+D\+E\+F\+A\+U\+LT).
+
+Get the name of the current locale character set. 
+\begin{DoxyParams}{Parameters}
+{\em pool} & the pool to allocate the name from, if needed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Defers to apr\+\_\+os\+\_\+default\+\_\+encoding if the current locale\textquotesingle{}s data can\textquotesingle{}t be retrieved on this system.
+\end{DoxyRemark}
+Display the name of the mutex, as it relates to the actual method used. This matches the valid options for Apache\textquotesingle{}s Accept\+Mutex directive 
+\begin{DoxyParams}{Parameters}
+{\em mutex} & the name of the mutex\\
+\hline
+\end{DoxyParams}
+Display the name of the default mutex\+: A\+P\+R\+\_\+\+L\+O\+C\+K\+\_\+\+D\+E\+F\+A\+U\+LT \mbox{\Hypertarget{group___a_p_r___global_mutex_ga722d0f9777257de10d37d174468bc881}\label{group___a_p_r___global_mutex_ga722d0f9777257de10d37d174468bc881}} 
+\index{Global Locking Routines@{Global Locking Routines}!A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+A\+C\+C\+E\+S\+S\+OR@{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+A\+C\+C\+E\+S\+S\+OR}}
+\index{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+A\+C\+C\+E\+S\+S\+OR@{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+A\+C\+C\+E\+S\+S\+OR}!Global Locking Routines@{Global Locking Routines}}
+\subsubsection{\texorpdfstring{A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R()}{APR\_POOL\_DECLARE\_ACCESSOR()}}
+{\footnotesize\ttfamily A\+P\+R\+\_\+\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+A\+C\+C\+E\+S\+S\+OR (\begin{DoxyParamCaption}\item[{global\+\_\+mutex}]{ }\end{DoxyParamCaption})}
+
+Get the pool used by this global\+\_\+mutex. \begin{DoxyReturn}{Returns}
+apr\+\_\+pool\+\_\+t the pool 
+\end{DoxyReturn}

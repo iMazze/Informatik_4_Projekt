@@ -1,0 +1,61 @@
+\hypertarget{structapr__mmap__t}{}\section{apr\+\_\+mmap\+\_\+t Struct Reference}
+\label{structapr__mmap__t}\index{apr\+\_\+mmap\+\_\+t@{apr\+\_\+mmap\+\_\+t}}
+
+
+{\ttfamily \#include $<$apr\+\_\+mmap.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structapr__mmap__t_aeca30aed7539548d31b7c0115020af62}{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY}} (\mbox{\hyperlink{structapr__mmap__t}{apr\+\_\+mmap\+\_\+t}}) link
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t}} $\ast$ \mbox{\hyperlink{structapr__mmap__t_a42d01080278bbc9bad26728f9a71c492}{cntxt}}
+\item 
+void $\ast$ \mbox{\hyperlink{structapr__mmap__t_abcc62d7e7c8187311e6619faf0d44f19}{mm}}
+\item 
+apr\+\_\+size\+\_\+t \mbox{\hyperlink{structapr__mmap__t_a274aea0906a4b674e1642ac9e81966c7}{size}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyRemark}{Remarks}
+As far as I can tell the only really sane way to store an M\+M\+AP is as a void $\ast$ and a length. Be\+OS requires this area\+\_\+id, but that\textquotesingle{}s just a little something extra. I am exposing this type, because it doesn\textquotesingle{}t make much sense to keep it private, and opening it up makes some stuff easier in Apache.\+The M\+M\+AP structure 
+\end{DoxyRemark}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structapr__mmap__t_aeca30aed7539548d31b7c0115020af62}\label{structapr__mmap__t_aeca30aed7539548d31b7c0115020af62}} 
+\index{apr\+\_\+mmap\+\_\+t@{apr\+\_\+mmap\+\_\+t}!A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY}}
+\index{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY@{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY}!apr\+\_\+mmap\+\_\+t@{apr\+\_\+mmap\+\_\+t}}
+\subsubsection{\texorpdfstring{A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+R\+Y()}{APR\_RING\_ENTRY()}}
+{\footnotesize\ttfamily apr\+\_\+mmap\+\_\+t\+::\+A\+P\+R\+\_\+\+R\+I\+N\+G\+\_\+\+E\+N\+T\+RY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structapr__mmap__t}{apr\+\_\+mmap\+\_\+t}}}]{ }\end{DoxyParamCaption})}
+
+ring of \mbox{\hyperlink{structapr__mmap__t}{apr\+\_\+mmap\+\_\+t}}\textquotesingle{}s that reference the same mmap\textquotesingle{}ed region; acts in place of a reference count 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structapr__mmap__t_a42d01080278bbc9bad26728f9a71c492}\label{structapr__mmap__t_a42d01080278bbc9bad26728f9a71c492}} 
+\index{apr\+\_\+mmap\+\_\+t@{apr\+\_\+mmap\+\_\+t}!cntxt@{cntxt}}
+\index{cntxt@{cntxt}!apr\+\_\+mmap\+\_\+t@{apr\+\_\+mmap\+\_\+t}}
+\subsubsection{\texorpdfstring{cntxt}{cntxt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t}}$\ast$ apr\+\_\+mmap\+\_\+t\+::cntxt}
+
+The pool the mmap structure was allocated out of. \mbox{\Hypertarget{structapr__mmap__t_abcc62d7e7c8187311e6619faf0d44f19}\label{structapr__mmap__t_abcc62d7e7c8187311e6619faf0d44f19}} 
+\index{apr\+\_\+mmap\+\_\+t@{apr\+\_\+mmap\+\_\+t}!mm@{mm}}
+\index{mm@{mm}!apr\+\_\+mmap\+\_\+t@{apr\+\_\+mmap\+\_\+t}}
+\subsubsection{\texorpdfstring{mm}{mm}}
+{\footnotesize\ttfamily void$\ast$ apr\+\_\+mmap\+\_\+t\+::mm}
+
+The start of the memory mapped area \mbox{\Hypertarget{structapr__mmap__t_a274aea0906a4b674e1642ac9e81966c7}\label{structapr__mmap__t_a274aea0906a4b674e1642ac9e81966c7}} 
+\index{apr\+\_\+mmap\+\_\+t@{apr\+\_\+mmap\+\_\+t}!size@{size}}
+\index{size@{size}!apr\+\_\+mmap\+\_\+t@{apr\+\_\+mmap\+\_\+t}}
+\subsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily apr\+\_\+size\+\_\+t apr\+\_\+mmap\+\_\+t\+::size}
+
+The amount of data in the mmap 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Maximilian Klug/\+Desktop/\+Informatik\+\_\+4\+\_\+\+Projekt/\+Source/complex\+\_\+calculator/packages/libapr.\+1.\+4.\+6.\+1/build/native/include/\mbox{\hyperlink{apr__mmap_8h}{apr\+\_\+mmap.\+h}}\end{DoxyCompactItemize}

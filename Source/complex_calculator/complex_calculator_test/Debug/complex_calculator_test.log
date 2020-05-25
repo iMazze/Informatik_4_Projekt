@@ -1,0 +1,6 @@
+﻿  unittest1.cpp
+     Bibliothek "C:\Users\Maximilian Klug\Desktop\Informatik_4_Projekt\Source\complex_calculator\Debug\complex_calculator_test.lib" und Objekt "C:\Users\Maximilian Klug\Desktop\Informatik_4_Projekt\Source\complex_calculator\Debug\complex_calculator_test.exp" werden erstellt.
+unittest1.obj : error LNK2019: Verweis auf nicht aufgel÷stes externes Symbol ""public: __thiscall xml_io::xml_io(void)" (??0xml_io@@QAE@XZ)" in Funktion ""public: void __thiscall complex_calculator_test::UnitTest1::TestMethod1(void)" (?TestMethod1@UnitTest1@complex_calculator_test@@QAEXXZ)".
+unittest1.obj : error LNK2019: Verweis auf nicht aufgel÷stes externes Symbol ""public: __thiscall xml_io::~xml_io(void)" (??1xml_io@@QAE@XZ)" in Funktion ""public: void __thiscall complex_calculator_test::UnitTest1::TestMethod1(void)" (?TestMethod1@UnitTest1@complex_calculator_test@@QAEXXZ)".
+unittest1.obj : error LNK2019: Verweis auf nicht aufgel÷stes externes Symbol ""public: static void __cdecl xml_io::doxml(void)" (?doxml@xml_io@@SAXXZ)" in Funktion ""public: void __thiscall complex_calculator_test::UnitTest1::TestMethod1(void)" (?TestMethod1@UnitTest1@complex_calculator_test@@QAEXXZ)".
+C:\Users\Maximilian Klug\Desktop\Informatik_4_Projekt\Source\complex_calculator\Debug\complex_calculator_test.dll : fatal error LNK1120: 3 nicht aufgel÷ste Externe

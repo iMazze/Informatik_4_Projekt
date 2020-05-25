@@ -165,7 +165,6 @@
     <ClInclude Include="xml_io.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\DoxyGen\DoxyFile" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

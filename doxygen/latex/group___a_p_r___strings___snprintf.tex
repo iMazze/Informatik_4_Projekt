@@ -1,0 +1,49 @@
+\hypertarget{group___a_p_r___strings___snprintf}{}\section{snprintf implementations}
+\label{group___a_p_r___strings___snprintf}\index{snprintf implementations@{snprintf implementations}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___a_p_r___strings___snprintf_ga0dc3cc1193c72c91053f32d5ed97f88d}{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+N\+O\+N\+S\+TD}} (int) apr\+\_\+snprintf(char $\ast$buf
+\item 
+\mbox{\Hypertarget{group___a_p_r___strings___snprintf_ga767f277ea2c91fc4ab29752439d44ece}\label{group___a_p_r___strings___snprintf_ga767f277ea2c91fc4ab29752439d44ece}} 
+apr\+\_\+size\+\_\+t const char {\bfseries \+\_\+\+\_\+attribute\+\_\+\+\_\+} ((format(printf, 3, 4)))
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___a_p_r___strings___snprintf_ga7aaae9d6ec4ff865ec20a5ca802dc3af}\label{group___a_p_r___strings___snprintf_ga7aaae9d6ec4ff865ec20a5ca802dc3af}} 
+apr\+\_\+size\+\_\+t {\bfseries len}
+\item 
+\mbox{\Hypertarget{group___a_p_r___strings___snprintf_gafa8d2f476d8295cbd359245828f5d041}\label{group___a_p_r___strings___snprintf_gafa8d2f476d8295cbd359245828f5d041}} 
+apr\+\_\+size\+\_\+t const char $\ast$ {\bfseries format}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyWarning}{Warning}
+These are snprintf implementations based on apr\+\_\+vformatter().
+\end{DoxyWarning}
+Note that various standards and implementations disagree on the return value of snprintf, and side-\/effects due to n in the formatting string. apr\+\_\+snprintf (and apr\+\_\+vsnprintf) behaves as follows\+:
+
+Process the format string until the entire string is exhausted, or the buffer fills. If the buffer fills then stop processing immediately (so no further n arguments are processed), and return the buffer length. In all cases the buffer is N\+UL terminated. It will return the number of characters inserted into the buffer, not including the terminating N\+UL. As a special case, if len is 0, apr\+\_\+snprintf will return the number of characters that would have been inserted if the buffer had been infinite (in this case, $\ast$buffer can be N\+U\+LL)
+
+In no event does apr\+\_\+snprintf return a negative number. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___a_p_r___strings___snprintf_ga0dc3cc1193c72c91053f32d5ed97f88d}\label{group___a_p_r___strings___snprintf_ga0dc3cc1193c72c91053f32d5ed97f88d}} 
+\index{snprintf implementations@{snprintf implementations}!A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+N\+O\+N\+S\+TD@{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+N\+O\+N\+S\+TD}}
+\index{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+N\+O\+N\+S\+TD@{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+N\+O\+N\+S\+TD}!snprintf implementations@{snprintf implementations}}
+\subsubsection{\texorpdfstring{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+N\+O\+N\+S\+T\+D()}{APR\_DECLARE\_NONSTD()}}
+{\footnotesize\ttfamily A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+N\+O\+N\+S\+TD (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+snprintf routine based on apr\+\_\+vformatter. This means it understands the same extensions. 
+\begin{DoxyParams}{Parameters}
+{\em buf} & The buffer to write to \\
+\hline
+{\em len} & The size of the buffer \\
+\hline
+{\em format} & The format string \\
+\hline
+{\em ...} & The arguments to use to fill out the format string. \\
+\hline
+\end{DoxyParams}

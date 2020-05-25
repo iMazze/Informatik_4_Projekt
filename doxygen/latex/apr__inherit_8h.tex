@@ -1,0 +1,59 @@
+\hypertarget{apr__inherit_8h}{}\section{C\+:/\+Users/\+Maximilian Klug/\+Desktop/\+Informatik\+\_\+4\+\_\+\+Projekt/\+Source/complex\+\_\+calculator/packages/libapr.1.4.6.1/build/native/include/apr\+\_\+inherit.h File Reference}
+\label{apr__inherit_8h}\index{C\+:/\+Users/\+Maximilian Klug/\+Desktop/\+Informatik\+\_\+4\+\_\+\+Projekt/\+Source/complex\+\_\+calculator/packages/libapr.\+1.\+4.\+6.\+1/build/native/include/apr\+\_\+inherit.\+h@{C\+:/\+Users/\+Maximilian Klug/\+Desktop/\+Informatik\+\_\+4\+\_\+\+Projekt/\+Source/complex\+\_\+calculator/packages/libapr.\+1.\+4.\+6.\+1/build/native/include/apr\+\_\+inherit.\+h}}
+
+
+A\+PR File Handle Inheritance Helpers.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{apr__inherit_8h_aa67d345784df8cce8114086e1f67cf3d}{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+S\+ET}}(type)
+\item 
+\#define \mbox{\hyperlink{apr__inherit_8h_ad4886be514d6cead6bd119a48984d4b5}{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+U\+N\+S\+ET}}(type)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+PR File Handle Inheritance Helpers. 
+
+\begin{DoxyRemark}{Remarks}
+This internal header includes internal declaration helpers for other headers to declare apr\+\_\+foo\+\_\+inherit\+\_\+\mbox{[}un\mbox{]}set functions. 
+\end{DoxyRemark}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{apr__inherit_8h_aa67d345784df8cce8114086e1f67cf3d}\label{apr__inherit_8h_aa67d345784df8cce8114086e1f67cf3d}} 
+\index{apr\+\_\+inherit.\+h@{apr\+\_\+inherit.\+h}!A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+S\+ET@{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+S\+ET}}
+\index{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+S\+ET@{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+S\+ET}!apr\+\_\+inherit.\+h@{apr\+\_\+inherit.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+S\+ET}{APR\_DECLARE\_INHERIT\_SET}}
+{\footnotesize\ttfamily \#define A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+S\+ET(\begin{DoxyParamCaption}\item[{}]{type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\mbox{\hyperlink{group__apr__allocator_gaac44cde286d1fa89f3063a38e1f56093}{APR\_DECLARE}}(\mbox{\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\_status\_t}}) apr\_##type##\_inherit\_set( \(\backslash\)
+                                          apr\_##type##\_t *the##type)
+\end{DoxyCode}
+Prototype for type-\/specific declarations of apr\+\_\+foo\+\_\+inherit\+\_\+set functions. ~\newline
+\begin{DoxyRemark}{Remarks}
+Doxygen unwraps this macro (via doxygen.\+conf) to provide actual help for each specific occurance of apr\+\_\+foo\+\_\+inherit\+\_\+set. 
+
+the linkage is specified for A\+PR. It would be possible to expand the macros to support other linkages. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{apr__inherit_8h_ad4886be514d6cead6bd119a48984d4b5}\label{apr__inherit_8h_ad4886be514d6cead6bd119a48984d4b5}} 
+\index{apr\+\_\+inherit.\+h@{apr\+\_\+inherit.\+h}!A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+U\+N\+S\+ET@{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+U\+N\+S\+ET}}
+\index{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+U\+N\+S\+ET@{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+U\+N\+S\+ET}!apr\+\_\+inherit.\+h@{apr\+\_\+inherit.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+U\+N\+S\+ET}{APR\_DECLARE\_INHERIT\_UNSET}}
+{\footnotesize\ttfamily \#define A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+H\+E\+R\+I\+T\+\_\+\+U\+N\+S\+ET(\begin{DoxyParamCaption}\item[{}]{type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\mbox{\hyperlink{group__apr__allocator_gaac44cde286d1fa89f3063a38e1f56093}{APR\_DECLARE}}(\mbox{\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\_status\_t}}) apr\_##type##\_inherit\_unset( \(\backslash\)
+                                          apr\_##type##\_t *the##type)
+\end{DoxyCode}
+Prototype for type-\/specific declarations of apr\+\_\+foo\+\_\+inherit\+\_\+unset functions. ~\newline
+\begin{DoxyRemark}{Remarks}
+Doxygen unwraps this macro (via doxygen.\+conf) to provide actual help for each specific occurance of apr\+\_\+foo\+\_\+inherit\+\_\+unset. 
+
+the linkage is specified for A\+PR. It would be possible to expand the macros to support other linkages. 
+\end{DoxyRemark}

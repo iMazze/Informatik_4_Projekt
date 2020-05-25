@@ -40,7 +40,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\DoxyGen\DoxyFile" />
     <None Include="packages.config" />
   </ItemGroup>
 </Project>

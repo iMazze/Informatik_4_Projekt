@@ -1,0 +1,140 @@
+\hypertarget{group__apr__fnmatch}{}\section{Filename Matching Functions}
+\label{group__apr__fnmatch}\index{Filename Matching Functions@{Filename Matching Functions}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__apr__fnmatch_gaea769621807400e4c741e7deddf6c3df}{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+N\+O\+M\+A\+T\+CH}}~1
+\item 
+\#define \mbox{\hyperlink{group__apr__fnmatch_gae12c1286631f316647be6dc007170630}{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+N\+O\+E\+S\+C\+A\+PE}}~0x01
+\item 
+\#define \mbox{\hyperlink{group__apr__fnmatch_ga0d421a2cef68cb590f958b5de6c7fe1b}{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+P\+A\+T\+H\+N\+A\+ME}}~0x02
+\item 
+\#define \mbox{\hyperlink{group__apr__fnmatch_ga4806f936b6eacc59dfed831d67b750ef}{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+P\+E\+R\+I\+OD}}~0x04
+\item 
+\#define \mbox{\hyperlink{group__apr__fnmatch_ga5cee1c0a917a283a193721d11160b502}{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+C\+A\+S\+E\+\_\+\+B\+L\+I\+ND}}~0x08
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__apr__fnmatch_gaaa224db42fb6857159b6b7049451ddea}{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+RE}} (\mbox{\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}}) apr\+\_\+fnmatch(const char $\ast$pattern
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__apr__fnmatch_ga1b8521735ca7e48893ad6958cba59a7b}\label{group__apr__fnmatch_ga1b8521735ca7e48893ad6958cba59a7b}} 
+const char $\ast$ {\bfseries strings}
+\item 
+\mbox{\Hypertarget{group__apr__fnmatch_ga3e6d697dc0ff44866a7ba96989912775}\label{group__apr__fnmatch_ga3e6d697dc0ff44866a7ba96989912775}} 
+const char int {\bfseries flags}
+\item 
+\mbox{\Hypertarget{group__apr__fnmatch_ga5870bc70d0e7e1e79ec7b4c512a92c4b}\label{group__apr__fnmatch_ga5870bc70d0e7e1e79ec7b4c512a92c4b}} 
+\mbox{\hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t}} $\ast$$\ast$ {\bfseries result}
+\item 
+\mbox{\Hypertarget{group__apr__fnmatch_ga4aaa19306a024e92edb34e88100061f6}\label{group__apr__fnmatch_ga4aaa19306a024e92edb34e88100061f6}} 
+\mbox{\hyperlink{structapr__array__header__t}{apr\+\_\+array\+\_\+header\+\_\+t}} \mbox{\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\+\_\+pool\+\_\+t}} $\ast$ {\bfseries p}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__apr__fnmatch_ga5cee1c0a917a283a193721d11160b502}\label{group__apr__fnmatch_ga5cee1c0a917a283a193721d11160b502}} 
+\index{Filename Matching Functions@{Filename Matching Functions}!A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+C\+A\+S\+E\+\_\+\+B\+L\+I\+ND@{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+C\+A\+S\+E\+\_\+\+B\+L\+I\+ND}}
+\index{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+C\+A\+S\+E\+\_\+\+B\+L\+I\+ND@{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+C\+A\+S\+E\+\_\+\+B\+L\+I\+ND}!Filename Matching Functions@{Filename Matching Functions}}
+\subsubsection{\texorpdfstring{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+C\+A\+S\+E\+\_\+\+B\+L\+I\+ND}{APR\_FNM\_CASE\_BLIND}}
+{\footnotesize\ttfamily \#define A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+C\+A\+S\+E\+\_\+\+B\+L\+I\+ND~0x08}
+
+Compare characters case-\/insensitively. \begin{DoxyRemark}{Remarks}
+This flag is an Apache addition 
+\end{DoxyRemark}
+\mbox{\Hypertarget{group__apr__fnmatch_gae12c1286631f316647be6dc007170630}\label{group__apr__fnmatch_gae12c1286631f316647be6dc007170630}} 
+\index{Filename Matching Functions@{Filename Matching Functions}!A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+N\+O\+E\+S\+C\+A\+PE@{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+N\+O\+E\+S\+C\+A\+PE}}
+\index{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+N\+O\+E\+S\+C\+A\+PE@{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+N\+O\+E\+S\+C\+A\+PE}!Filename Matching Functions@{Filename Matching Functions}}
+\subsubsection{\texorpdfstring{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+N\+O\+E\+S\+C\+A\+PE}{APR\_FNM\_NOESCAPE}}
+{\footnotesize\ttfamily \#define A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+N\+O\+E\+S\+C\+A\+PE~0x01}
+
+Disable backslash escaping. \mbox{\Hypertarget{group__apr__fnmatch_gaea769621807400e4c741e7deddf6c3df}\label{group__apr__fnmatch_gaea769621807400e4c741e7deddf6c3df}} 
+\index{Filename Matching Functions@{Filename Matching Functions}!A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+N\+O\+M\+A\+T\+CH@{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+N\+O\+M\+A\+T\+CH}}
+\index{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+N\+O\+M\+A\+T\+CH@{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+N\+O\+M\+A\+T\+CH}!Filename Matching Functions@{Filename Matching Functions}}
+\subsubsection{\texorpdfstring{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+N\+O\+M\+A\+T\+CH}{APR\_FNM\_NOMATCH}}
+{\footnotesize\ttfamily \#define A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+N\+O\+M\+A\+T\+CH~1}
+
+Match failed. \mbox{\Hypertarget{group__apr__fnmatch_ga0d421a2cef68cb590f958b5de6c7fe1b}\label{group__apr__fnmatch_ga0d421a2cef68cb590f958b5de6c7fe1b}} 
+\index{Filename Matching Functions@{Filename Matching Functions}!A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+P\+A\+T\+H\+N\+A\+ME@{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+P\+A\+T\+H\+N\+A\+ME}}
+\index{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+P\+A\+T\+H\+N\+A\+ME@{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+P\+A\+T\+H\+N\+A\+ME}!Filename Matching Functions@{Filename Matching Functions}}
+\subsubsection{\texorpdfstring{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+P\+A\+T\+H\+N\+A\+ME}{APR\_FNM\_PATHNAME}}
+{\footnotesize\ttfamily \#define A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+P\+A\+T\+H\+N\+A\+ME~0x02}
+
+Slash must be matched by slash. \mbox{\Hypertarget{group__apr__fnmatch_ga4806f936b6eacc59dfed831d67b750ef}\label{group__apr__fnmatch_ga4806f936b6eacc59dfed831d67b750ef}} 
+\index{Filename Matching Functions@{Filename Matching Functions}!A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+P\+E\+R\+I\+OD@{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+P\+E\+R\+I\+OD}}
+\index{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+P\+E\+R\+I\+OD@{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+P\+E\+R\+I\+OD}!Filename Matching Functions@{Filename Matching Functions}}
+\subsubsection{\texorpdfstring{A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+P\+E\+R\+I\+OD}{APR\_FNM\_PERIOD}}
+{\footnotesize\ttfamily \#define A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+P\+E\+R\+I\+OD~0x04}
+
+Period must be matched by period. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__apr__fnmatch_gaaa224db42fb6857159b6b7049451ddea}\label{group__apr__fnmatch_gaaa224db42fb6857159b6b7049451ddea}} 
+\index{Filename Matching Functions@{Filename Matching Functions}!A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+RE@{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+RE}}
+\index{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+RE@{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+RE}!Filename Matching Functions@{Filename Matching Functions}}
+\subsubsection{\texorpdfstring{A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+R\+E()}{APR\_DECLARE()}}
+{\footnotesize\ttfamily A\+P\+R\+\_\+\+D\+E\+C\+L\+A\+RE (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\+\_\+status\+\_\+t}}}]{ }\end{DoxyParamCaption}) const}
+
+Try to match the string to the given pattern, return A\+P\+R\+\_\+\+S\+U\+C\+C\+E\+SS if match, else return A\+P\+R\+\_\+\+F\+N\+M\+\_\+\+N\+O\+M\+A\+T\+CH. Note that there is no such thing as an illegal pattern.
+
+With all flags unset, a pattern is interpreted as such\+:
+
+P\+A\+T\+T\+E\+RN\+: Backslash followed by any character, including another backslash.~\newline
+ M\+A\+T\+C\+H\+ES\+: That character exactly.
+
+P\+A\+T\+T\+E\+RN\+: ?~\newline
+ M\+A\+T\+C\+H\+ES\+: Any single character. 
+
+P\+A\+T\+T\+E\+RN\+: $\ast$~\newline
+ M\+A\+T\+C\+H\+ES\+: Any sequence of zero or more characters. (Note that multiple $\ast$s in a row are equivalent to one.)
+
+P\+A\+T\+T\+E\+RN\+: Any character other than \textbackslash{}?$\ast$\mbox{[} or a \textbackslash{} at the end of the pattern~\newline
+ M\+A\+T\+C\+H\+ES\+: That character exactly. (Case sensitive.)
+
+P\+A\+T\+T\+E\+RN\+: \mbox{[} followed by a class description followed by \mbox{]}~\newline
+ M\+A\+T\+C\+H\+ES\+: A single character described by the class description. (Never matches, if the class description reaches until the end of the string without a \mbox{]}.) If the first character of the class description is $^\wedge$ or !, the sense of the description is reversed. The rest of the class description is a list of single characters or pairs of characters separated by -\/. Any of those characters can have a backslash in front of them, which is ignored; this lets you use the characters \mbox{]} and -\/ in the character class, as well as $^\wedge$ and ! at the beginning. The pattern matches a single character if it is one of the listed characters or falls into one of the listed ranges (inclusive, case sensitive). Ranges with the first character larger than the second are legal but never match. Edge cases\+: \mbox{[}\mbox{]} never matches, and \mbox{[}$^\wedge$\mbox{]} and \mbox{[}!\mbox{]} always match without consuming a character.
+
+Note that these patterns attempt to match the entire string, not just find a substring matching the pattern.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pattern} & The pattern to match to \\
+\hline
+{\em strings} & The string we are trying to match \\
+\hline
+{\em flags} & flags to use in the match. Bitwise OR of\+: 
+\begin{DoxyPre}
+             APR\_FNM\_NOESCAPE       Disable backslash escaping
+             APR\_FNM\_PATHNAME       Slash must be matched by slash
+             APR\_FNM\_PERIOD         Period must be matched by period
+             APR\_FNM\_CASE\_BLIND     Compare characters case-insensitively.
+\end{DoxyPre}
+\\
+\hline
+\end{DoxyParams}
+Determine if the given pattern is a regular expression. 
+\begin{DoxyParams}{Parameters}
+{\em pattern} & The pattern to search for glob characters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if pattern has any glob characters in it
+\end{DoxyReturn}
+Find all files that match a specified pattern. 
+\begin{DoxyParams}{Parameters}
+{\em pattern} & The pattern to use for finding files. \\
+\hline
+{\em result} & Array to use when storing the results \\
+\hline
+{\em p} & The pool to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if pattern has any glob characters in it 
+\end{DoxyReturn}
