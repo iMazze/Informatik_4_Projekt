@@ -41,25 +41,13 @@ void Complex::setIm(double value)
 	im = value;
 }
 
-void Complex::setReFromPolar(double mag, double phi)
+void Complex::setFromPolar(double mag, double phi)
 {
 	double help = phi * (M_PI / 180);
 	double twoPi = 2 * M_PI;
 	if (-twoPi <= help && help <= twoPi) {
 
 		re = mag * cos(help);
-	}
-	else {
-		std::cout << phi << " grad: ungueltiges Argument \n";
-	}
-}
-
-void Complex::setImFromPolar(double mag, double phi)
-{
-	double help = phi * (M_PI / 180);
-	double twoPi = 2 * M_PI;
-	if (-twoPi <= help && help <= twoPi) {
-
 		im = mag * sin(help);
 	}
 	else {
@@ -129,6 +117,11 @@ Complex Complex::operator/(Complex divisor)
 	result.re = (re*divisor.re + im * divisor.im) / (divisor.re*divisor.re + divisor.im*divisor.im);
 	result.im = (im* divisor.re - re * divisor.im) / (divisor.re*divisor.re + divisor.im*divisor.im);
 	return result;
+}
+
+std::string Complex::ComplexToString()
+{
+	
 }
 
 
