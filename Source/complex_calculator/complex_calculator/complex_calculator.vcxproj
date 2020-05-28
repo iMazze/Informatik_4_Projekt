@@ -157,11 +157,13 @@
     <ClCompile Include="Complex.cpp" />
     <ClCompile Include="complex_calculator.cpp" />
     <ClCompile Include="Console_Handler.cpp" />
+    <ClCompile Include="Rechnung.cpp" />
     <ClCompile Include="xml_io.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Complex.h" />
     <ClInclude Include="Console_Handler.h" />
+    <ClInclude Include="Rechnung.h" />
     <ClInclude Include="xml_io.h" />
   </ItemGroup>
   <ItemGroup>

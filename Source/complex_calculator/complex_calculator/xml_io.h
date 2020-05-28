@@ -18,6 +18,7 @@ public:
 
 	//! A normal member taking two arguments and returning an integer value.
 	/*!
+
 	*/
 	static void doxml();
 	void writexml();
