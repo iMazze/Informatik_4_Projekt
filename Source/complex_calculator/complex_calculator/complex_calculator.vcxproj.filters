@@ -27,7 +27,7 @@
     <ClCompile Include="xml_io.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Rechnung.cpp">
+    <ClCompile Include="testing.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,7 +41,7 @@
     <ClInclude Include="xml_io.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Rechnung.h">
+    <ClInclude Include="..\..\..\catch.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
