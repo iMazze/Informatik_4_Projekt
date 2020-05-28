@@ -1,5 +1,2 @@
 ﻿  complex_calculator.cpp
-  xml_io.cpp
-  Code wird generiert...
-LINK : warning LNK4076: Inkrementelle Statusdatei "C:\Users\Maximilian Klug\Desktop\Informatik_4_Projekt\Source\complex_calculator\Debug\complex_calculator.ilk" ungültig (wird gelöscht); Link erfolgt nicht inkrementell.
   complex_calculator.vcxproj -> C:\Users\Maximilian Klug\Desktop\Informatik_4_Projekt\Source\complex_calculator\Debug\complex_calculator.exe
