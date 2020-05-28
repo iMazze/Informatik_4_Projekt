@@ -157,9 +157,11 @@
     <ClCompile Include="Complex.cpp" />
     <ClCompile Include="complex_calculator.cpp" />
     <ClCompile Include="Console_Handler.cpp" />
+    <ClCompile Include="testing.cpp" />
     <ClCompile Include="xml_io.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\catch.hpp" />
     <ClInclude Include="Complex.h" />
     <ClInclude Include="Console_Handler.h" />
     <ClInclude Include="xml_io.h" />
