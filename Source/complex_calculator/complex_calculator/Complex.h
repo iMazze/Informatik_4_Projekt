@@ -9,6 +9,7 @@
 #define EA_A0FEDFFD_417C_4d48_871A_EEA55FBAD715__INCLUDED_
 
 #include <math.h>
+#include <string>
 #include <iostream>
 
 
@@ -43,10 +44,8 @@ public:
 	void setRe(double value);
 	//! set immaginary Part
 	void setIm(double value);
-	//! set real Part given a complex Number in polar Form
-	void setReFromPolar(double mag, double phi);
-	//! set immaginary Part given a complex number in polar form
-	void setImFromPolar(double mag, double phi);
+	//! set complex number given a complex Number in polar Form
+	void setFromPolar(double mag, double phi);
 	//! get magnitude of complex number 
 	double getMag();
 	//! get angle of complex number
@@ -79,6 +78,7 @@ public:
 	z1/z2 = (ac+bd)/(c^2+d^2) +(bc-ad)/(c^2+d^2)i
 	*/
 	Complex operator/(Complex divisor);
+	std::string ComplexToString();
 	virtual ~Complex();
 
 };
