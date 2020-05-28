@@ -1,11 +1,8 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
 
-<<<<<<< HEAD
-=======
-#include "../complex_calculator/Complex.h"
+#include "../complex_calculator/Rechnung.h"
 
->>>>>>> unittest_intro
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace complex_calculator_unittest
@@ -17,12 +14,18 @@ namespace complex_calculator_unittest
 		TEST_METHOD(TestMethod1)
 		{
 			// TODO: Testcode hier eingeben
-<<<<<<< HEAD
-=======
-			Complex c;
-			c.getImaginary();
+			Rechnung<int> r1;
+			int a, b, c;
 
->>>>>>> unittest_intro
+			a = 11;
+			b = 22;
+
+			r1.setZahl1(a);
+			r1.setZahl2(b);
+			r1.addieren();
+			c = r1.getErgebnis();
+
+			Assert::IsTrue((a + b) == c);
 		}
 
 	};

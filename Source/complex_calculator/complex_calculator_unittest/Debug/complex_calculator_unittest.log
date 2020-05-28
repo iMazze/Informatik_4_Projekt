@@ -1,8 +1,9 @@
-<<<<<<< HEAD
-﻿  stdafx.cpp
-  unittest1.cpp
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: Das Zwischenverzeichnis (Debug\) enthält freigegebene Dateien aus einem anderen Projekt (complex_calculator_unittest.vcxproj). Dies kann zu einem falschen Bereinigungs- und Neuerstellungsverhalten führen.
      Bibliothek "C:\Users\Maximilian Klug\Desktop\Informatik_4_Projekt\Source\complex_calculator\Debug\complex_calculator_unittest.lib" und Objekt "C:\Users\Maximilian Klug\Desktop\Informatik_4_Projekt\Source\complex_calculator\Debug\complex_calculator_unittest.exp" werden erstellt.
-=======
-﻿     Bibliothek "C:\Users\Maximilian Klug\Desktop\Informatik_4_Projekt\Source\complex_calculator\Debug\complex_calculator_unittest.lib" und Objekt "C:\Users\Maximilian Klug\Desktop\Informatik_4_Projekt\Source\complex_calculator\Debug\complex_calculator_unittest.exp" werden erstellt.
->>>>>>> unittest_intro
-  complex_calculator_unittest.vcxproj -> C:\Users\Maximilian Klug\Desktop\Informatik_4_Projekt\Source\complex_calculator\Debug\complex_calculator_unittest.dll
+unittest1.obj : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol ""public: __thiscall Rechnung<int>::Rechnung<int>(void)" (??0?$Rechnung@H@@QAE@XZ)" in Funktion ""public: void __thiscall complex_calculator_unittest::UnitTest1::TestMethod1(void)" (?TestMethod1@UnitTest1@complex_calculator_unittest@@QAEXXZ)".
+unittest1.obj : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol ""public: __thiscall Rechnung<int>::~Rechnung<int>(void)" (??1?$Rechnung@H@@QAE@XZ)" in Funktion ""public: void __thiscall complex_calculator_unittest::UnitTest1::TestMethod1(void)" (?TestMethod1@UnitTest1@complex_calculator_unittest@@QAEXXZ)".
+unittest1.obj : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol ""public: int & __thiscall Rechnung<int>::getErgebnis(void)" (?getErgebnis@?$Rechnung@H@@QAEAAHXZ)" in Funktion ""public: void __thiscall complex_calculator_unittest::UnitTest1::TestMethod1(void)" (?TestMethod1@UnitTest1@complex_calculator_unittest@@QAEXXZ)".
+unittest1.obj : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol ""public: void __thiscall Rechnung<int>::setZahl1(int const &)" (?setZahl1@?$Rechnung@H@@QAEXABH@Z)" in Funktion ""public: void __thiscall complex_calculator_unittest::UnitTest1::TestMethod1(void)" (?TestMethod1@UnitTest1@complex_calculator_unittest@@QAEXXZ)".
+unittest1.obj : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol ""public: void __thiscall Rechnung<int>::setZahl2(int const &)" (?setZahl2@?$Rechnung@H@@QAEXABH@Z)" in Funktion ""public: void __thiscall complex_calculator_unittest::UnitTest1::TestMethod1(void)" (?TestMethod1@UnitTest1@complex_calculator_unittest@@QAEXXZ)".
+unittest1.obj : error LNK2019: Verweis auf nicht aufgelöstes externes Symbol ""public: void __thiscall Rechnung<int>::addieren(void)" (?addieren@?$Rechnung@H@@QAEXXZ)" in Funktion ""public: void __thiscall complex_calculator_unittest::UnitTest1::TestMethod1(void)" (?TestMethod1@UnitTest1@complex_calculator_unittest@@QAEXXZ)".
+C:\Users\Maximilian Klug\Desktop\Informatik_4_Projekt\Source\complex_calculator\Debug\complex_calculator_unittest.dll : fatal error LNK1120: 6 nicht aufgelöste Externe
