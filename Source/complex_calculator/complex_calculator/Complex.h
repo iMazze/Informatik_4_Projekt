@@ -78,7 +78,7 @@ public:
 	z1/z2 = (ac+bd)/(c^2+d^2) +(bc-ad)/(c^2+d^2)i
 	*/
 	Complex operator/(Complex divisor);
-	std::string ComplexToString();
+	//std::string ComplexToString();
 	virtual ~Complex();
 
 };

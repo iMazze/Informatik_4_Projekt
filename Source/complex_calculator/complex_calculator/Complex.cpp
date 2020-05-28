@@ -119,10 +119,11 @@ Complex Complex::operator/(Complex divisor)
 	return result;
 }
 
+/*
 std::string Complex::ComplexToString()
 {
 	
-}
+}*/
 
 
 Complex::~Complex() {
