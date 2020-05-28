@@ -20,7 +20,11 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
+<<<<<<< HEAD
     <ProjectGuid>{26422B72-BB8D-451B-AB26-B714517AD519}</ProjectGuid>
+=======
+    <ProjectGuid>{E3F030AA-940E-469B-AC68-8EFCCCDB2490}</ProjectGuid>
+>>>>>>> unittest_intro
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>complex_calculator_unittest</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
@@ -164,6 +168,14 @@
     </ClCompile>
     <ClCompile Include="unittest1.cpp" />
   </ItemGroup>
+<<<<<<< HEAD
+=======
+  <ItemGroup>
+    <ProjectReference Include="..\complex_calculator\complex_calculator.vcxproj">
+      <Project>{16fa59ed-ee93-4f71-aca0-0b1b9bc76ed8}</Project>
+    </ProjectReference>
+  </ItemGroup>
+>>>>>>> unittest_intro
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
