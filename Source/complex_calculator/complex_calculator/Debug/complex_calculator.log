@@ -1,1 +1,3 @@
-﻿  complex_calculator.vcxproj -> C:\Users\Maximilian Klug\Desktop\Informatik_4_Projekt\Source\complex_calculator\Debug\complex_calculator.exe
+﻿  Complex.cpp
+c:\users\maximilian klug\desktop\informatik_4_projekt\source\complex_calculator\complex_calculator\complex.cpp(87): warning C4715: "Complex::getPhi": Nicht alle Codepfade geben einen Wert zurück.
+  complex_calculator.vcxproj -> C:\Users\Maximilian Klug\Desktop\Informatik_4_Projekt\Source\complex_calculator\Debug\complex_calculator.exe

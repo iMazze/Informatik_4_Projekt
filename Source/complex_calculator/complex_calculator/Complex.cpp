@@ -6,6 +6,8 @@
 ///////////////////////////////////////////////////////////
 
 #include "Complex.h"
+#include <sstream>
+
 
 
 Complex::Complex() : re(0), im(0) {
@@ -119,11 +121,39 @@ Complex Complex::operator/(Complex divisor)
 	return result;
 }
 
-/*
+
 std::string Complex::ComplexToString()
 {
-	
-}*/
+	std::stringstream fmt;
+	if (im == 0) {
+		fmt << re;
+	}
+	else if (re == 0) {
+		fmt << im << "i";
+	}
+	else {
+		fmt << re;
+		if (im < 0) {
+			fmt << " - " << -im;
+		}
+		else {
+			fmt << " + " << im;
+		}
+		fmt << "i";
+	}
+	return fmt.str();
+}
+
+std::string Complex::ComplexToPolarString(Complex z)
+{
+
+	std::stringstream fmt;
+
+	fmt << z.getMag() << "e^(i" << z.getPhi() << ")";
+
+
+	return fmt.str();
+}
 
 
 Complex::~Complex() {
