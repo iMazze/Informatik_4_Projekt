@@ -83,8 +83,10 @@ TEST_CASE("Unit Test: complex class") {
 		SECTION("Division") {
 			r1 = z1 / z2;
 			r2 = z3 / z4;
+			r3 = z3 / z5;
 			REQUIRE(r1.getRe() == 0); REQUIRE(r1.getIm() == 0);
-			//REQUIRE(r2.getRe() == Approx(-0.0492)); //REQUIRE(r2.getIm() == Approx(-0.013));
+			REQUIRE(r2.getRe() == Approx(-0.0492).epsilon(0.1)); REQUIRE(r2.getIm() == Approx(-0.013).epsilon(0.1));
+			REQUIRE(r3.getRe() == Approx(-0.0034).epsilon(0.1)); REQUIRE(r3.getIm() == Approx(+0.061).epsilon(0.1));
 		}
 	}
 
