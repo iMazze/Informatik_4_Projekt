@@ -23,7 +23,7 @@ Documentation Style: http://doxygen.nl/manual/docblocks.html
     </embed>
 </object>
 
-##push Files with size>100Mbits:
+## push Files with size>100Mbits:
 $ git rm --cached your_giant_file
 $ git commit --amend -CHEAD
 $ git push
