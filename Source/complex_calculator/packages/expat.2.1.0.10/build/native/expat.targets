@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="expat_init">
+  <PropertyGroup Label="Debug and static and RuntimeLibraryNull" Condition="( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'static' And ('$(RuntimeLibrary)' == '')">
+    <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Label="Release and static and RuntimeLibraryNull" Condition="( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'static' And ('$(RuntimeLibrary)' == '')">
+    <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Label="Debug and ltcg and RuntimeLibraryNull" Condition="( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'ltcg' And ('$(RuntimeLibrary)' == '')">
+    <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Label="Release and ltcg and RuntimeLibraryNull" Condition="( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'ltcg' And ('$(RuntimeLibrary)' == '')">
+    <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Label="Default initializers for properties">
+    <UTFwidth-expat Condition="'$(UTFwidth-expat)' == ''">utf8</UTFwidth-expat>
+    <Linkage-expat Condition="'$(Linkage-expat)' == ''">dynamic</Linkage-expat>
+    <CallingConvention-expat Condition="'$(CallingConvention-expat)' == ''">cdecl</CallingConvention-expat>
+  </PropertyGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\default-propertiesui.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\expat-propertiesui-875a0625-05ac-4d5a-b629-509bd660bf61.xml" />
+  </ItemGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>HAS_EXPAT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)..\..\build\native\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="static" Condition="'$(Linkage-expat)' == 'static'">
+    <ClCompile>
+      <PreprocessorDefinitions>XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>$(RuntimeLibrary)</RuntimeLibrary>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="utf16" Condition="'$(UTFwidth-expat)' == 'utf16'">
+    <ClCompile>
+      <PreprocessorDefinitions>XML_UNICODE_WCHAR_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="ltcg" Condition="'$(Linkage-expat)' == 'ltcg'">
+    <ClCompile>
+      <RuntimeLibrary>$(RuntimeLibrary)</RuntimeLibrary>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and Win32 and Release and static and cdecl and utf16" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'static' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\Win32\Release\static\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and Win32 and Release and static and cdecl and utf16" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'static' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\Win32\Release\static\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and x64 and Release and static and cdecl and utf16" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'static' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\x64\Release\static\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and x64 and Release and static and cdecl and utf16" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'static' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\x64\Release\static\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and Win32 and Debug and static and cdecl and utf16" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'static' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\Win32\Debug\static\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and Win32 and Debug and static and cdecl and utf16" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'static' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\Win32\Debug\static\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and x64 and Debug and static and cdecl and utf16" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'static' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\x64\Debug\static\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and x64 and Debug and static and cdecl and utf16" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'static' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\x64\Debug\static\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and Win32 and Release and ltcg and cdecl and utf16" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'ltcg' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\Win32\Release\ltcg\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and Win32 and Release and ltcg and cdecl and utf16" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'ltcg' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\Win32\Release\ltcg\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and x64 and Release and ltcg and cdecl and utf16" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'ltcg' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\x64\Release\ltcg\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and x64 and Release and ltcg and cdecl and utf16" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'ltcg' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\x64\Release\ltcg\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and Win32 and Debug and ltcg and cdecl and utf16" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'ltcg' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\Win32\Debug\ltcg\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and Win32 and Debug and ltcg and cdecl and utf16" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'ltcg' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\Win32\Debug\ltcg\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and x64 and Debug and ltcg and cdecl and utf16" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'ltcg' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\x64\Debug\ltcg\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and x64 and Debug and ltcg and cdecl and utf16" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'ltcg' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\x64\Debug\ltcg\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and Win32 and Release and dynamic and cdecl and utf16" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'dynamic' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\Win32\Release\dynamic\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and Win32 and Release and dynamic and cdecl and utf16" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'dynamic' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\Win32\Release\dynamic\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and x64 and Release and dynamic and cdecl and utf16" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'dynamic' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\x64\Release\dynamic\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and x64 and Release and dynamic and cdecl and utf16" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'dynamic' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\x64\Release\dynamic\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and Win32 and Debug and dynamic and cdecl and utf16" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'dynamic' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\Win32\Debug\dynamic\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and Win32 and Debug and dynamic and cdecl and utf16" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'dynamic' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\Win32\Debug\dynamic\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and x64 and Debug and dynamic and cdecl and utf16" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'dynamic' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\x64\Debug\dynamic\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and x64 and Debug and dynamic and cdecl and utf16" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'dynamic' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf16'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\x64\Debug\dynamic\cdecl\utf16\libexpatw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and Win32 and Release and static and cdecl and utf8" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'static' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\Win32\Release\static\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and Win32 and Release and static and cdecl and utf8" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'static' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\Win32\Release\static\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and x64 and Release and static and cdecl and utf8" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'static' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\x64\Release\static\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and x64 and Release and static and cdecl and utf8" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'static' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\x64\Release\static\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and Win32 and Debug and static and cdecl and utf8" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'static' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\Win32\Debug\static\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and Win32 and Debug and static and cdecl and utf8" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'static' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\Win32\Debug\static\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and x64 and Debug and static and cdecl and utf8" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'static' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\x64\Debug\static\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and x64 and Debug and static and cdecl and utf8" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'static' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\x64\Debug\static\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and Win32 and Release and ltcg and cdecl and utf8" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'ltcg' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\Win32\Release\ltcg\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and Win32 and Release and ltcg and cdecl and utf8" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'ltcg' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\Win32\Release\ltcg\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and x64 and Release and ltcg and cdecl and utf8" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'ltcg' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\x64\Release\ltcg\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and x64 and Release and ltcg and cdecl and utf8" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'ltcg' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\x64\Release\ltcg\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and Win32 and Debug and ltcg and cdecl and utf8" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'ltcg' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\Win32\Debug\ltcg\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and Win32 and Debug and ltcg and cdecl and utf8" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'ltcg' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\Win32\Debug\ltcg\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and x64 and Debug and ltcg and cdecl and utf8" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'ltcg' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\x64\Debug\ltcg\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and x64 and Debug and ltcg and cdecl and utf8" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'ltcg' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\x64\Debug\ltcg\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and Win32 and Release and dynamic and cdecl and utf8" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'dynamic' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\Win32\Release\dynamic\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and Win32 and Release and dynamic and cdecl and utf8" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'dynamic' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\Win32\Release\dynamic\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and x64 and Release and dynamic and cdecl and utf8" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'dynamic' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\x64\Release\dynamic\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and x64 and Release and dynamic and cdecl and utf8" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-expat)' == 'dynamic' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\x64\Release\dynamic\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and Win32 and Debug and dynamic and cdecl and utf8" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'dynamic' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\Win32\Debug\dynamic\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and Win32 and Debug and dynamic and cdecl and utf8" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'Win32' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'dynamic' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\Win32\Debug\dynamic\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v100 and x64 and Debug and dynamic and cdecl and utf8" Condition="'$(PlatformToolset)' == 'v100' And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'dynamic' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v100\x64\Debug\dynamic\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="v110 and x64 and Debug and dynamic and cdecl and utf8" Condition="( $(PlatformToolset.IndexOf('v110')) &gt; -1 Or '$(PlatformToolset)' == 'WindowsKernelModeDriver8.0' Or '$(PlatformToolset)' == 'WindowsApplicationForDrivers8.0' Or '$(PlatformToolset)' == 'WindowsUserModeDriver8.0' ) And '$(Platform)' == 'x64' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-expat)' == 'dynamic' And '$(CallingConvention-expat)' == 'cdecl' And '$(UTFwidth-expat)' == 'utf8'">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\build\native\lib\v110\x64\Debug\dynamic\cdecl\utf8\libexpat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <UsingTask TaskName="expat_Contains" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" TaskFactory="CodeTaskFactory">
+    <ParameterGroup>
+      <Text Output="false" ParameterType="System.String" />
+      <Library Output="false" Required="true" ParameterType="System.String" />
+      <Value Output="false" Required="true" ParameterType="System.String" />
+      <Result Output="true" ParameterType="System.String" />
+    </ParameterGroup>
+    <Task>
+      <Code>Result = ((Text ?? "").Split(';').Contains(Library) ) ? Value : String.Empty;</Code>
+    </Task>
+  </UsingTask>
+  <Target Name="expat_init">
+    <expat_Contains Text="UTFwidth-utf8" Library="expat" Value="utf8" Condition="'$(UTFwidth-expat)'==''">
+      <Output TaskParameter="Result" PropertyName="UTFwidth-expat" />
+    </expat_Contains>
+    <expat_Contains Text="UTFwidth-utf16" Library="expat" Value="utf16" Condition="'$(UTFwidth-expat)'==''">
+      <Output TaskParameter="Result" PropertyName="UTFwidth-expat" />
+    </expat_Contains>
+    <expat_Contains Text="Linkage-dynamic" Library="expat" Value="dynamic" Condition="'$(Linkage-expat)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-expat" />
+    </expat_Contains>
+    <expat_Contains Text="Linkage-static" Library="expat" Value="static" Condition="'$(Linkage-expat)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-expat" />
+    </expat_Contains>
+    <expat_Contains Text="Linkage-ltcg" Library="expat" Value="ltcg" Condition="'$(Linkage-expat)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-expat" />
+    </expat_Contains>
+    <expat_Contains Text="Linkage-sxs" Library="expat" Value="sxs" Condition="'$(Linkage-expat)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-expat" />
+    </expat_Contains>
+    <expat_Contains Text="CallingConvention-cdecl" Library="expat" Value="cdecl" Condition="'$(CallingConvention-expat)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-expat" />
+    </expat_Contains>
+    <expat_Contains Text="CallingConvention-stdcall" Library="expat" Value="stdcall" Condition="'$(CallingConvention-expat)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-expat" />
+    </expat_Contains>
+    <expat_Contains Text="CallingConvention-fastcall" Library="expat" Value="fastcall" Condition="'$(CallingConvention-expat)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-expat" />
+    </expat_Contains>
+    <expat_Contains Text="CallingConvention-thiscall" Library="expat" Value="thiscall" Condition="'$(CallingConvention-expat)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-expat" />
+    </expat_Contains>
+    <expat_Contains Text="CallingConvention-clrcall" Library="expat" Value="clrcall" Condition="'$(CallingConvention-expat)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-expat" />
+    </expat_Contains>
+  </Target>
+</Project>
