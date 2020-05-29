@@ -1,3 +1,4 @@
+
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
 #include "Complex.h"
@@ -7,3 +8,5 @@ TEST_CASE("check constructor") {
 	REQUIRE(z.getRe() == 1);
 
 }
+
+
