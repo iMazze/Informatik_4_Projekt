@@ -82,6 +82,9 @@ double Complex::getPhi()
 	else if (re == 0 && im < 0) {
 		return -M_PI_2 * (180 / M_PI);
 	}
+	else if (re == 0 && im == 0) {
+		return 0;
+	}
 
 
 }
