@@ -1,4 +1,4 @@
-# Informatik_4_Projekt
+﻿# Informatik_4_Projekt
 ## Aufgabenstellung
 Rechner für komplexe Zahlen
 - Einlesen einer komplexen Zahl über die Konsole (Koeffizienten ODER Exponential- Darstellung)
@@ -22,3 +22,8 @@ Documentation Style: http://doxygen.nl/manual/docblocks.html
         <p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://yoursite.com/the.pdf">Download PDF</a>.</p>
     </embed>
 </object>
+
+##push Files with size>100Mbits:
+$ git rm --cached your_giant_file
+$ git commit --amend -CHEAD
+$ git push
