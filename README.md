@@ -27,3 +27,8 @@ Documentation Style: http://doxygen.nl/manual/docblocks.html
 $ git rm --cached your_giant_file
 $ git commit --amend -CHEAD
 $ git push
+
+## Todo for Johannes
+- overwrite & Operator in Complex
+- buzzi added const Complex& für alle operatoren!
+- // magnitude shoud not be negative! i = ui.stringToNumber("-7.1e^(-i81.8)"); REQUIRE_FALSE(i.getMag() == Approx(-7.1)); REQUIRE(i.getPhi() == Approx(-81.8));

@@ -57,12 +57,12 @@ void Complex::setFromPolar(double mag, double phi)
 	}
 }
 
-double Complex::getMag()
+double Complex::getMag() const
 {
 	return sqrt((re*re + im * im));
 }
 
-double Complex::getPhi()
+double Complex::getPhi() const
 {
 	double help = (im / re);
 	if (re > 0.0) {
@@ -89,7 +89,7 @@ double Complex::getPhi()
 
 }
 
-Complex Complex::operator+(Complex summand)
+Complex Complex::operator+(const Complex& summand)
 {
 	Complex result;
 
@@ -99,7 +99,7 @@ Complex Complex::operator+(Complex summand)
 	return result;
 }
 
-Complex Complex::operator-(Complex minuend)
+Complex Complex::operator-(const Complex& minuend)
 {
 	Complex result;
 	result.re = re - minuend.re;
@@ -108,7 +108,7 @@ Complex Complex::operator-(Complex minuend)
 	return result;
 }
 
-Complex Complex::operator*(Complex multiplier)
+Complex Complex::operator*(const Complex& multiplier)
 {
 	Complex result;
 	result.re = (re*multiplier.re - im * multiplier.im);
@@ -116,7 +116,7 @@ Complex Complex::operator*(Complex multiplier)
 	return result;
 }
 
-Complex Complex::operator/(Complex divisor)
+Complex Complex::operator/(const Complex& divisor)
 {
 	Complex result;
 	result.re = (re*divisor.re + im * divisor.im) / (divisor.re*divisor.re + divisor.im*divisor.im);
@@ -125,7 +125,7 @@ Complex Complex::operator/(Complex divisor)
 }
 
 
-std::string Complex::ComplexToString()
+std::string Complex::ComplexToString() const
 {
 	std::stringstream fmt;
 	if (im == 0) {
@@ -147,12 +147,12 @@ std::string Complex::ComplexToString()
 	return fmt.str();
 }
 
-std::string Complex::ComplexToPolarString(Complex z)
+std::string Complex::ComplexToPolarString() const
 {
 
 	std::stringstream fmt;
 
-	fmt << z.getMag() << "e^(i" << z.getPhi() << ")";
+	fmt << getMag() << "e^(i" << getPhi() << ")";
 
 
 	return fmt.str();

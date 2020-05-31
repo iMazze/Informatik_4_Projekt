@@ -8,6 +8,8 @@
 #if !defined(EA_A0FEDFFD_417C_4d48_871A_EEA55FBAD715__INCLUDED_)
 #define EA_A0FEDFFD_417C_4d48_871A_EEA55FBAD715__INCLUDED_
 
+
+
 #include <math.h>
 #include <string>
 #include <iostream>
@@ -21,6 +23,7 @@
 #define M_PI_2 (3.14159265358979323846)/2 //PI/2
 #endif
 
+enum class E_Format { CARTESIAN, POLAR };
 
 
 
@@ -47,39 +50,39 @@ public:
 	//! set complex number given a complex Number in polar Form
 	void setFromPolar(double mag, double phi);
 	//! get magnitude of complex number 
-	double getMag();
+	double getMag() const;
 	//! get angle of complex number
-	double getPhi();
+	double getPhi() const;
 	//! Addition
 	/*!
 	z1 = a+bi
 	z2 = c+di
 	z1 + z2 = (a+b)+(c+d)i
 	*/
-	Complex operator+(Complex summand);
+	Complex operator+(const Complex& summand);
 	//! Substraction
 	/*!
 	z1 = a+bi
 	z2 = c+di
 	z1 - z2 = (a-b)+(c-d)i
 	*/
-	Complex operator-(Complex minuend);
+	Complex operator-(const Complex& minuend);
 	//! Multiplication
 	/*!
 	z1=a+bi
 	z2=c+di
 	z1*z2 = (ac-bd) + (ad+bc)i
 	*/
-	Complex operator*(Complex multiplier);
+	Complex operator*(const Complex& multiplier);
 	//! Division
 	/*!
 	z1 = a+bi
 	z2 = c+di
 	z1/z2 = (ac+bd)/(c^2+d^2) +(bc-ad)/(c^2+d^2)i
 	*/
-	Complex operator/(Complex divisor);
-	std::string ComplexToString();
-	std::string ComplexToPolarString(Complex z);
+	Complex operator/(const Complex& divisor);
+	std::string ComplexToString() const;
+	std::string ComplexToPolarString() const;
 	virtual ~Complex();
 
 };

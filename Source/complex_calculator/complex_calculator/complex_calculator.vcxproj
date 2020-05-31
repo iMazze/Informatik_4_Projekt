@@ -154,19 +154,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Calculation.cpp" />
+    <ClCompile Include="Calculator_Logic.cpp" />
     <ClCompile Include="Complex.cpp" />
     <ClCompile Include="complex_calculator.cpp" />
-    <ClCompile Include="Console_Handler.cpp" />
     <ClCompile Include="testing.cpp" />
-    <ClCompile Include="xml_io.cpp" />
+    <ClCompile Include="UI_Communication.cpp" />
+    <ClCompile Include="XML_Writer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\catch.hpp" />
+    <ClInclude Include="Calculation.h" />
+    <ClInclude Include="Calculator_Logic.h" />
     <ClInclude Include="Complex.h" />
-    <ClInclude Include="Console_Handler.h" />
-    <ClInclude Include="xml_io.h" />
+    <ClInclude Include="UI_Communication.h" />
+    <ClInclude Include="XML_Writer.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\README.md" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
