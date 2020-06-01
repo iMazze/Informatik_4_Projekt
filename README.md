@@ -30,5 +30,11 @@ $ git push
 
 ## Todo for Johannes
 - overwrite & Operator in Complex
+- const    statement 
 - buzzi added const Complex& für alle operatoren!
 - // magnitude shoud not be negative! i = ui.stringToNumber("-7.1e^(-i81.8)"); REQUIRE_FALSE(i.getMag() == Approx(-7.1)); REQUIRE(i.getPhi() == Approx(-81.8));
+
+## Todoooo for all
+- throw exceptions
+- Tests auf allen ebenen
+- Schichten -> UML

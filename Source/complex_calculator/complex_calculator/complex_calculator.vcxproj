@@ -167,6 +167,7 @@
     <ClInclude Include="Calculation.h" />
     <ClInclude Include="Calculator_Logic.h" />
     <ClInclude Include="Complex.h" />
+    <ClInclude Include="Messages.h" />
     <ClInclude Include="UI_Communication.h" />
     <ClInclude Include="XML_Writer.h" />
   </ItemGroup>

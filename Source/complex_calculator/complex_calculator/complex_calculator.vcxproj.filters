@@ -56,6 +56,9 @@
     <ClInclude Include="Calculator_Logic.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="Messages.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

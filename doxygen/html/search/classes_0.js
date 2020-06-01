@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['complex',['Complex',['../class_complex.html',1,'']]],
-  ['console_5fhandler',['Console_Handler',['../class_console___handler.html',1,'']]]
+  ['calculation',['Calculation',['../class_calculation.html',1,'']]],
+  ['calculator_5flogic',['Calculator_Logic',['../class_calculator___logic.html',1,'']]],
+  ['complex',['Complex',['../class_complex.html',1,'']]]
 ];

@@ -2,33 +2,87 @@
 \label{class_complex}\index{Complex@{Complex}}
 
 
+Class \mbox{\hyperlink{class_complex}{Complex}} represents a complex number.  
+
+
+
+
 {\ttfamily \#include $<$Complex.\+h$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_complex_a43b9f07cdf697c71b5fd506a6cc80b8f}{Complex}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em constructor to initialize z=0+0i \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_complex_a83d613f319cfea93b1a70c57801cdf80}{Complex}} (double re, double im)
+\begin{DoxyCompactList}\small\item\em constructor to initialize z = a+bi \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_complex_a7ce22596ad4401c8e7b90084661e1757}{Complex}} (const \mbox{\hyperlink{class_complex}{Complex}} \&Complex2)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_complex_a5e43de61a58eab8420b70eb2974e6b0b}{get\+Re}} ()
+\begin{DoxyCompactList}\small\item\em get Real Part \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_complex_adb777696a6536bae109ce0b1380493cb}{get\+Im}} ()
+\begin{DoxyCompactList}\small\item\em get immaginary Part \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_complex_af92157b54776656aea634edd4ecac46d}{set\+Re}} (double value)
+\begin{DoxyCompactList}\small\item\em set real Part \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_complex_a6bc88eb16ce2cf081ad0d6c0c5758f11}{set\+Im}} (double value)
+\begin{DoxyCompactList}\small\item\em set immaginary Part \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_complex_a507be49e963cbeab282f9c839a0eea40}{set\+From\+Polar}} (double mag, double phi)
+\begin{DoxyCompactList}\small\item\em set complex number given a complex Number in polar Form \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_complex_a58e5404efd8f49c034be2ab82af53461}{get\+Mag}} () const
+\begin{DoxyCompactList}\small\item\em get magnitude of complex number \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_complex_a4eb4ecde5a206cae05fd0b6500f22fff}{get\+Phi}} () const
+\begin{DoxyCompactList}\small\item\em get angle of complex number \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_complex}{Complex}} \mbox{\hyperlink{class_complex_a4c1189414fa16c6d8115c90ce2f29d78}{operator+}} (const \mbox{\hyperlink{class_complex}{Complex}} \&summand)
+\begin{DoxyCompactList}\small\item\em Addition. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_complex}{Complex}} \mbox{\hyperlink{class_complex_a8f880f1056308d876fd50aad9244e8d2}{operator-\/}} (const \mbox{\hyperlink{class_complex}{Complex}} \&minuend)
+\begin{DoxyCompactList}\small\item\em Substraction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_complex}{Complex}} \mbox{\hyperlink{class_complex_a99935ad84f8b979344d68485c42462c7}{operator$\ast$}} (const \mbox{\hyperlink{class_complex}{Complex}} \&multiplier)
+\begin{DoxyCompactList}\small\item\em Multiplication. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_complex}{Complex}} \mbox{\hyperlink{class_complex_a365fd33e7bc67fde80e79c514aab95bc}{operator/}} (const \mbox{\hyperlink{class_complex}{Complex}} \&divisor)
+\begin{DoxyCompactList}\small\item\em Division. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_complex_af125108c8589740c1b9893aaeae8e64b}{to\+String}} () const
+\begin{DoxyCompactList}\small\item\em Converts the complex number to an cartesian readable string. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_complex_acbec47c6e4b7538c6f1a1b4234f9cbf7}{to\+Polar\+String}} () const
+\begin{DoxyCompactList}\small\item\em Converts the complex number to an polar readable string. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_complex_a70e14b17c92e3da779686b98f9f3bb2d}{$\sim$\+Complex}} ()
-\item 
-float \mbox{\hyperlink{class_complex_a26e02af563661f5e4b77380a7d8acbd7}{get\+Imaginary}} ()
-\item 
-float \mbox{\hyperlink{class_complex_ad0a988b37190381e553616b1f56d29c7}{get\+Real}} ()
-\item 
-void \mbox{\hyperlink{class_complex_aabdc89fcb379b59ced6aedf12408e3f2}{set\+Imaginary}} (float value)
-\item 
-void \mbox{\hyperlink{class_complex_a5cc1fcf1428a62c4a775fe4625597fa5}{set\+Real}} (float value)
-\item 
-unsigned char \mbox{\hyperlink{class_complex_afd4253456f558ed0d1bce5f73af12670}{to\+String}} ()
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Class \mbox{\hyperlink{class_complex}{Complex}} represents a complex number. 
+
+Representing a complex number with real and imaginary part. Implements some basic maths operations and some print out functions. The number is stored as cartesian, but can be also used with polar coordinates. 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_complex_a43b9f07cdf697c71b5fd506a6cc80b8f}\label{class_complex_a43b9f07cdf697c71b5fd506a6cc80b8f}} 
 \index{Complex@{Complex}!Complex@{Complex}}
 \index{Complex@{Complex}!Complex@{Complex}}
-\subsubsection{\texorpdfstring{Complex()}{Complex()}}
+\subsubsection{\texorpdfstring{Complex()}{Complex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily Complex\+::\+Complex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+constructor to initialize z=0+0i 
+
+\mbox{\Hypertarget{class_complex_a83d613f319cfea93b1a70c57801cdf80}\label{class_complex_a83d613f319cfea93b1a70c57801cdf80}} 
+\index{Complex@{Complex}!Complex@{Complex}}
+\index{Complex@{Complex}!Complex@{Complex}}
+\subsubsection{\texorpdfstring{Complex()}{Complex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Complex\+::\+Complex (\begin{DoxyParamCaption}\item[{double}]{re,  }\item[{double}]{im }\end{DoxyParamCaption})}
+
+
+
+constructor to initialize z = a+bi 
+
+\mbox{\Hypertarget{class_complex_a7ce22596ad4401c8e7b90084661e1757}\label{class_complex_a7ce22596ad4401c8e7b90084661e1757}} 
+\index{Complex@{Complex}!Complex@{Complex}}
+\index{Complex@{Complex}!Complex@{Complex}}
+\subsubsection{\texorpdfstring{Complex()}{Complex()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Complex\+::\+Complex (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_complex}{Complex}} \&}]{Complex2 }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
 
 \mbox{\Hypertarget{class_complex_a70e14b17c92e3da779686b98f9f3bb2d}\label{class_complex_a70e14b17c92e3da779686b98f9f3bb2d}} 
 \index{Complex@{Complex}!````~Complex@{$\sim$\+Complex}}
@@ -39,35 +93,135 @@ unsigned char \mbox{\hyperlink{class_complex_afd4253456f558ed0d1bce5f73af12670}{
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_complex_a26e02af563661f5e4b77380a7d8acbd7}\label{class_complex_a26e02af563661f5e4b77380a7d8acbd7}} 
-\index{Complex@{Complex}!get\+Imaginary@{get\+Imaginary}}
-\index{get\+Imaginary@{get\+Imaginary}!Complex@{Complex}}
-\subsubsection{\texorpdfstring{get\+Imaginary()}{getImaginary()}}
-{\footnotesize\ttfamily float Complex\+::get\+Imaginary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_complex_adb777696a6536bae109ce0b1380493cb}\label{class_complex_adb777696a6536bae109ce0b1380493cb}} 
+\index{Complex@{Complex}!get\+Im@{get\+Im}}
+\index{get\+Im@{get\+Im}!Complex@{Complex}}
+\subsubsection{\texorpdfstring{get\+Im()}{getIm()}}
+{\footnotesize\ttfamily double Complex\+::get\+Im (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_complex_ad0a988b37190381e553616b1f56d29c7}\label{class_complex_ad0a988b37190381e553616b1f56d29c7}} 
-\index{Complex@{Complex}!get\+Real@{get\+Real}}
-\index{get\+Real@{get\+Real}!Complex@{Complex}}
-\subsubsection{\texorpdfstring{get\+Real()}{getReal()}}
-{\footnotesize\ttfamily float Complex\+::get\+Real (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_complex_aabdc89fcb379b59ced6aedf12408e3f2}\label{class_complex_aabdc89fcb379b59ced6aedf12408e3f2}} 
-\index{Complex@{Complex}!set\+Imaginary@{set\+Imaginary}}
-\index{set\+Imaginary@{set\+Imaginary}!Complex@{Complex}}
-\subsubsection{\texorpdfstring{set\+Imaginary()}{setImaginary()}}
-{\footnotesize\ttfamily void Complex\+::set\+Imaginary (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_complex_a5cc1fcf1428a62c4a775fe4625597fa5}\label{class_complex_a5cc1fcf1428a62c4a775fe4625597fa5}} 
-\index{Complex@{Complex}!set\+Real@{set\+Real}}
-\index{set\+Real@{set\+Real}!Complex@{Complex}}
-\subsubsection{\texorpdfstring{set\+Real()}{setReal()}}
-{\footnotesize\ttfamily void Complex\+::set\+Real (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+get immaginary Part 
 
-\mbox{\Hypertarget{class_complex_afd4253456f558ed0d1bce5f73af12670}\label{class_complex_afd4253456f558ed0d1bce5f73af12670}} 
+\mbox{\Hypertarget{class_complex_a58e5404efd8f49c034be2ab82af53461}\label{class_complex_a58e5404efd8f49c034be2ab82af53461}} 
+\index{Complex@{Complex}!get\+Mag@{get\+Mag}}
+\index{get\+Mag@{get\+Mag}!Complex@{Complex}}
+\subsubsection{\texorpdfstring{get\+Mag()}{getMag()}}
+{\footnotesize\ttfamily double Complex\+::get\+Mag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get magnitude of complex number 
+
+\mbox{\Hypertarget{class_complex_a4eb4ecde5a206cae05fd0b6500f22fff}\label{class_complex_a4eb4ecde5a206cae05fd0b6500f22fff}} 
+\index{Complex@{Complex}!get\+Phi@{get\+Phi}}
+\index{get\+Phi@{get\+Phi}!Complex@{Complex}}
+\subsubsection{\texorpdfstring{get\+Phi()}{getPhi()}}
+{\footnotesize\ttfamily double Complex\+::get\+Phi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get angle of complex number 
+
+\mbox{\Hypertarget{class_complex_a5e43de61a58eab8420b70eb2974e6b0b}\label{class_complex_a5e43de61a58eab8420b70eb2974e6b0b}} 
+\index{Complex@{Complex}!get\+Re@{get\+Re}}
+\index{get\+Re@{get\+Re}!Complex@{Complex}}
+\subsubsection{\texorpdfstring{get\+Re()}{getRe()}}
+{\footnotesize\ttfamily double Complex\+::get\+Re (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get Real Part 
+
+\mbox{\Hypertarget{class_complex_a99935ad84f8b979344d68485c42462c7}\label{class_complex_a99935ad84f8b979344d68485c42462c7}} 
+\index{Complex@{Complex}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Complex@{Complex}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_complex}{Complex}} Complex\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_complex}{Complex}} \&}]{multiplier }\end{DoxyParamCaption})}
+
+
+
+Multiplication. 
+
+z1=a+bi z2=c+di z1$\ast$z2 = (ac-\/bd) + (ad+bc)i \mbox{\Hypertarget{class_complex_a4c1189414fa16c6d8115c90ce2f29d78}\label{class_complex_a4c1189414fa16c6d8115c90ce2f29d78}} 
+\index{Complex@{Complex}!operator+@{operator+}}
+\index{operator+@{operator+}!Complex@{Complex}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_complex}{Complex}} Complex\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_complex}{Complex}} \&}]{summand }\end{DoxyParamCaption})}
+
+
+
+Addition. 
+
+z1 = a+bi z2 = c+di z1 + z2 = (a+b)+(c+d)i \mbox{\Hypertarget{class_complex_a8f880f1056308d876fd50aad9244e8d2}\label{class_complex_a8f880f1056308d876fd50aad9244e8d2}} 
+\index{Complex@{Complex}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Complex@{Complex}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_complex}{Complex}} Complex\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_complex}{Complex}} \&}]{minuend }\end{DoxyParamCaption})}
+
+
+
+Substraction. 
+
+z1 = a+bi z2 = c+di z1 -\/ z2 = (a-\/b)+(c-\/d)i \mbox{\Hypertarget{class_complex_a365fd33e7bc67fde80e79c514aab95bc}\label{class_complex_a365fd33e7bc67fde80e79c514aab95bc}} 
+\index{Complex@{Complex}!operator/@{operator/}}
+\index{operator/@{operator/}!Complex@{Complex}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_complex}{Complex}} Complex\+::operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_complex}{Complex}} \&}]{divisor }\end{DoxyParamCaption})}
+
+
+
+Division. 
+
+z1 = a+bi z2 = c+di z1/z2 = (ac+bd)/(c$^\wedge$2+d$^\wedge$2) +(bc-\/ad)/(c$^\wedge$2+d$^\wedge$2)i \mbox{\Hypertarget{class_complex_a507be49e963cbeab282f9c839a0eea40}\label{class_complex_a507be49e963cbeab282f9c839a0eea40}} 
+\index{Complex@{Complex}!set\+From\+Polar@{set\+From\+Polar}}
+\index{set\+From\+Polar@{set\+From\+Polar}!Complex@{Complex}}
+\subsubsection{\texorpdfstring{set\+From\+Polar()}{setFromPolar()}}
+{\footnotesize\ttfamily void Complex\+::set\+From\+Polar (\begin{DoxyParamCaption}\item[{double}]{mag,  }\item[{double}]{phi }\end{DoxyParamCaption})}
+
+
+
+set complex number given a complex Number in polar Form 
+
+\mbox{\Hypertarget{class_complex_a6bc88eb16ce2cf081ad0d6c0c5758f11}\label{class_complex_a6bc88eb16ce2cf081ad0d6c0c5758f11}} 
+\index{Complex@{Complex}!set\+Im@{set\+Im}}
+\index{set\+Im@{set\+Im}!Complex@{Complex}}
+\subsubsection{\texorpdfstring{set\+Im()}{setIm()}}
+{\footnotesize\ttfamily void Complex\+::set\+Im (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
+
+
+
+set immaginary Part 
+
+\mbox{\Hypertarget{class_complex_af92157b54776656aea634edd4ecac46d}\label{class_complex_af92157b54776656aea634edd4ecac46d}} 
+\index{Complex@{Complex}!set\+Re@{set\+Re}}
+\index{set\+Re@{set\+Re}!Complex@{Complex}}
+\subsubsection{\texorpdfstring{set\+Re()}{setRe()}}
+{\footnotesize\ttfamily void Complex\+::set\+Re (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
+
+
+
+set real Part 
+
+\mbox{\Hypertarget{class_complex_acbec47c6e4b7538c6f1a1b4234f9cbf7}\label{class_complex_acbec47c6e4b7538c6f1a1b4234f9cbf7}} 
+\index{Complex@{Complex}!to\+Polar\+String@{to\+Polar\+String}}
+\index{to\+Polar\+String@{to\+Polar\+String}!Complex@{Complex}}
+\subsubsection{\texorpdfstring{to\+Polar\+String()}{toPolarString()}}
+{\footnotesize\ttfamily std\+::string Complex\+::to\+Polar\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Converts the complex number to an polar readable string. 
+
+\mbox{\Hypertarget{class_complex_af125108c8589740c1b9893aaeae8e64b}\label{class_complex_af125108c8589740c1b9893aaeae8e64b}} 
 \index{Complex@{Complex}!to\+String@{to\+String}}
 \index{to\+String@{to\+String}!Complex@{Complex}}
 \subsubsection{\texorpdfstring{to\+String()}{toString()}}
-{\footnotesize\ttfamily unsigned char Complex\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::string Complex\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Converts the complex number to an cartesian readable string. 
 
 
 

@@ -1,14 +1,11 @@
-///////////////////////////////////////////////////////////
-//  Complex.h
-//  Implementation of the Class Complex
-//  Created on:      07-Mai-2020 12:06:36
-//  Original author: Maximilian Klug
-///////////////////////////////////////////////////////////
-
+/**
+ * @file Complex.h
+ *
+ * @brief Represents a Complex number
+ * @author Johannes Eberle
+ */
 #if !defined(EA_A0FEDFFD_417C_4d48_871A_EEA55FBAD715__INCLUDED_)
 #define EA_A0FEDFFD_417C_4d48_871A_EEA55FBAD715__INCLUDED_
-
-
 
 #include <math.h>
 #include <string>
@@ -20,13 +17,17 @@
 #endif
 
 #ifndef M_PI_2
-#define M_PI_2 (3.14159265358979323846)/2 //PI/2
+#define M_PI_2 M_PI/2 //PI/2
 #endif
 
+ //!  Enum for deciding betwen cartesian or polar format
 enum class E_Format { CARTESIAN, POLAR };
 
-
-
+//!  Class Complex represents a complex number. 
+/*!
+  Representing a complex number with real and imaginary part. Implements some basic maths operations and some print out functions.
+  The number is stored as cartesian, but can be also used with polar coordinates.
+*/
 class Complex
 {
 private:
@@ -81,8 +82,13 @@ public:
 	z1/z2 = (ac+bd)/(c^2+d^2) +(bc-ad)/(c^2+d^2)i
 	*/
 	Complex operator/(const Complex& divisor);
-	std::string ComplexToString() const;
-	std::string ComplexToPolarString() const;
+
+	//!  Converts the complex number to an cartesian readable string
+	std::string toString() const;
+
+	//!  Converts the complex number to an polar readable string
+	std::string toPolarString() const;
+
 	virtual ~Complex();
 
 };

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['read_5fxmldoc',['read_xmldoc',['../xml__io_8cpp.html#ad3714b28763f3a6b3bcc936bdaf22e4f',1,'xml_io.cpp']]]
+  ['main',['main',['../complex__calculator_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'complex_calculator.cpp']]],
+  ['makexml',['makeXML',['../class_calculator___logic.html#acbfb4467582baf8386d841b8ea1e7f7b',1,'Calculator_Logic']]],
+  ['multiply',['multiply',['../class_calculation.html#ad83eb07a25a6ed6c5d09160a4ed0fb5c',1,'Calculation']]]
 ];

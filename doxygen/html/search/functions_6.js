@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['test_5fclass',['TEST_CLASS',['../namespacecomplex__calculator__test.html#ae3054d8337f87242e78ca38644ad504e',1,'complex_calculator_test']]],
-  ['testfunktion',['testfunktion',['../class_console___handler.html#a65e35994c0241d259c24f55069009c85',1,'Console_Handler']]],
-  ['tostring',['toString',['../class_complex.html#afd4253456f558ed0d1bce5f73af12670',1,'Complex']]]
+  ['readformat',['readFormat',['../class_u_i___communication.html#a05dcd3ca7e560c0e09b1174ca7e8d727',1,'UI_Communication']]],
+  ['readnumber',['readNumber',['../class_u_i___communication.html#ab148ad16ca061fc9235f5950ec0aff85',1,'UI_Communication']]],
+  ['readoperation',['readOperation',['../class_u_i___communication.html#a53c5898becc61bc725b6c3a648719b42',1,'UI_Communication']]]
 ];

@@ -1,19 +1,13 @@
 var searchData=
 [
-  ['table_20and_20array_20functions',['Table and Array Functions',['../group__apr__tables.html',1,'']]],
-  ['threads_20and_20process_20functions',['Threads and Process Functions',['../group__apr__thread__proc.html',1,'']]],
-  ['time_20routines',['Time Routines',['../group__apr__time.html',1,'']]],
-  ['tm_5fgmtoff',['tm_gmtoff',['../structapr__time__exp__t.html#a1102ca16ed70b1c707473431eed58d7b',1,'apr_time_exp_t']]],
-  ['tm_5fhour',['tm_hour',['../structapr__time__exp__t.html#a2dbab1d10ed6234c8e9e714e13b7911c',1,'apr_time_exp_t']]],
-  ['tm_5fisdst',['tm_isdst',['../structapr__time__exp__t.html#a4d899f1fb9fde3c6b6893941fa81b1c8',1,'apr_time_exp_t']]],
-  ['tm_5fmday',['tm_mday',['../structapr__time__exp__t.html#a6c09a274f011841e9e988c3c9504848a',1,'apr_time_exp_t']]],
-  ['tm_5fmin',['tm_min',['../structapr__time__exp__t.html#a56a380db482ba5b2bef43351faad27fb',1,'apr_time_exp_t']]],
-  ['tm_5fmon',['tm_mon',['../structapr__time__exp__t.html#a746f38956dfeb6be3bd17282791e3577',1,'apr_time_exp_t']]],
-  ['tm_5fsec',['tm_sec',['../structapr__time__exp__t.html#a2c29c99a75b55237917cb05ebae6706c',1,'apr_time_exp_t']]],
-  ['tm_5fusec',['tm_usec',['../structapr__time__exp__t.html#ac5f11e3c1f5a30d357df2108296a8d30',1,'apr_time_exp_t']]],
-  ['tm_5fwday',['tm_wday',['../structapr__time__exp__t.html#a57e892bbf3c52df34dcff2c6a9f1adbf',1,'apr_time_exp_t']]],
-  ['tm_5fyday',['tm_yday',['../structapr__time__exp__t.html#aa15c7ab0d7e2a974e89cc1470f1583ab',1,'apr_time_exp_t']]],
-  ['tm_5fyear',['tm_year',['../structapr__time__exp__t.html#a35c32245be49279a6689e34bcd6e534a',1,'apr_time_exp_t']]],
-  ['trailers',['trailers',['../structapr__hdtr__t.html#a538387cfa0065abc2bfa6ba7393fa3ee',1,'apr_hdtr_t']]],
-  ['type',['type',['../structapr__os__sock__info__t.html#a248fb394cd644b31619f44de0936aa04',1,'apr_os_sock_info_t']]]
+  ['ui_5fcommunication',['UI_Communication',['../class_u_i___communication.html',1,'UI_Communication'],['../class_u_i___communication.html#aa7f9e5d5a946a33469e8a76e1fdbdec8',1,'UI_Communication::UI_Communication()']]],
+  ['ui_5fcommunication_2ecpp',['UI_Communication.cpp',['../_u_i___communication_8cpp.html',1,'']]],
+  ['ui_5fcommunication_2eh',['UI_Communication.h',['../_u_i___communication_8h.html',1,'']]],
+  ['unaryexpr',['UnaryExpr',['../class_catch_1_1_unary_expr.html',1,'Catch::UnaryExpr&lt; LhsT &gt;'],['../class_catch_1_1_unary_expr.html#ae02f666a1e64da728628aa2033e1d6e7',1,'Catch::UnaryExpr::UnaryExpr()']]],
+  ['unknown',['Unknown',['../struct_catch_1_1_result_was.html#a624e1ee3661fcf6094ceef1f654601efa65721dda02fe5efb522e7449e496608a',1,'Catch::ResultWas']]],
+  ['unorderedequals',['UnorderedEquals',['../namespace_catch_1_1_matchers.html#aa1955107efa02ee9e0a9f2db9c160f1f',1,'Catch::Matchers']]],
+  ['unorderedequalsmatcher',['UnorderedEqualsMatcher',['../struct_catch_1_1_matchers_1_1_vector_1_1_unordered_equals_matcher.html',1,'Catch::Matchers::Vector::UnorderedEqualsMatcher&lt; T, AllocComp, AllocMatch &gt;'],['../struct_catch_1_1_matchers_1_1_vector_1_1_unordered_equals_matcher.html#ab78e6bbbad05472815a695650edc062c',1,'Catch::Matchers::Vector::UnorderedEqualsMatcher::UnorderedEqualsMatcher()']]],
+  ['unprintablestring',['unprintableString',['../namespace_catch_1_1_detail.html#a466775f4eec29ffef29ab334cd885136',1,'Catch::Detail']]],
+  ['unscoped_5finfo',['UNSCOPED_INFO',['../catch_8hpp.html#a8dd723bbdb751f1c2f3af8c4f264b7a3',1,'catch.hpp']]],
+  ['usecolour',['UseColour',['../struct_catch_1_1_use_colour.html',1,'Catch::UseColour'],['../struct_catch_1_1_i_config.html#a87ec19a6b486eb5b5015cf7738fee026',1,'Catch::IConfig::useColour()']]]
 ];

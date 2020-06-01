@@ -1,1 +1,51 @@
-Documentation Style\+: \href{http://doxygen.nl/manual/docblocks.html}{\tt http\+://doxygen.\+nl/manual/docblocks.\+html} 
+\subsection*{Aufgabenstellung}
+
+Rechner für komplexe Zahlen
+\begin{DoxyItemize}
+\item Einlesen einer komplexen Zahl über die Konsole (Koeffizienten O\+D\+ER Exponential-\/ Darstellung)
+\item Einlesen einer zweiten komplexen Zahl über die Konsole (Koeffizienten O\+D\+ER Exponential-\/ Darstellung)
+\item Verarbeitung der beiden Zahlen (Grundrechenarten)
+\item Speicherung von Eingaben und Ergebnis als X\+ML (Koeffizienten-\/ U\+ND Exponential-\/ Darstellung)
+\item Ausgabe des Ergebnisses über die Konsole (mit Nachfrage, ob Koeffizienten O\+D\+ER Exponential-\/\+Darstellung)
+\end{DoxyItemize}
+
+Anstöße\+:
+\begin{DoxyItemize}
+\item Empfohlene X\+M\+L-\/\+Bibliothek\+: Lib\+Xml2 (via Nu\+Get)
+\item Einlesen/\+Ausgabe und BL als Bibliotheken/\+Module des Hauptprogramms
+\end{DoxyItemize}
+
+\subsection*{Conventions}
+
+Documentation Style\+: \href{http://doxygen.nl/manual/docblocks.html}{\tt http\+://doxygen.\+nl/manual/docblocks.\+html}
+
+\subsection*{Diagramme}
+
+$<$object data=\char`\"{}http\+://yoursite.\+com/the.\+pdf\char`\"{} type=\char`\"{}application/pdf\char`\"{} width=\char`\"{}700px\char`\"{} height=\char`\"{}700px\char`\"{}$>$ $<$embed src=\char`\"{}http\+://yoursite.\+com/the.\+pdf\char`\"{}$>$ 
+
+This browser does not support P\+D\+Fs. Please download the P\+DF to view it\+: \href{http://yoursite.com/the.pdf}{\tt Download P\+DF}.
+
+$<$/embed$>$ $<$/object$>$
+
+\subsection*{push Files with size$>$100\+Mbits\+:}
+
+\$ git rm --cached your\+\_\+giant\+\_\+file \$ git commit --amend -\/\+C\+H\+E\+AD \$ git push
+
+\subsection*{Todo for Johannes}
+
+
+\begin{DoxyItemize}
+\item overwrite \& Operator in \mbox{\hyperlink{class_complex}{Complex}}
+\item const statement
+\item buzzi added const \mbox{\hyperlink{class_complex}{Complex}}\& für alle operatoren!
+\item // magnitude shoud not be negative! i = ui.\+string\+To\+Number(\char`\"{}-\/7.\+1e$^\wedge$(-\/i81.\+8)\char`\"{}); R\+E\+Q\+U\+I\+R\+E\+\_\+\+F\+A\+L\+SE(i.\+get\+Mag() == Approx(-\/7.\+1)); R\+E\+Q\+U\+I\+RE(i.\+get\+Phi() == Approx(-\/81.\+8));
+\end{DoxyItemize}
+
+\subsection*{Todoooo for all}
+
+
+\begin{DoxyItemize}
+\item throw exceptions
+\item Tests auf allen ebenen
+\item Schichten -\/$>$ U\+ML 
+\end{DoxyItemize}

@@ -1,10 +1,3 @@
-//////////////////////////////////////////////////////////
-//  Complex.cpp
-//  Implementation of the Class Complex
-//  Created on:      07-Mai-2020 12:06:36
-//  Original author: Maximilian Klug
-///////////////////////////////////////////////////////////
-
 #include "Complex.h"
 #include <sstream>
 
@@ -125,7 +118,7 @@ Complex Complex::operator/(const Complex& divisor)
 }
 
 
-std::string Complex::ComplexToString() const
+std::string Complex::toString() const
 {
 	std::stringstream fmt;
 	if (im == 0) {
@@ -147,7 +140,7 @@ std::string Complex::ComplexToString() const
 	return fmt.str();
 }
 
-std::string Complex::ComplexToPolarString() const
+std::string Complex::toPolarString() const
 {
 
 	std::stringstream fmt;

@@ -1,6 +1,7 @@
 #include "UI_Communication.h"
 #include <algorithm> // for replace string
-
+#include "Messages.h"
+#include <exception>
 
 Complex UI_Communication::stringToNumber(const std::string & str)
 {
@@ -45,6 +46,7 @@ Complex UI_Communication::stringToNumber(const std::string & str)
 			else
 			{
 				// error
+				throw std::exception();
 			}
 		}
 		
@@ -101,6 +103,7 @@ E_Format UI_Communication::stringToFormat(const std::string & str)
 	else
 	{
 		// error;
+		throw std::exception();
 	}
 
 	return format;
@@ -108,7 +111,7 @@ E_Format UI_Communication::stringToFormat(const std::string & str)
 
 E_Operation UI_Communication::stringToOperation(const std::string & str)
 {
-	E_Operation op;
+	E_Operation op = E_Operation::NONE;
 
 	if (str.find("add") != std::string::npos ||
 		str.find("+") != std::string::npos)
@@ -133,6 +136,7 @@ E_Operation UI_Communication::stringToOperation(const std::string & str)
 	else
 	{
 		// error;
+		throw std::exception();
 	}
 
 	return op;
@@ -142,25 +146,15 @@ UI_Communication::UI_Communication()
 {
 }
 
-Complex UI_Communication::readNumber()
-{
-	std::string input;
-	writeText("Please input the number. Either format cartesian(1+7i) or polar (7.1e^(i81.8))!");
-
-	std::cin >> input;
-
-	return stringToNumber(input);
-}
-
 void UI_Communication::writeNumber(const Complex & number, E_Format format)
 {
 	if (format == E_Format::CARTESIAN)
 	{
-		std::cout <<number.ComplexToString();
+		std::cout <<number.toString();
 	}
 	else
 	{
-		std::cout << number.ComplexToPolarString();
+		std::cout << number.toPolarString();
 	}
 	
 	std::cout << std::endl;
@@ -175,7 +169,7 @@ void UI_Communication::writeText(const std::string & text)
 E_Format UI_Communication::readFormat()
 {
 	std::string input;
-	writeText("Please input the format. Either cartesian or polar!");
+	writeText(MSG_READ_FORMAT);
 
 	std::cin >> input;
 	
@@ -185,11 +179,23 @@ E_Format UI_Communication::readFormat()
 E_Operation UI_Communication::readOperation()
 {
 	std::string input;
-	writeText("Please input the operation. Either + - * /!");
+	writeText(MSG_READ_OPERATION);
 
 	std::cin >> input;
 
 	return stringToOperation(input);
 }
+
+Complex UI_Communication::readNumber()
+{
+	std::string input;
+	writeText(MSG_READ_NUMBER);
+
+	std::cin >> input;
+
+	return stringToNumber(input);
+}
+
+
 
 

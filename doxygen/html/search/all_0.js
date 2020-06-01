@@ -1,12 +1,5 @@
 var searchData=
 [
-  ['complex',['Complex',['../class_complex.html',1,'Complex'],['../class_complex.html#a43b9f07cdf697c71b5fd506a6cc80b8f',1,'Complex::Complex()']]],
-  ['complex_2ecpp',['Complex.cpp',['../_complex_8cpp.html',1,'']]],
-  ['complex_2eh',['Complex.h',['../_complex_8h.html',1,'']]],
-  ['complex_5fcalculator_2ecpp',['complex_calculator.cpp',['../complex__calculator_8cpp.html',1,'']]],
-  ['complex_5fcalculator_5ftest',['complex_calculator_test',['../namespacecomplex__calculator__test.html',1,'']]],
-  ['console_5fhandler',['Console_Handler',['../class_console___handler.html',1,'Console_Handler'],['../class_console___handler.html#a2bb80d1e1c03134cd46977bed0bc43e9',1,'Console_Handler::Console_Handler()']]],
-  ['console_5fhandler_2ecpp',['Console_Handler.cpp',['../_console___handler_8cpp.html',1,'']]],
-  ['console_5fhandler_2eh',['Console_Handler.h',['../_console___handler_8h.html',1,'']]],
-  ['create_5fxmldoc',['create_xmldoc',['../xml__io_8cpp.html#abd63cdb170ffaa12a821642e68b95d4c',1,'xml_io.cpp']]]
+  ['add',['add',['../class_calculation.html#ab55212dfa6fb55cee8ab258a8f7472a1',1,'Calculation::add()'],['../_calculation_8h.html#a57e7c508a7a8b39e59743eb5a00b2ef7a9eeb52badb613229884838847294b90d',1,'ADD():&#160;Calculation.h']]],
+  ['addcomplexcalculation',['addComplexCalculation',['../class_x_m_l___writer.html#a4fb5ce350559fcfd8142fb8c9f31325e',1,'XML_Writer']]]
 ];

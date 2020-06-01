@@ -1,13 +1,11 @@
-#define CATCH_CONFIG_MAIN
-
+// Define if you want to use only catch2
+//#define CATCH_CONFIG_MAIN
 #include "catch.hpp"
 #include "Complex.h"
 #include "Calculation.h"
 #include "XML_Writer.h"
 #include "UI_Communication.h"
 #include "Calculator_Logic.h"
-
-
 
 
 Complex z1;
@@ -203,7 +201,7 @@ TEST_CASE("Unit Test: class XML_WRITER") {
 		writer.addComplexCalculation(*r2);
 		writer.addComplexCalculation(*r3);
 
-		writer.writeCalculationsToXML();
+		REQUIRE_NOTHROW(writer.writeCalculationsToXML("test123.xml"));
 	}
 }
 
@@ -274,7 +272,7 @@ TEST_CASE("Unit Test: class UI_Communication") {
 			i = ui.stringToNumber("7.1e^(i-81.8)");
 			REQUIRE(i.getMag() == Approx(7.1)); REQUIRE(i.getPhi() == Approx(-81.8));
 
-
+			// Todo Johannes
 			// magnitude shoud not be negative!
 			//i = ui.stringToNumber("-7.1e^(-i81.8)");
 			//REQUIRE_FALSE(i.getMag() == Approx(-7.1)); REQUIRE(i.getPhi() == Approx(-81.8));
@@ -332,6 +330,8 @@ TEST_CASE("Unit Test: class UI_Communication") {
 			// dafür ist er zu dumm
 			//i = ui.stringToNumber("(7.1)+i(-81.8)");
 			//REQUIRE(i.getRe() == Approx(7.1)); REQUIRE(i.getIm() == Approx(-81.8));
+			//i = ui.stringToNumber("+(-7.1)+i(-81.8)");
+			//REQUIRE(i.getRe() == Approx(7.1)); REQUIRE(i.getIm() == Approx(-81.8));
 
 			i = ui.stringToNumber("-(7.1)-i(81.8)");
 			REQUIRE(i.getRe() == Approx(-7.1)); REQUIRE(i.getIm() == Approx(-81.8));
@@ -343,9 +343,6 @@ TEST_CASE("Unit Test: class UI_Communication") {
 
 TEST_CASE("Unit Test: class Calculator_Logic") {
 	Calculator_Logic c;
-	c.doCalculation();
-	c.doCalculation();
-	c.makeXML();
+	//c.doCalculation();
+	//c.makeXML();
 }
-
-

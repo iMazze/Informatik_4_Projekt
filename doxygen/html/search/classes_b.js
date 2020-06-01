@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['waiter_5ft',['waiter_t',['../structwaiter__t.html',1,'']]]
+  ['option',['Option',['../class_catch_1_1_option.html',1,'Catch']]]
 ];

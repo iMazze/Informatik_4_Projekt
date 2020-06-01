@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['local',['local',['../structapr__os__sock__info__t.html#afaf470560cbc3088479af708878aa086',1,'apr_os_sock_info_t']]]
+  ['resultdisposition',['resultDisposition',['../struct_catch_1_1_assertion_info.html#a60353b3632ab2f827162f2b2d6911073',1,'Catch::AssertionInfo']]]
 ];

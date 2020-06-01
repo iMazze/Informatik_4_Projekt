@@ -70,28 +70,70 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Class <a class="el" href="class_complex.html" title="Class Complex represents a complex number. ">Complex</a> represents a complex number.  
+ <a href="class_complex.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_complex_8h_source.html">Complex.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a43b9f07cdf697c71b5fd506a6cc80b8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex.html#a43b9f07cdf697c71b5fd506a6cc80b8f">Complex</a> ()</td></tr>
+<tr class="memdesc:a43b9f07cdf697c71b5fd506a6cc80b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor to initialize z=0+0i  <a href="#a43b9f07cdf697c71b5fd506a6cc80b8f">More...</a><br /></td></tr>
 <tr class="separator:a43b9f07cdf697c71b5fd506a6cc80b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83d613f319cfea93b1a70c57801cdf80"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex.html#a83d613f319cfea93b1a70c57801cdf80">Complex</a> (double re, double im)</td></tr>
+<tr class="memdesc:a83d613f319cfea93b1a70c57801cdf80"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor to initialize z = a+bi  <a href="#a83d613f319cfea93b1a70c57801cdf80">More...</a><br /></td></tr>
+<tr class="separator:a83d613f319cfea93b1a70c57801cdf80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ce22596ad4401c8e7b90084661e1757"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex.html#a7ce22596ad4401c8e7b90084661e1757">Complex</a> (const <a class="el" href="class_complex.html">Complex</a> &amp;Complex2)</td></tr>
+<tr class="memdesc:a7ce22596ad4401c8e7b90084661e1757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#a7ce22596ad4401c8e7b90084661e1757">More...</a><br /></td></tr>
+<tr class="separator:a7ce22596ad4401c8e7b90084661e1757"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e43de61a58eab8420b70eb2974e6b0b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex.html#a5e43de61a58eab8420b70eb2974e6b0b">getRe</a> ()</td></tr>
+<tr class="memdesc:a5e43de61a58eab8420b70eb2974e6b0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">get Real Part  <a href="#a5e43de61a58eab8420b70eb2974e6b0b">More...</a><br /></td></tr>
+<tr class="separator:a5e43de61a58eab8420b70eb2974e6b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb777696a6536bae109ce0b1380493cb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex.html#adb777696a6536bae109ce0b1380493cb">getIm</a> ()</td></tr>
+<tr class="memdesc:adb777696a6536bae109ce0b1380493cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">get immaginary Part  <a href="#adb777696a6536bae109ce0b1380493cb">More...</a><br /></td></tr>
+<tr class="separator:adb777696a6536bae109ce0b1380493cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af92157b54776656aea634edd4ecac46d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex.html#af92157b54776656aea634edd4ecac46d">setRe</a> (double value)</td></tr>
+<tr class="memdesc:af92157b54776656aea634edd4ecac46d"><td class="mdescLeft">&#160;</td><td class="mdescRight">set real Part  <a href="#af92157b54776656aea634edd4ecac46d">More...</a><br /></td></tr>
+<tr class="separator:af92157b54776656aea634edd4ecac46d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bc88eb16ce2cf081ad0d6c0c5758f11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex.html#a6bc88eb16ce2cf081ad0d6c0c5758f11">setIm</a> (double value)</td></tr>
+<tr class="memdesc:a6bc88eb16ce2cf081ad0d6c0c5758f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">set immaginary Part  <a href="#a6bc88eb16ce2cf081ad0d6c0c5758f11">More...</a><br /></td></tr>
+<tr class="separator:a6bc88eb16ce2cf081ad0d6c0c5758f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a507be49e963cbeab282f9c839a0eea40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex.html#a507be49e963cbeab282f9c839a0eea40">setFromPolar</a> (double mag, double phi)</td></tr>
+<tr class="memdesc:a507be49e963cbeab282f9c839a0eea40"><td class="mdescLeft">&#160;</td><td class="mdescRight">set complex number given a complex Number in polar Form  <a href="#a507be49e963cbeab282f9c839a0eea40">More...</a><br /></td></tr>
+<tr class="separator:a507be49e963cbeab282f9c839a0eea40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58e5404efd8f49c034be2ab82af53461"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex.html#a58e5404efd8f49c034be2ab82af53461">getMag</a> () const</td></tr>
+<tr class="memdesc:a58e5404efd8f49c034be2ab82af53461"><td class="mdescLeft">&#160;</td><td class="mdescRight">get magnitude of complex number  <a href="#a58e5404efd8f49c034be2ab82af53461">More...</a><br /></td></tr>
+<tr class="separator:a58e5404efd8f49c034be2ab82af53461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eb4ecde5a206cae05fd0b6500f22fff"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex.html#a4eb4ecde5a206cae05fd0b6500f22fff">getPhi</a> () const</td></tr>
+<tr class="memdesc:a4eb4ecde5a206cae05fd0b6500f22fff"><td class="mdescLeft">&#160;</td><td class="mdescRight">get angle of complex number  <a href="#a4eb4ecde5a206cae05fd0b6500f22fff">More...</a><br /></td></tr>
+<tr class="separator:a4eb4ecde5a206cae05fd0b6500f22fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c1189414fa16c6d8115c90ce2f29d78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_complex.html">Complex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex.html#a4c1189414fa16c6d8115c90ce2f29d78">operator+</a> (const <a class="el" href="class_complex.html">Complex</a> &amp;summand)</td></tr>
+<tr class="memdesc:a4c1189414fa16c6d8115c90ce2f29d78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Addition.  <a href="#a4c1189414fa16c6d8115c90ce2f29d78">More...</a><br /></td></tr>
+<tr class="separator:a4c1189414fa16c6d8115c90ce2f29d78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f880f1056308d876fd50aad9244e8d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_complex.html">Complex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex.html#a8f880f1056308d876fd50aad9244e8d2">operator-</a> (const <a class="el" href="class_complex.html">Complex</a> &amp;minuend)</td></tr>
+<tr class="memdesc:a8f880f1056308d876fd50aad9244e8d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substraction.  <a href="#a8f880f1056308d876fd50aad9244e8d2">More...</a><br /></td></tr>
+<tr class="separator:a8f880f1056308d876fd50aad9244e8d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99935ad84f8b979344d68485c42462c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_complex.html">Complex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex.html#a99935ad84f8b979344d68485c42462c7">operator*</a> (const <a class="el" href="class_complex.html">Complex</a> &amp;multiplier)</td></tr>
+<tr class="memdesc:a99935ad84f8b979344d68485c42462c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplication.  <a href="#a99935ad84f8b979344d68485c42462c7">More...</a><br /></td></tr>
+<tr class="separator:a99935ad84f8b979344d68485c42462c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a365fd33e7bc67fde80e79c514aab95bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_complex.html">Complex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex.html#a365fd33e7bc67fde80e79c514aab95bc">operator/</a> (const <a class="el" href="class_complex.html">Complex</a> &amp;divisor)</td></tr>
+<tr class="memdesc:a365fd33e7bc67fde80e79c514aab95bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Division.  <a href="#a365fd33e7bc67fde80e79c514aab95bc">More...</a><br /></td></tr>
+<tr class="separator:a365fd33e7bc67fde80e79c514aab95bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af125108c8589740c1b9893aaeae8e64b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex.html#af125108c8589740c1b9893aaeae8e64b">toString</a> () const</td></tr>
+<tr class="memdesc:af125108c8589740c1b9893aaeae8e64b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the complex number to an cartesian readable string.  <a href="#af125108c8589740c1b9893aaeae8e64b">More...</a><br /></td></tr>
+<tr class="separator:af125108c8589740c1b9893aaeae8e64b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbec47c6e4b7538c6f1a1b4234f9cbf7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex.html#acbec47c6e4b7538c6f1a1b4234f9cbf7">toPolarString</a> () const</td></tr>
+<tr class="memdesc:acbec47c6e4b7538c6f1a1b4234f9cbf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the complex number to an polar readable string.  <a href="#acbec47c6e4b7538c6f1a1b4234f9cbf7">More...</a><br /></td></tr>
+<tr class="separator:acbec47c6e4b7538c6f1a1b4234f9cbf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70e14b17c92e3da779686b98f9f3bb2d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex.html#a70e14b17c92e3da779686b98f9f3bb2d">~Complex</a> ()</td></tr>
 <tr class="separator:a70e14b17c92e3da779686b98f9f3bb2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26e02af563661f5e4b77380a7d8acbd7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex.html#a26e02af563661f5e4b77380a7d8acbd7">getImaginary</a> ()</td></tr>
-<tr class="separator:a26e02af563661f5e4b77380a7d8acbd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0a988b37190381e553616b1f56d29c7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex.html#ad0a988b37190381e553616b1f56d29c7">getReal</a> ()</td></tr>
-<tr class="separator:ad0a988b37190381e553616b1f56d29c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabdc89fcb379b59ced6aedf12408e3f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex.html#aabdc89fcb379b59ced6aedf12408e3f2">setImaginary</a> (float value)</td></tr>
-<tr class="separator:aabdc89fcb379b59ced6aedf12408e3f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cc1fcf1428a62c4a775fe4625597fa5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex.html#a5cc1fcf1428a62c4a775fe4625597fa5">setReal</a> (float value)</td></tr>
-<tr class="separator:a5cc1fcf1428a62c4a775fe4625597fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd4253456f558ed0d1bce5f73af12670"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex.html#afd4253456f558ed0d1bce5f73af12670">toString</a> ()</td></tr>
-<tr class="separator:afd4253456f558ed0d1bce5f73af12670"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class <a class="el" href="class_complex.html" title="Class Complex represents a complex number. ">Complex</a> represents a complex number. </p>
+<p>Representing a complex number with real and imaginary part. Implements some basic maths operations and some print out functions. The number is stored as cartesian, but can be also used with polar coordinates. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a43b9f07cdf697c71b5fd506a6cc80b8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43b9f07cdf697c71b5fd506a6cc80b8f">&#9670;&nbsp;</a></span>Complex()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a43b9f07cdf697c71b5fd506a6cc80b8f">&#9670;&nbsp;</a></span>Complex() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -104,6 +146,58 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>constructor to initialize z=0+0i </p>
+
+</div>
+</div>
+<a id="a83d613f319cfea93b1a70c57801cdf80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83d613f319cfea93b1a70c57801cdf80">&#9670;&nbsp;</a></span>Complex() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Complex::Complex </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>re</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>im</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constructor to initialize z = a+bi </p>
+
+</div>
+</div>
+<a id="a7ce22596ad4401c8e7b90084661e1757"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ce22596ad4401c8e7b90084661e1757">&#9670;&nbsp;</a></span>Complex() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Complex::Complex </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_complex.html">Complex</a> &amp;&#160;</td>
+          <td class="paramname"><em>Complex2</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy constructor. </p>
 
 </div>
 </div>
@@ -133,14 +227,14 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a26e02af563661f5e4b77380a7d8acbd7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26e02af563661f5e4b77380a7d8acbd7">&#9670;&nbsp;</a></span>getImaginary()</h2>
+<a id="adb777696a6536bae109ce0b1380493cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb777696a6536bae109ce0b1380493cb">&#9670;&nbsp;</a></span>getIm()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float Complex::getImaginary </td>
+          <td class="memname">double Complex::getIm </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -148,16 +242,56 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>get immaginary Part </p>
+
 </div>
 </div>
-<a id="ad0a988b37190381e553616b1f56d29c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0a988b37190381e553616b1f56d29c7">&#9670;&nbsp;</a></span>getReal()</h2>
+<a id="a58e5404efd8f49c034be2ab82af53461"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58e5404efd8f49c034be2ab82af53461">&#9670;&nbsp;</a></span>getMag()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float Complex::getReal </td>
+          <td class="memname">double Complex::getMag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get magnitude of complex number </p>
+
+</div>
+</div>
+<a id="a4eb4ecde5a206cae05fd0b6500f22fff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eb4ecde5a206cae05fd0b6500f22fff">&#9670;&nbsp;</a></span>getPhi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Complex::getPhi </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get angle of complex number </p>
+
+</div>
+</div>
+<a id="a5e43de61a58eab8420b70eb2974e6b0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e43de61a58eab8420b70eb2974e6b0b">&#9670;&nbsp;</a></span>getRe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Complex::getRe </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -165,58 +299,199 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>get Real Part </p>
+
 </div>
 </div>
-<a id="aabdc89fcb379b59ced6aedf12408e3f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabdc89fcb379b59ced6aedf12408e3f2">&#9670;&nbsp;</a></span>setImaginary()</h2>
+<a id="a99935ad84f8b979344d68485c42462c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99935ad84f8b979344d68485c42462c7">&#9670;&nbsp;</a></span>operator*()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Complex::setImaginary </td>
+          <td class="memname"><a class="el" href="class_complex.html">Complex</a> Complex::operator* </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_complex.html">Complex</a> &amp;&#160;</td>
+          <td class="paramname"><em>multiplier</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Multiplication. </p>
+<p>z1=a+bi z2=c+di z1*z2 = (ac-bd) + (ad+bc)i </p>
+
+</div>
+</div>
+<a id="a4c1189414fa16c6d8115c90ce2f29d78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c1189414fa16c6d8115c90ce2f29d78">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_complex.html">Complex</a> Complex::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_complex.html">Complex</a> &amp;&#160;</td>
+          <td class="paramname"><em>summand</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Addition. </p>
+<p>z1 = a+bi z2 = c+di z1 + z2 = (a+b)+(c+d)i </p>
+
+</div>
+</div>
+<a id="a8f880f1056308d876fd50aad9244e8d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f880f1056308d876fd50aad9244e8d2">&#9670;&nbsp;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_complex.html">Complex</a> Complex::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_complex.html">Complex</a> &amp;&#160;</td>
+          <td class="paramname"><em>minuend</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Substraction. </p>
+<p>z1 = a+bi z2 = c+di z1 - z2 = (a-b)+(c-d)i </p>
+
+</div>
+</div>
+<a id="a365fd33e7bc67fde80e79c514aab95bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a365fd33e7bc67fde80e79c514aab95bc">&#9670;&nbsp;</a></span>operator/()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_complex.html">Complex</a> Complex::operator/ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_complex.html">Complex</a> &amp;&#160;</td>
+          <td class="paramname"><em>divisor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Division. </p>
+<p>z1 = a+bi z2 = c+di z1/z2 = (ac+bd)/(c^2+d^2) +(bc-ad)/(c^2+d^2)i </p>
+
+</div>
+</div>
+<a id="a507be49e963cbeab282f9c839a0eea40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a507be49e963cbeab282f9c839a0eea40">&#9670;&nbsp;</a></span>setFromPolar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Complex::setFromPolar </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>mag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>phi</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set complex number given a complex Number in polar Form </p>
+
+</div>
+</div>
+<a id="a6bc88eb16ce2cf081ad0d6c0c5758f11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bc88eb16ce2cf081ad0d6c0c5758f11">&#9670;&nbsp;</a></span>setIm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Complex::setIm </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>set immaginary Part </p>
+
 </div>
 </div>
-<a id="a5cc1fcf1428a62c4a775fe4625597fa5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5cc1fcf1428a62c4a775fe4625597fa5">&#9670;&nbsp;</a></span>setReal()</h2>
+<a id="af92157b54776656aea634edd4ecac46d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af92157b54776656aea634edd4ecac46d">&#9670;&nbsp;</a></span>setRe()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Complex::setReal </td>
+          <td class="memname">void Complex::setRe </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
+          <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>set real Part </p>
+
 </div>
 </div>
-<a id="afd4253456f558ed0d1bce5f73af12670"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd4253456f558ed0d1bce5f73af12670">&#9670;&nbsp;</a></span>toString()</h2>
+<a id="acbec47c6e4b7538c6f1a1b4234f9cbf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbec47c6e4b7538c6f1a1b4234f9cbf7">&#9670;&nbsp;</a></span>toPolarString()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned char Complex::toString </td>
+          <td class="memname">std::string Complex::toPolarString </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Converts the complex number to an polar readable string. </p>
+
+</div>
+</div>
+<a id="af125108c8589740c1b9893aaeae8e64b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af125108c8589740c1b9893aaeae8e64b">&#9670;&nbsp;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Complex::toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts the complex number to an cartesian readable string. </p>
 
 </div>
 </div>

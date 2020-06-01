@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['sock_5fuserdata_5ft',['sock_userdata_t',['../structsock__userdata__t.html',1,'']]],
-  ['sym_5flist',['sym_list',['../structsym__list.html',1,'']]]
+  ['nameandtags',['NameAndTags',['../struct_catch_1_1_name_and_tags.html',1,'Catch']]],
+  ['noncopyable',['NonCopyable',['../class_catch_1_1_non_copyable.html',1,'Catch']]]
 ];

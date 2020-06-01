@@ -1,31 +1,53 @@
+/**
+ * @file Calculation.h
+ *
+ * @brief Represents a mathematical calculation with two numbers 
+ * @author Johannes Eberle
+ */
 #pragma once
-
+//!  Enum for setting a operation within a variable
 enum class E_Operation { NONE, ADD, SUBTRACT, MULTIPLY, DIVIDE };
 
 
+//!  Class Calculation represents a mathematical calculation with two numbers 
+/*!
+  The type independent calculation class saves two numbers and the result after a mathematical operation, which can be done with a function.
+*/
 template <typename T>
 class Calculation
 {
 private:
-	T number1;
-	T number2;
-	T result;
-	E_Operation lastOperation;
+	T _number1; //! Storage for the first number
+	T _number2; //! Storage for the second number
+	T _result;  //! Storage for the result of operation
+	E_Operation _lastOperation; //! Storage for last done calculation operation.
 public:
+	//! Constructor for Class Calcualtion
 	Calculation();
+	//! Constructor for Class Calcualtion with two numbers for storing directly
 	Calculation(const T &n1, const T &n2);
 
-	T &getNumber1(); //! Gibt die Zahl 1 zurück
-	T &getNumber2(); //! Gibt die Zahl 2 zurück
-	T &getResult(); //! Gibt das Ergebnis zurück
+	//! Returns the first number
+	T &getNumber1(); 
+	//! Returns the second number
+	T &getNumber2();
+	//! Returns the result of the calcualtion
+	T &getResult(); 
+	//! Sets the first number
 	void setNumber1(const T &number);
+	//! Sets the first number
 	void setNumber2(const T &number);
 
+	//! Do the operation add
 	void add();
+	//! Do the operation subtract
 	void subtract();
+	//! Do the operation multiply
 	void multiply();
+	//! Do the operation divide
 	void divide();
 
+	//! Returns the last done operation
 	E_Operation getLastOperation();
 };
 
@@ -36,71 +58,71 @@ Calculation<T>::Calculation()
 
 template<typename T>
 Calculation<T>::Calculation(const T & n1, const T & n2)
-	: number1(n1), number2(n2)
+	: _number1(n1), _number2(n2)
 {
 }
 
 template<typename T>
 T & Calculation<T>::getNumber1()
 {
-	return number1;
+	return _number1;
 }
 
 template<typename T>
 T & Calculation<T>::getNumber2()
 {
-	return number2;
+	return _number2;
 }
 
 template<typename T>
 T & Calculation<T>::getResult()
 {
-	return result;
+	return _result;
 }
 
 template<typename T>
 void Calculation<T>::setNumber1(const T & number)
 {
-	number1 = number;
+	_number1 = number;
 }
 
 template<typename T>
 void Calculation<T>::setNumber2(const T & number)
 {
-	number2 = number;
+	_number2 = number;
 }
 
 template<typename T>
 void Calculation<T>::add()
 {
-	lastOperation = E_Operation::ADD;
-	result = number1 + number2;
+	_lastOperation = E_Operation::ADD;
+	_result = _number1 + _number2;
 }
 
 template<typename T>
 void Calculation<T>::subtract()
 {
-	lastOperation = E_Operation::SUBTRACT;
-	result = number1 - number2;
+	_lastOperation = E_Operation::SUBTRACT;
+	_result = _number1 - _number2;
 }
 
 template<typename T>
 void Calculation<T>::multiply()
 {
-	lastOperation = E_Operation::MULTIPLY;
-	result = number1 * number2;
+	_lastOperation = E_Operation::MULTIPLY;
+	_result = _number1 * _number2;
 }
 
 template<typename T>
 void Calculation<T>::divide()
 {
-	lastOperation = E_Operation::DIVIDE;
-	result = number1 / number2;
+	_lastOperation = E_Operation::DIVIDE;
+	_result = _number1 / _number2;
 }
 
 template<typename T>
 inline E_Operation Calculation<T>::getLastOperation()
 {
-	return lastOperation;
+	return _lastOperation;
 }
 

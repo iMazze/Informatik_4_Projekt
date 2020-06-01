@@ -66,7 +66,39 @@ $(function() {
 <div class="title">Informatik_4_Projekt </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Documentation Style: <a href="http://doxygen.nl/manual/docblocks.html">http://doxygen.nl/manual/docblocks.html</a> </p>
+<div class="textblock"><h2>Aufgabenstellung</h2>
+<p>Rechner für komplexe Zahlen</p><ul>
+<li>Einlesen einer komplexen Zahl über die Konsole (Koeffizienten ODER Exponential- Darstellung)</li>
+<li>Einlesen einer zweiten komplexen Zahl über die Konsole (Koeffizienten ODER Exponential- Darstellung)</li>
+<li>Verarbeitung der beiden Zahlen (Grundrechenarten)</li>
+<li>Speicherung von Eingaben und Ergebnis als XML (Koeffizienten- UND Exponential- Darstellung)</li>
+<li>Ausgabe des Ergebnisses über die Konsole (mit Nachfrage, ob Koeffizienten ODER Exponential-Darstellung)</li>
+</ul>
+<p>Anstöße:</p><ul>
+<li>Empfohlene XML-Bibliothek: LibXml2 (via NuGet)</li>
+<li>Einlesen/Ausgabe und BL als Bibliotheken/Module des Hauptprogramms</li>
+</ul>
+<h2>Conventions</h2>
+<p>Documentation Style: <a href="http://doxygen.nl/manual/docblocks.html">http://doxygen.nl/manual/docblocks.html</a></p>
+<h2>Diagramme</h2>
+<p>&lt;object data="http://yoursite.com/the.pdf" type="application/pdf" width="700px" height="700px"&gt; &lt;embed src="http://yoursite.com/the.pdf"&gt; </p>
+<p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://yoursite.com/the.pdf">Download PDF</a>.</p>
+<p>&lt;/embed&gt; &lt;/object&gt;</p>
+<h2>push Files with size&gt;100Mbits:</h2>
+<p>$ git rm &ndash;cached your_giant_file $ git commit &ndash;amend -CHEAD $ git push</p>
+<h2>Todo for Johannes</h2>
+<ul>
+<li>overwrite &amp; Operator in <a class="el" href="class_complex.html" title="Class Complex represents a complex number. ">Complex</a></li>
+<li>const statement</li>
+<li>buzzi added const <a class="el" href="class_complex.html" title="Class Complex represents a complex number. ">Complex</a>&amp; für alle operatoren!</li>
+<li>// magnitude shoud not be negative! i = ui.stringToNumber("-7.1e^(-i81.8)"); REQUIRE_FALSE(i.getMag() == Approx(-7.1)); REQUIRE(i.getPhi() == Approx(-81.8));</li>
+</ul>
+<h2>Todoooo for all</h2>
+<ul>
+<li>throw exceptions</li>
+<li>Tests auf allen ebenen</li>
+<li>Schichten -&gt; UML </li>
+</ul>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

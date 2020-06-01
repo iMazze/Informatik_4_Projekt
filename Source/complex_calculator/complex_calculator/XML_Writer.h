@@ -1,37 +1,32 @@
 #pragma once
 
 #include <vector>
+/**
+ * @file XML_Writer.h
+ *
+ * @brief Saves and writes all added calculations to a xml file 
+ * @author Maximilian Klug
+ */
 #include "Complex.h"
 #include "Calculation.h"
 
-//!  A test class. 
-/*!
-  A more elaborate class description.
-*/
+//!  XML_Writer saves and writes all added calculations to a xml file 
 class XML_Writer
 {
 public:
-	//! A constructor.
-	/*!
-	  A more elaborate description of the constructor.
-	*/
+	//! Constructor of class XML Writer
 	XML_Writer();
+
+	//! Destructor of class XML Writer
 	~XML_Writer();
 
-	//! A normal member taking two arguments and returning an integer value.
-	/*!
+	//! Writes all calculations to a specified XML File
+	void writeCalculationsToXML(const std::string &filename);
 
-	*/
-	static void doxml();
-	void writexml();
-
-	void writeCalculationsToXML();
+	//! Adds a calculation reference to a list
 	void addComplexCalculation(const Calculation<Complex> &calc);
 private: 
-	//! A function variable.
-	/*!
-	  Details.
-	*/
-	std::vector<Calculation<Complex>> list;
+	//! Internal Vector for saving the calculations
+	std::vector<Calculation<Complex>> _list;
 };
 
