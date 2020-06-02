@@ -38,12 +38,13 @@ void Complex::setIm(double value)
 
 void Complex::setFromPolar(double mag, double phi)
 {
+
 	double help = phi * (M_PI / 180);
 	double twoPi = 2 * M_PI;
 	if (-twoPi <= help && help <= twoPi) {
 
-		re = mag * cos(help);
-		im = mag * sin(help);
+		re = sqrt(mag*mag) * cos(help);
+		im = sqrt (mag*mag) * sin(help);
 	}
 	else {
 		std::cout << phi << " grad: ungueltiges Argument \n";
@@ -58,6 +59,8 @@ double Complex::getMag() const
 double Complex::getPhi() const
 {
 	double help = (im / re);
+	//return help;
+
 	if (re > 0.0) {
 		return atan(help) * 180 / M_PI;
 	}
@@ -78,7 +81,7 @@ double Complex::getPhi() const
 	else if (re == 0 && im == 0) {
 		return 0;
 	}
-
+	
 
 }
 
@@ -142,10 +145,11 @@ std::string Complex::toString() const
 
 std::string Complex::toPolarString() const
 {
+	double help = sqrt(getMag()*getMag());
 
 	std::stringstream fmt;
 
-	fmt << getMag() << "e^(i" << getPhi() << ")";
+	fmt << help << "e^(i" << getPhi() << ")";
 
 
 	return fmt.str();

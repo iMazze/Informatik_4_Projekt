@@ -272,10 +272,9 @@ TEST_CASE("Unit Test: class UI_Communication") {
 			i = ui.stringToNumber("7.1e^(i-81.8)");
 			REQUIRE(i.getMag() == Approx(7.1)); REQUIRE(i.getPhi() == Approx(-81.8));
 
-			// Todo Johannes
 			// magnitude shoud not be negative!
-			//i = ui.stringToNumber("-7.1e^(-i81.8)");
-			//REQUIRE_FALSE(i.getMag() == Approx(-7.1)); REQUIRE(i.getPhi() == Approx(-81.8));
+			i = ui.stringToNumber("-7.1e^(-i81.8)");
+			REQUIRE_FALSE(i.getMag() == Approx(-7.1)); REQUIRE(i.getPhi() == Approx(-81.8));
 
 			i = ui.stringToNumber("7.1e^(i81.8)");
 			REQUIRE(i.getMag() == Approx(7.1)); REQUIRE(i.getPhi() == Approx(81.8));
