@@ -26,29 +26,23 @@ double Complex::getIm()
 	return im;
 }
 
-void Complex::setRe(double value)
+void Complex::setRe(const double &value)
 {
 	re = value;
 }
 
-void Complex::setIm(double value)
+void Complex::setIm(const double &value)
 {
 	im = value;
 }
 
-void Complex::setFromPolar(double mag, double phi)
+void Complex::setFromPolar(const double &mag, const double &phi)
 {
-
 	double help = phi * (M_PI / 180);
-	double twoPi = 2 * M_PI;
-	if (-twoPi <= help && help <= twoPi) {
-
-		re = sqrt(mag*mag) * cos(help);
-		im = sqrt (mag*mag) * sin(help);
-	}
-	else {
-		std::cout << phi << " grad: ungueltiges Argument \n";
-	}
+	
+	re = sqrt(mag*mag) * cos(help);
+	im = sqrt (mag*mag) * sin(help);
+	
 }
 
 double Complex::getMag() const
@@ -115,9 +109,15 @@ Complex Complex::operator*(const Complex& multiplier)
 Complex Complex::operator/(const Complex& divisor)
 {
 	Complex result;
-	result.re = (re*divisor.re + im * divisor.im) / (divisor.re*divisor.re + divisor.im*divisor.im);
-	result.im = (im* divisor.re - re * divisor.im) / (divisor.re*divisor.re + divisor.im*divisor.im);
-	return result;
+
+	if (divisor.re == 0 & divisor.im == 0) {
+		throw std::invalid_argument("Divison by complex number 0+0i");
+	}
+	else {
+		result.re = (re*divisor.re + im * divisor.im) / (divisor.re*divisor.re + divisor.im*divisor.im);
+		result.im = (im* divisor.re - re * divisor.im) / (divisor.re*divisor.re + divisor.im*divisor.im);
+		return result;
+	}
 }
 
 
