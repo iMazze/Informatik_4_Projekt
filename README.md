@@ -81,6 +81,7 @@ Zur Optimierung der Laufzeit haben wir darauf geachtet, dass Objekte der verschi
 Alle möglichen auftretenden Fehler (unseres Wissenstands entsprechend) werden als std::Exception ausgegeben. Bedeutet dass bei auftreten dieser Fehler via `throw` ausgelöst wird. 
 Zur Laufzeit erkennt dann die Klasse Calculator_Logic (welche auch die komplette Aufrufhierarchie beinhaltet), falls so ein Fehler auftritt. 
 Darauf wird die aktuelle Operation abgebrochen sowie ein Fehler wie in der Datei "Messages.h" beschrieben an den User ausgegeben.
+
 ### Unit - Tests
 Unsere Testcases sind alle via dem Framework Catch2 implementiert, welches sich als eine einzige *.hpp Datei ins Projekt einbinden lässt.
 Die Testcases decken folgende Klassen ab: complex, calculation (einmal mit std::int, einmal mit complex), XML_Writer, UI_Communication, Calculator_Logic.
@@ -89,9 +90,7 @@ Wir haben versucht alle möglichen Grenzfälle sowie Spezial-Fälle abzudecken.
 
 # Nur für Autoren relevant
 ## push Files with size>100Mbits:
-$ git rm --cached your_giant_file
-$ git commit --amend -CHEAD
-$ git push
+- $ git rm --cached your_giant_file
+- $ git commit --amend -CHEAD
+- $ git push
 
-## Todoooo for Johannes
-- throw exceptions
