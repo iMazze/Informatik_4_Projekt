@@ -66,7 +66,7 @@ $(function() {
 <div class="title">Informatik_4_Projekt </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2>Aufgabenstellung</h2>
+<div class="textblock"><p>Veröffentlicht im GitHub Repository: <a href="https://github.com/iMazze/Informatik_4_Projekt">https://github.com/iMazze/Informatik_4_Projekt</a> </p><h2>Aufgabenstellung</h2>
 <p>Rechner für komplexe Zahlen</p><ul>
 <li>Einlesen einer komplexen Zahl über die Konsole (Koeffizienten ODER Exponential- Darstellung)</li>
 <li>Einlesen einer zweiten komplexen Zahl über die Konsole (Koeffizienten ODER Exponential- Darstellung)</li>
@@ -78,26 +78,84 @@ $(function() {
 <li>Empfohlene XML-Bibliothek: LibXml2 (via NuGet)</li>
 <li>Einlesen/Ausgabe und BL als Bibliotheken/Module des Hauptprogramms</li>
 </ul>
-<h2>Conventions</h2>
-<p>Documentation Style: <a href="http://doxygen.nl/manual/docblocks.html">http://doxygen.nl/manual/docblocks.html</a></p>
+<h2>Von uns verwendete Conventions</h2>
+<p>Documentation Style C++: <a href="http://doxygen.nl/manual/docblocks.html">http://doxygen.nl/manual/docblocks.html</a> <br />
+ Markdownfile Readme: <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet</a></p>
 <h2>Diagramme</h2>
-<p>&lt;object data="http://yoursite.com/the.pdf" type="application/pdf" width="700px" height="700px"&gt; &lt;embed src="http://yoursite.com/the.pdf"&gt; </p>
-<p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://yoursite.com/the.pdf">Download PDF</a>.</p>
-<p>&lt;/embed&gt; &lt;/object&gt;</p>
+<p>Activity<br />
+ </p><div class="image">
+<img src="UML/export/Activity.png" alt="Activitydiagram"/>
+</div>
+<p> Class<br />
+ </p><div class="image">
+<img src="UML/export/Class.png" alt="Classdiagram"/>
+</div>
+<p> Domain<br />
+ </p><div class="image">
+<img src="UML/export/Domain.png" alt="Domainmodel"/>
+</div>
+<p> Sequenzdiagram<br />
+ </p><div class="image">
+<img src="UML/export/Sequence.png" alt="Sequenzdiagram"/>
+</div>
+<p> Use-Case<br />
+ </p><div class="image">
+<img src="UML/export/Use_Case.png" alt="UseCaseModel"/>
+</div>
+<h2>Compilieren der Software Complex_Calculator</h2>
+<p>Abgabe des "Rohprojekts" via Moodle:</p><ul>
+<li>erstens</li>
+<li>zweitens</li>
+<li>drittens</li>
+</ul>
+<p>Projekt via Github:</p><ul>
+<li>erstens</li>
+<li>zweitens</li>
+</ul>
+<h2>Ordnerstruktur</h2>
+<p>Informatik_4_Projekt</p><ul>
+<li><a class="el" href="_r_e_a_d_m_e_8md.html">README.md</a>: Aktuelles File mit allen Infos zum Programm</li>
+<li>doxygen<ul>
+<li>Doxyfile: Doxygen Konfiguration</li>
+<li>html/index.html: Gerenderte Dokumentation</li>
+</ul>
+</li>
+<li>Source/complex_calculator<ul>
+<li>complex_calculator.sln: Visual Studio Projektdatei</li>
+<li>Debug: compilierte *.exe Files</li>
+<li>complex_calculator: Ordner mit C++ und H Dateien</li>
+<li>packages: Abhängigkeiten von Libraries</li>
+</ul>
+</li>
+<li>UML<ul>
+<li>diagrams.EAP: Enterprise Architect Projekt der Diagramme</li>
+<li>export: Ordner mit allen gerenderten PDF Dateien</li>
+</ul>
+</li>
+</ul>
+<h2>Kurzanleitung zur Software Complex_Calculator</h2>
+<h3>Ausführung des Programms</h3>
+<p>text </p><h3>Abstrahierung der Layer</h3>
+<p>text </p><h3>Lebenszeit der Objekte</h3>
+<p>text </p><h3>Errorhandling</h3>
+<p>text </p><h3>Unit - Tests</h3>
+<p>text</p>
+<h1>Nur für Autoren relevant</h1>
 <h2>push Files with size&gt;100Mbits:</h2>
 <p>$ git rm &ndash;cached your_giant_file $ git commit &ndash;amend -CHEAD $ git push</p>
-<h2>Todo for Johannes</h2>
-<ul>
-<li>overwrite &amp; Operator in <a class="el" href="class_complex.html" title="Class Complex represents a complex number. ">Complex</a></li>
-<li>const statement</li>
-<li>buzzi added const <a class="el" href="class_complex.html" title="Class Complex represents a complex number. ">Complex</a>&amp; für alle operatoren!</li>
-<li>// magnitude shoud not be negative! i = ui.stringToNumber("-7.1e^(-i81.8)"); REQUIRE_FALSE(i.getMag() == Approx(-7.1)); REQUIRE(i.getPhi() == Approx(-81.8));</li>
-</ul>
-<h2>Todoooo for all</h2>
+<h2>Todoooo for Johannes</h2>
 <ul>
 <li>throw exceptions</li>
-<li>Tests auf allen ebenen</li>
-<li>Schichten -&gt; UML </li>
+<li>text Ausführung des Programms</li>
+<li>text Abstrahierung der Layer</li>
+<li>text Lebenszeit der Objekte</li>
+</ul>
+<h2>Todo for Buzz</h2>
+<ul>
+<li>Integrate Diagrams in UML</li>
+<li>text Compilieren der Software Complex_Calculator</li>
+<li>text Errorhandling</li>
+<li>text Unit - Tests </li>
 </ul>
 </div></div><!-- contents -->
 <!-- start footer part -->

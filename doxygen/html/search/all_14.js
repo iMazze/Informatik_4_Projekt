@@ -15,8 +15,7 @@ var searchData=
   ['withinulp',['WithinULP',['../namespace_catch_1_1_matchers.html#ae77e233c3ed735ea12b7c726153798d1',1,'Catch::Matchers::WithinULP(double target, uint64_t maxUlpDiff)'],['../namespace_catch_1_1_matchers.html#a5d108ff6aaeac40f20f4978dfb3f51fc',1,'Catch::Matchers::WithinULP(float target, uint64_t maxUlpDiff)']]],
   ['withinulpsmatcher',['WithinUlpsMatcher',['../struct_catch_1_1_matchers_1_1_floating_1_1_within_ulps_matcher.html',1,'Catch::Matchers::Floating::WithinUlpsMatcher'],['../struct_catch_1_1_matchers_1_1_floating_1_1_within_ulps_matcher.html#a0d29702ebd6ab7b679c9ce275514fe1e',1,'Catch::Matchers::Floating::WithinUlpsMatcher::WithinUlpsMatcher()']]],
   ['withname',['withName',['../class_catch_1_1_test_case.html#a0812e8a216d09b087d5874687009f0d6',1,'Catch::TestCase']]],
-  ['writecalculationstoxml',['writeCalculationsToXML',['../class_x_m_l___writer.html#a12357cb14062d49dba4aa455d2041c5c',1,'XML_Writer']]],
+  ['writecalculationstoxml',['writeCalculationsToXML',['../class_x_m_l___writer.html#a69eba4821f47637350804b7af1be5928',1,'XML_Writer']]],
   ['writenumber',['writeNumber',['../class_u_i___communication.html#a09b78ff23be1ef53673a0357e02368e4',1,'UI_Communication']]],
-  ['writetext',['writeText',['../class_u_i___communication.html#a2a5e6618db73c2db5b8d12a6270dd8c1',1,'UI_Communication']]],
-  ['writexml',['writexml',['../class_x_m_l___writer.html#a3116b33582e77adfbbf6a512eee67902',1,'XML_Writer']]]
+  ['writetext',['writeText',['../class_u_i___communication.html#a2a5e6618db73c2db5b8d12a6270dd8c1',1,'UI_Communication']]]
 ];

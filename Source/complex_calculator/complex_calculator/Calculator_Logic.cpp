@@ -1,8 +1,23 @@
 #include "Calculator_Logic.h"
 #include "Messages.h"
 
-#define XML_FILE_NAME "test3.xml"
+#include <chrono>  // chrono::system_clock
+#include <ctime>   // localtime
+#include <sstream> // stringstream
+#include <iomanip> // put_time
+#include <string>  // string
 
+#define XML_FILE_NAME "Berechnungen_Complex"
+
+std::string return_current_time_and_date()
+{
+	auto now = std::chrono::system_clock::now();
+	auto in_time_t = std::chrono::system_clock::to_time_t(now);
+
+	std::stringstream ss;
+	ss << std::put_time(std::localtime(&in_time_t), "%Y-%m-%d_%H-%M");
+	return ss.str();
+}
 
 Calculator_Logic::Calculator_Logic()
 {
@@ -71,7 +86,7 @@ void Calculator_Logic::makeXML()
 {
 	try
 	{
-		_writer.writeCalculationsToXML(XML_FILE_NAME);
+		_writer.writeCalculationsToXML(XML_FILE_NAME + std::string("_") + return_current_time_and_date() + std::string(".xml"));
 	}
 	catch (const std::exception& e)
 	{
@@ -79,4 +94,5 @@ void Calculator_Logic::makeXML()
 		return; // Abort
 	}
 }
+
 
