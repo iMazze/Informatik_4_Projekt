@@ -64,19 +64,25 @@ Informatik_4_Projekt
 
 ## Kurzanleitung zur Software Complex_Calculator
 ### Ausführung des Programms
-text
-- Wo ist exe datei?
-- Ausgabe der XML in Source\complex_calculator\complex_calculator\Berechnungen_Complex_2020-06-05_11-57.xml
+Ziel des Informatik 4 Projekt war es, ein Rechner für komplexe Zahlen zu entwicklen. Dabei soll sowohl die Eingabe als Polar- oder kartesische Koordinaten möglich sein. Zum Schluss soll die Rechnung als XML-Datei gespeichert werden. 
+Nach dem complilieren des Projekts stehen den Anwender 4 Möglichkeiten zur Verfügung. Er kann 0) das Programm schließen, 1) den Complex Rechner ausführen, 2) eine XML Datei erstellen oder 3) die Tascases einsehen. Verdeutlicht wird dieses Verhalten durch das aufgeführte Activity Diagramm. 
+Wählt der Nutzer 1) Complex Rechner, kann er die gewünschte Rechnung durchführen in dem er die erste komplexe Zahle in polar xe^i(phi) oder kartesischer (a+bi) Form gefolgt von einem Operator (+,-,*,/) une einer zweiten komplexen Zahl in karteischer oder polar Form über Konsole eingibt. 
+Nach der Durchführung der Rechnung gelangt der Nutzer wieder zum Ausgangspunkt des Programms und kann sich nun wieder entscheiden 0) das Programm zu schließen, 1) eine weitere Rechnung durchzuführen 2) die durchgeführte Rechung in einer XML-Datei zu speichern oder 3) die Test durchzuführen. Lässt der Nutzer eine XML Datei erstellen, liegt diese unter:
+- Ausgabe der XML in \Informatik_4_Projekt\Source\complex_calculator\complex_calculator\Berechnungen_Complex_2020-06-05_11-57.xml
+In der XML Datei ist sowohl die Rechnung als auch das Ergebnis in polar UND kartesischen Koordianten gespeichert. 
+
 ### Abstrahierung der Layer
-text
+In unserem Prgrammentwurf war es uns wichtig nach dem ISO-OSI Schichtmodell eine sinnvolle Softwarabstahierung zu genereieren. Durch die Abstahierung ist eine verbesserte Lesbarkeit und Widerverwendbarkeit der Klassen gewährleistet. Das Klassen Diagramm kann unter \Informatik_4_Projekt\UML\export eingesehen werden. Als abstarhierteste Schicht stellt die Calculator_Logic Klasse die Anwednung dem Nutzer zur Verfügung. Sie erbt von XML_Write und UI_Communication. In XML_ Write wird der ganze Prozess zum Erstellen der XML Datei gehandelt. UI_Communication dagegen händelt sämtliche Nutzer In/Outputs in der Console. Es war uns wichtig die Kommunikation mit dem Nutzer smart zugestallten und wollte nicht mit sämtlichen Abfragen der z.B. Darstellung arbeiten. Nach dem KISS Prinzip (Keep it simple and stupid) soll der nutzer so intutiv wie möglich den Rechner nutzen können. Um dies zuermöglichen arbeiten wir mit String Manipulationen und suchen nach Merkmalen in der Nutzereingabe um auf die jeweilige Darstellung zu schließen.Als Basis dient die Klasse Complex, in welcher sämtliche Operationen mit komplexen Zahlen (+,-,*,/) implementiert sind. Intern nutzt die Klasse die karteische Darstellung (a+bi) einer komplexen Zahl. Um wiederrum polar Koordinaten verwenden zu können wurden gewissen Transformationsfunktionen implementiert. Um die Rechnung mit komplexen Zahlen durchzuführen haben wir die Template Klasse Calculation implementiert. Der Vorteil einer Template Klasse ist, dass sie für verschiedene Datentypen eingesetzt werden können. In unserem Rechner wird bsp. der komplexe Datentyp verwendet andereseits können durch die Template Klasse auch andere Rechner mit z.B. dem Double Datentyp implemntiert werden. 
+
 ### Lebenszeit der Objekte
-text
+Zur Optimierung der Laufzeit haben wir darauf geachtet, dass Objekte der verschiedenen Klassen nur zu dem benötigten Zeitpunkt erstellt werden und für die notwendige Dauer leben. Im Sequenzdiagramm sieht man z.B. das ein Objekt der Klasse Calculator_Logic für über die gesamte Programmlaufzeit lebt. Dies ist nötig da der Programmablauf in ihr definiert ist. Als anderes Beispiel ist ein Objekt von Rechnung nur dann aktiv wenn zwei komplexe Zahlen und ein Operator über die Konsole eingeben wurde. Gleichermaßen ist der XML_Witer nicht dann aktiv wenn der Nutzer sich entscheidet seine Rechnungen als XML Datei zu speichern. 
+
 ### Errorhandling
 Alle möglichen auftretenden Fehler (unseres Wissenstands entsprechend) werden als std::Exception ausgegeben. Bedeutet dass bei auftreten dieser Fehler via `throw` ausgelöst wird. 
 Zur Laufzeit erkennt dann die Klasse Calculator_Logic (welche auch die komplette Aufrufhierarchie beinhaltet), falls so ein Fehler auftritt. 
 Darauf wird die aktuelle Operation abgebrochen sowie ein Fehler wie in der Datei "Messages.h" beschrieben an den User ausgegeben.
 ### Unit - Tests
-Unsere Testcases sind alle via dem Framework Catch2 welches sich als eine einzige *.hpp Datei ins Projekt einbinden lässt.
+Unsere Testcases sind alle via dem Framework Catch2 implementiert, welches sich als eine einzige *.hpp Datei ins Projekt einbinden lässt.
 Die Testcases decken folgende Klassen ab: complex, calculation (einmal mit std::int, einmal mit complex), XML_Writer, UI_Communication, Calculator_Logic.
 Wir haben versucht alle möglichen Grenzfälle sowie Spezial-Fälle abzudecken. 
 
@@ -89,6 +95,3 @@ $ git push
 
 ## Todoooo for Johannes
 - throw exceptions
-- text Ausführung des Programms
-- text Abstrahierung der Layer
-- text Lebenszeit der Objekte
