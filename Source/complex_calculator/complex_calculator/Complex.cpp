@@ -38,18 +38,11 @@ void Complex::setIm(const double &value)
 
 void Complex::setFromPolar(const double &mag, const double &phi)
 {
-
 	double help = phi * (M_PI / 180);
-	double twoPi = 2 * M_PI;
-	//if (-twoPi <= help && help <= twoPi) {
-
-		re = sqrt(mag*mag) * cos(help);
-		im = sqrt (mag*mag) * sin(help);
-	//}
-	/*
-	else {
-		std::cout << phi << " grad: ungueltiges Argument \n";
-	}*/
+	
+	re = sqrt(mag*mag) * cos(help);
+	im = sqrt (mag*mag) * sin(help);
+	
 }
 
 double Complex::getMag() const
