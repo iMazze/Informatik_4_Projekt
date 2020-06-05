@@ -1,4 +1,5 @@
 ﻿# Informatik_4_Projekt
+Veröffentlicht im GitHub Repository: https://github.com/iMazze/Informatik_4_Projekt
 ## Aufgabenstellung
 Rechner für komplexe Zahlen
 - Einlesen einer komplexen Zahl über die Konsole (Koeffizienten ODER Exponential- Darstellung)
@@ -13,31 +14,54 @@ Anstöße:
 - Empfohlene XML-Bibliothek: LibXml2 (via NuGet)
 - Einlesen/Ausgabe und BL als Bibliotheken/Module des Hauptprogramms
 
-## Conventions
-Documentation Style: http://doxygen.nl/manual/docblocks.html
+## Von uns verwendete Conventions
+Documentation Style C++: http://doxygen.nl/manual/docblocks.html
+Markdownfile Readme: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
 ## Diagramme
-<object data="http://yoursite.com/the.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="http://yoursite.com/the.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://yoursite.com/the.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+Sequenzdiagram
+![Sequenzdiagram](UML/export/test.png)
+Activity
+![Activitydiagram](UML/export/test.png)
+Class
+![Activitydiagram](UML/export/test.png)
+Domain
+![Activitydiagram](UML/export/test.png)
+Use-Case
+![Activitydiagram](UML/export/test.png)
 
-test 
-![alt text](UML/export/test.png)
+## Compilieren der Software Complex_Calculator
+- erstens
+- zweitens
+- drittens
 
+## Kurzanleitung zur Software Complex_Calculator
+### Ausführung des Programms
+text
+### Abstrahierung der Layer
+text
+### Lebenszeit der Objekte
+text
+### Errorhandling
+text
+### Unit - Tests
+text
+
+
+# Nur für Autoren relevant
 ## push Files with size>100Mbits:
 $ git rm --cached your_giant_file
 $ git commit --amend -CHEAD
 $ git push
 
-## Todo for Johannes
-- overwrite & Operator in Complex
-- const    statement 
-- buzzi added const Complex& für alle operatoren!
-- // magnitude shoud not be negative! i = ui.stringToNumber("-7.1e^(-i81.8)"); REQUIRE_FALSE(i.getMag() == Approx(-7.1)); REQUIRE(i.getPhi() == Approx(-81.8));
-
-## Todoooo for all
+## Todoooo for Johannes
 - throw exceptions
-- Tests auf allen ebenen
-- Schichten -> UML
+- text Ausführung des Programms
+- text Abstrahierung der Layer
+- text Lebenszeit der Objekte
+
+## Todo for Buzz
+- Integrate Diagrams in UML
+- text Compilieren der Software Complex_Calculator
+- text Errorhandling
+- text Unit - Tests
