@@ -19,16 +19,17 @@ Documentation Style C++: http://doxygen.nl/manual/docblocks.html
 Markdownfile Readme: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
 ## Diagramme
-Sequenzdiagram
-![Sequenzdiagram](UML/export/test.png)
 Activity
-![Activitydiagram](UML/export/test.png)
+![Activitydiagram](UML/export/Activity.png)
 Class
-![Activitydiagram](UML/export/test.png)
+![Classdiagram](UML/export/Class.png)
 Domain
-![Activitydiagram](UML/export/test.png)
+![Domainmodel](UML/export/Domain.png)
+Sequenzdiagram
+![Sequenzdiagram](UML/export/Sequence.png)
 Use-Case
-![Activitydiagram](UML/export/test.png)
+![UseCaseModel](UML/export/Use_Case.png)
+
 
 ## Compilieren der Software Complex_Calculator
 - erstens
