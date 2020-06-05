@@ -72,7 +72,7 @@ Ziel des Informatik 4 Projekt war es, ein Rechner für komplexe Zahlen zu entwic
 Nach dem complilieren des Projekts stehen den Anwender 4 Möglichkeiten zur Verfügung. Er kann 0) das Programm schließen, 1) den Complex Rechner ausführen, 2) eine XML Datei erstellen oder 3) die Tascases einsehen. Verdeutlicht wird dieses Verhalten durch das aufgeführte Activity Diagramm. <br>
 Wählt der Nutzer 1) Complex Rechner, kann er die gewünschte Rechnung durchführen in dem er die erste komplexe Zahle in polar xe^i(phi) oder kartesischer (a+bi) Form gefolgt von einem Operator (+,-,*,/) une einer zweiten komplexen Zahl in karteischer oder polar Form über Konsole eingibt. <br>
 Nach der Durchführung der Rechnung gelangt der Nutzer wieder zum Ausgangspunkt des Programms und kann sich nun wieder entscheiden 0) das Programm zu schließen, 1) eine weitere Rechnung durchzuführen 2) die durchgeführte Rechung in einer XML-Datei zu speichern oder 3) die Test durchzuführen. Lässt der Nutzer eine XML Datei erstellen, liegt diese unter:
-- Ausgabe der XML in \Informatik_4_Projekt\Source\complex_calculator\complex_calculator\Berechnungen_Complex_2020-06-05_11-57.xml
+-\Informatik_4_Projekt\Source\complex_calculator\complex_calculator\Berechnungen_Complex_2020-06-05_11-57.xml <br>
 In der XML Datei ist sowohl die Rechnung als auch das Ergebnis in polar UND kartesischen Koordianten gespeichert. 
 
 ### Abstrahierung der Layer
