@@ -45,11 +45,11 @@ public:
 	//! get immaginary Part
 	double getIm();
 	//! set real Part
-	void setRe(double value);
+	void setRe(const double &value);
 	//! set immaginary Part
-	void setIm(double value);
+	void setIm(const double &value);
 	//! set complex number given a complex Number in polar Form
-	void setFromPolar(double mag, double phi);
+	void setFromPolar(const double &mag, const double &phi);
 	//! get magnitude of complex number 
 	double getMag() const;
 	//! get angle of complex number

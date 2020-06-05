@@ -1,6 +1,16 @@
-﻿  Calculator_Logic.cpp
+﻿  Calculation.cpp
+  Calculator_Logic.cpp
 c:\users\maximilian klug\desktop\informatik_4_projekt\source\complex_calculator\complex_calculator\calculator_logic.cpp(37): warning C4101: "e": Unreferenzierte lokale Variable
 c:\users\maximilian klug\desktop\informatik_4_projekt\source\complex_calculator\complex_calculator\calculator_logic.cpp(63): warning C4101: "e": Unreferenzierte lokale Variable
 c:\users\maximilian klug\desktop\informatik_4_projekt\source\complex_calculator\complex_calculator\calculator_logic.cpp(77): warning C4101: "e": Unreferenzierte lokale Variable
 c:\users\maximilian klug\desktop\informatik_4_projekt\source\complex_calculator\complex_calculator\calculator_logic.cpp(91): warning C4101: "e": Unreferenzierte lokale Variable
+  Complex.cpp
+c:\users\maximilian klug\desktop\informatik_4_projekt\source\complex_calculator\complex_calculator\complex.cpp(120): warning C4554: "&": Überprüfen Sie die Operatorrangfolge auf mögliche Fehler. Verwenden Sie Klammern, um die Rangfolge zu verdeutlichen.
+  UI_Communication.cpp
+  XML_Writer.cpp
+  complex_calculator.cpp
+c:\users\maximilian klug\desktop\informatik_4_projekt\source\complex_calculator\complex_calculator\complex_calculator.cpp(39): warning C4101: "e": Unreferenzierte lokale Variable
+  testing.cpp
+  Code wird generiert...
+c:\users\maximilian klug\desktop\informatik_4_projekt\source\complex_calculator\complex_calculator\complex.cpp(87): warning C4715: "Complex::getPhi": Nicht alle Codepfade geben einen Wert zurück.
   complex_calculator.vcxproj -> C:\Users\Maximilian Klug\Desktop\Informatik_4_Projekt\Source\complex_calculator\Debug\complex_calculator.exe
