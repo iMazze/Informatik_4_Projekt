@@ -62,7 +62,7 @@ void Calculator_Logic::doCalculation()
 	}
 	catch (const std::exception& e)
 	{
-		std::cout << MSG_ERROR_INPUT << MSG_ERROR_OPERATION << std::endl;
+		std::cout << MSG_ERROR_INPUT << MSG_ERROR_OPERATION << std::string("(") << e.what() << std::string(")") << std::endl;
 		return; // Abort
 	}
 

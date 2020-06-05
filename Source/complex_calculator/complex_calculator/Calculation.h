@@ -116,16 +116,8 @@ void Calculation<T>::multiply()
 template<typename T>
 void Calculation<T>::divide()
 {
-	try
-	{
-		_lastOperation = E_Operation::DIVIDE;
-		_result = _number1 / _number2;
-	} 
-	catch (const std::exception e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-	
+	_lastOperation = E_Operation::DIVIDE;
+	_result = _number1 / _number2;
 }
 
 template<typename T>
