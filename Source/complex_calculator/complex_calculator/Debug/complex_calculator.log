@@ -1,5 +1,1 @@
-﻿  Calculator_Logic.cpp
-c:\users\maximilian klug\desktop\informatik_4_projekt\source\complex_calculator\complex_calculator\calculator_logic.cpp(37): warning C4101: "e": Unreferenzierte lokale Variable
-c:\users\maximilian klug\desktop\informatik_4_projekt\source\complex_calculator\complex_calculator\calculator_logic.cpp(77): warning C4101: "e": Unreferenzierte lokale Variable
-c:\users\maximilian klug\desktop\informatik_4_projekt\source\complex_calculator\complex_calculator\calculator_logic.cpp(91): warning C4101: "e": Unreferenzierte lokale Variable
-  complex_calculator.vcxproj -> C:\Users\Maximilian Klug\Desktop\Informatik_4_Projekt\Source\complex_calculator\Debug\complex_calculator.exe
+﻿
