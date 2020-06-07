@@ -78,39 +78,56 @@ $(function() {
 <li>Empfohlene XML-Bibliothek: LibXml2 (via NuGet)</li>
 <li>Einlesen/Ausgabe und BL als Bibliotheken/Module des Hauptprogramms</li>
 </ul>
+<h2>Abgabe Dateien</h2>
+<ul>
+<li>Ordner mit compiliertern Kommandozeilenprogramm (complex_calculator.exe) wie zugehörigen Librarys (Moodle)</li>
+<li>PDF Dokumentation (Moodle)</li>
+<li>Projekt - Sourcefolder (Moodle)</li>
+<li>GitHub Repository (<a href="https://github.com/iMazze/Informatik_4_Projekt">https://github.com/iMazze/Informatik_4_Projekt</a>)</li>
+</ul>
 <h2>Von uns verwendete Conventions</h2>
 <p>Documentation Style C++: <a href="http://doxygen.nl/manual/docblocks.html">http://doxygen.nl/manual/docblocks.html</a> <br />
  Markdownfile Readme: <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet</a></p>
-<h2>Diagramme</h2>
-<p>Activity<br />
+<h2>UML Diagramme</h2>
+<p>Activity Diagramm<br />
  </p><div class="image">
 <img src="UML/export/Activity.png" alt="Activitydiagram"/>
 </div>
-<p> Class<br />
+<p> <br />
+ Class Diagramm <br />
  </p><div class="image">
 <img src="UML/export/Class.png" alt="Classdiagram"/>
 </div>
-<p> Domain<br />
+<p> <br />
+ Domain Diagramm<br />
  </p><div class="image">
 <img src="UML/export/Domain.png" alt="Domainmodel"/>
 </div>
-<p> Sequenzdiagram<br />
+<p> <br />
+ Sequenz Diagramm<br />
  </p><div class="image">
 <img src="UML/export/Sequence.png" alt="Sequenzdiagram"/>
 </div>
-<p> Use-Case<br />
+<p> <br />
+ Use-Case Diagramm<br />
  </p><div class="image">
 <img src="UML/export/Use_Case.png" alt="UseCaseModel"/>
 </div>
 <h2>Compilieren der Software Complex_Calculator</h2>
-<p>Abgabe des "Rohprojekts" via Moodle:</p><ul>
-<li>erstens</li>
-<li>zweitens</li>
-<li>drittens</li>
+<p>Abgabe des "Rohprojekts" via Moodle: Librarys müssen eigenständig gedownloaded werden</p><ul>
+<li>Entpacken der *.zip Datei "Informatik_4_Projekt.zip"</li>
+<li>Öffnen der Datei Source/complex_calculator/complex_calculator.sln mit Visual Studio (2017)</li>
+<li>Umstellen auf Debug -&gt; x86 Projekt</li>
+<li>Fehlende Packages laut Datei Source\complex_calculator\complex_calculator\packages.conf via NuGET herunterladen</li>
+<li>NuGET via Rechtsklick auf Projektmappe im Projektmappenexplorer -&gt; NuGET Pakete Wiederherstellen oder NuGET Pakete für Projektmappe verwalten</li>
 </ul>
-<p>Projekt via Github:</p><ul>
-<li>erstens</li>
-<li>zweitens</li>
+<p>Projekt via Github: Projekt ist nach dem Clonen sofort kompilierbar</p><ul>
+<li>Clonen des Projekts mit <code>git clone <a href="https://github.com/iMazze/Informatik_4_Projekt.git">https://github.com/iMazze/Informatik_4_Projekt.git</a></code></li>
+<li>Öffnen der Datei Source/complex_calculator/complex_calculator.sln mit Visual Studio (2017)</li>
+</ul>
+<p>Beide:</p><ul>
+<li>Compilieren mit <code>Erstellen -&gt; Projektmappe Erstellen</code></li>
+<li>Debugging mit <code>Lokaler Windows-Debugger</code></li>
 </ul>
 <h2>Ordnerstruktur</h2>
 <p>Informatik_4_Projekt</p><ul>
@@ -135,27 +152,30 @@ $(function() {
 </ul>
 <h2>Kurzanleitung zur Software Complex_Calculator</h2>
 <h3>Ausführung des Programms</h3>
-<p>text </p><h3>Abstrahierung der Layer</h3>
-<p>text </p><h3>Lebenszeit der Objekte</h3>
-<p>text </p><h3>Errorhandling</h3>
-<p>text </p><h3>Unit - Tests</h3>
-<p>text</p>
+<p>Ziel des Informatik 4 Projekt war es, ein Rechner für komplexe Zahlen zu entwickeln. Dabei soll sowohl die Eingabe als polar- (a+bi) als auch kartesische (xe^i(phi)) Koordinaten möglich sein. Am Ende soll die Rechnung als XML-Datei gespeichert werden. <br />
+ Nach dem Kompilieren des Projekts stehen den Anwender 4 Auswahlmöglichkeiten zur Verfügung. Er kann 0) das Programm schließen, 1) den Komplex Rechner ausführen, 2) eine XML Datei erstellen oder 3) die Testcases durchführen und einsehen. Grafisch aufbereitet ist dieses Verhalten in dem aufgeführte Activity Diagramm. <br />
+ Wählt der Nutzer 1) Komplex Rechner, kann er seine gewünschte Rechnung durchführen in dem er die erste komplexe Zahle in polar xe^i(phi) oder kartesischer (a+bi) Form gefolgt von einem Operator (+,-,*,/) und einer zweiten komplexen Zahl in karteischer oder polarer Form über die Konsole eingibt. Das Ergebnis wird ihm in der Konsole gezeigt. <br />
+ Nach der Durchführung der Rechnung gelangt der Nutzer wieder zum Ausgangspunkt des Programms und kann sich nun wieder zwischen 0) das Programm zu schließen, 1) eine weitere Rechnung durchzuführen 2) die durchgeführte Rechnung in einer XML-Datei zu speichern oder 3) die Test durchzuführen entscheiden. Lässt der Nutzer eine XML Datei erstellen, wird diese unter: <code>\Informatik_4_Projekt\Source\complex_calculator\complex_calculator\Berechnungen_Complex_2020-06-05_11-57.xml</code> abgelegt. In der XML Datei ist sowohl die Rechnung als auch das Ergebnis in polar UND kartesischen Koordinaten gespeichert.</p>
+<h3>Abstrahierung der Layer</h3>
+<p>In unserem Programmentwurf war es uns wichtig nach dem ISO-OSI Schichtmodell eine sinnvolle Softwareabstrahierung zu Generieren. Durch sinnvolle Abstrahierung ist eine verbesserte Lesbarkeit des Programmcodes und eine Widerverwendbarkeit der Klassen gewährleistet. Das Klassen Diagramm kann unter <code>\Informatik_4_Projekt\UML\export</code></p>
+<p>eingesehen werden. <br />
+ Als oberste Schicht stellt die <code><a class="el" href="class_calculator___logic.html" title="Class Calculator_Logic contains all logic for doing a calculation with two numbers. ">Calculator_Logic</a></code> Klasse die Anwendung dem Nutzer zur Verfügung. Sie erbt von <code>XML_Write</code> und <code><a class="el" href="class_u_i___communication.html" title="Class UI_Communication is the Interface between Human and the PC. ">UI_Communication</a></code>. In <code>XML_ Write</code> wird der gesamte Prozess zum Erstellen der XML Datei gehandelt. <code><a class="el" href="class_u_i___communication.html" title="Class UI_Communication is the Interface between Human and the PC. ">UI_Communication</a></code> dagegen handelt sämtliche Nutzer In/Outputs in der Konsole. Es war uns wichtig die Kommunikation mit dem Nutzer smart zu gestalten und wollten nicht mit sämtlichen Abfragen z.B. der Darstellung Komplexität erzeugen. Nach dem KISS Prinzip (Keep it simple and stupid) soll der Nutzer so intuitiv wie möglich den Rechner nutzen können. Um dies zu gewährleisten arbeiten wir mit String Manipulationen und suchen nach Merkmalen in der Nutzereingabe um auf die jeweilige Darstellung zuschließen. <br />
+ Als Basis des Programmes dient die Klasse <code><a class="el" href="class_complex.html" title="Class Complex represents a complex number. ">Complex</a></code>, in welcher unser eigenend komplexen Datentyp und sämtliche Operationen mit komplexen Zahlen (+,-,*,/) implementiert sind. Intern nutzt die Klasse die kartesische Darstellung (a+bi) einer komplexen Zahl. Um wiederrum polar Koordinaten verwenden zu können, wurden gewissen Transformationsfunktionen implementiert. Für die eigentlliche Rechenoperation mit den komplexen Zahlen haben wir die Template Klasse '<a class="el" href="class_calculation.html" title="Class Calculation represents a mathematical calculation with two numbers. ">Calculation</a>' implementiert. Der Vorteil einer Template Klasse ist, dass sie für verschiedene Datentypen eingesetzt werden können. In unserem Rechner wird bsp. unser eigener komplexer Datentyp (complex) verwendet. Andererseits können durch die Template Klasse auch andere Rechner mit z.B. dem Double Datentyp implementiert werden. In unseren Testcases haben wir die Klasse mit zwei verschiedenen Datentypen (complex und std::float) überprüft.</p>
+<h3>Lebenszeit der Objekte</h3>
+<p>Zur Optimierung der Laufzeit haben wir darauf geachtet, dass Objekte der verschiedenen Klassen nur zu dem benötigten Zeitpunkt erstellt werden und für die notwendige Dauer leben. Im Sequenzdiagramm sieht man z.B. das ein Objekt der Klasse <code><a class="el" href="class_calculator___logic.html" title="Class Calculator_Logic contains all logic for doing a calculation with two numbers. ">Calculator_Logic</a></code> über die gesamte Programmlaufzeit lebt. Dies ist nötig da der Programmablauf in ihr definiert ist. Als anderes Beispiel, ist ein Objekt der Klasse <code>Rechnung</code> nur dann aktiv wenn zwei komplexe Zahlen und ein Operator über die Konsole eingeben wurden. Gleichermaßen ist der <a class="el" href="class_x_m_l___writer.html" title="XML_Writer saves and writes all added calculations to a xml file. ">XML_Writer</a> nur dann aktiv wenn der Nutzer sich entscheidet seine Rechnungen als XML Datei zu speichern. <br />
+ </p><h3>Errorhandling</h3>
+<p>Alle möglichen auftretenden Fehler (unseres Wissenstands entsprechend) werden als std::Exception ausgegeben. Bedeutet dass bei auftreten dieser Fehler via <code>throw</code> ausgelöst wird. <br />
+ Zur Laufzeit erkennt dann die Klasse <a class="el" href="class_calculator___logic.html" title="Class Calculator_Logic contains all logic for doing a calculation with two numbers. ">Calculator_Logic</a> (welche auch die komplette Aufrufhierarchie beinhaltet), falls so ein Fehler auftritt. <br />
+ Darauf wird die aktuelle Operation abgebrochen sowie ein Fehler wie in der Datei "Messages.h" beschrieben an den User ausgegeben.</p>
+<h3>Unit - Tests</h3>
+<p>Unsere Testcases sind alle via dem Framework Catch2 implementiert, welches sich als eine einzige *.hpp Datei ins Projekt einbinden lässt.<br />
+ Die Testcases decken folgende Klassen ab: complex, calculation (einmal mit std::int, einmal mit complex), <a class="el" href="class_x_m_l___writer.html" title="XML_Writer saves and writes all added calculations to a xml file. ">XML_Writer</a>, <a class="el" href="class_u_i___communication.html" title="Class UI_Communication is the Interface between Human and the PC. ">UI_Communication</a>, <a class="el" href="class_calculator___logic.html" title="Class Calculator_Logic contains all logic for doing a calculation with two numbers. ">Calculator_Logic</a>. Wir haben versucht alle möglichen Grenzfälle sowie Spezial-Fälle abzudecken.</p>
 <h1>Nur für Autoren relevant</h1>
 <h2>push Files with size&gt;100Mbits:</h2>
-<p>$ git rm &ndash;cached your_giant_file $ git commit &ndash;amend -CHEAD $ git push</p>
-<h2>Todoooo for Johannes</h2>
 <ul>
-<li>throw exceptions</li>
-<li>text Ausführung des Programms</li>
-<li>text Abstrahierung der Layer</li>
-<li>text Lebenszeit der Objekte</li>
-</ul>
-<h2>Todo for Buzz</h2>
-<ul>
-<li>Integrate Diagrams in UML</li>
-<li>text Compilieren der Software Complex_Calculator</li>
-<li>text Errorhandling</li>
-<li>text Unit - Tests </li>
+<li>$ git rm &ndash;cached your_giant_file</li>
+<li>$ git commit &ndash;amend -CHEAD</li>
+<li>$ git push </li>
 </ul>
 </div></div><!-- contents -->
 <!-- start footer part -->

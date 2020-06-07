@@ -15,33 +15,55 @@ Anstöße\+:
 \item Einlesen/\+Ausgabe und BL als Bibliotheken/\+Module des Hauptprogramms
 \end{DoxyItemize}
 
+\subsection*{Abgabe Dateien}
+
+
+\begin{DoxyItemize}
+\item Ordner mit compiliertern Kommandozeilenprogramm (complex\+\_\+calculator.\+exe) wie zugehörigen Librarys (Moodle)
+\item P\+DF Dokumentation (Moodle)
+\item Projekt -\/ Sourcefolder (Moodle)
+\item Git\+Hub Repository (\href{https://github.com/iMazze/Informatik_4_Projekt}{\tt https\+://github.\+com/i\+Mazze/\+Informatik\+\_\+4\+\_\+\+Projekt})
+\end{DoxyItemize}
+
 \subsection*{Von uns verwendete Conventions}
 
 Documentation Style C++\+: \href{http://doxygen.nl/manual/docblocks.html}{\tt http\+://doxygen.\+nl/manual/docblocks.\+html} ~\newline
  Markdownfile Readme\+: \href{https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet}{\tt https\+://github.\+com/adam-\/p/markdown-\/here/wiki/\+Markdown-\/\+Cheatsheet}
 
-\subsection*{Diagramme}
+\subsection*{U\+ML Diagramme}
 
-Activity~\newline
-  Class~\newline
-  Domain~\newline
-  Sequenzdiagram~\newline
-  Use-\/\+Case~\newline
+Activity Diagramm~\newline
+  ~\newline
+ Class Diagramm ~\newline
+  ~\newline
+ Domain Diagramm~\newline
+  ~\newline
+ Sequenz Diagramm~\newline
+  ~\newline
+ Use-\/\+Case Diagramm~\newline
  
 
 \subsection*{Compilieren der Software Complex\+\_\+\+Calculator}
 
-Abgabe des \char`\"{}\+Rohprojekts\char`\"{} via Moodle\+:
+Abgabe des \char`\"{}\+Rohprojekts\char`\"{} via Moodle\+: Librarys müssen eigenständig gedownloaded werden
 \begin{DoxyItemize}
-\item erstens
-\item zweitens
-\item drittens
+\item Entpacken der $\ast$.zip Datei \char`\"{}\+Informatik\+\_\+4\+\_\+\+Projekt.\+zip\char`\"{}
+\item Öffnen der Datei Source/complex\+\_\+calculator/complex\+\_\+calculator.\+sln mit Visual Studio (2017)
+\item Umstellen auf Debug -\/$>$ x86 Projekt
+\item Fehlende Packages laut Datei Source\textbackslash{}complex\+\_\+calculator\textbackslash{}complex\+\_\+calculator\textbackslash{}packages.\+conf via Nu\+G\+ET herunterladen
+\item Nu\+G\+ET via Rechtsklick auf Projektmappe im Projektmappenexplorer -\/$>$ Nu\+G\+ET Pakete Wiederherstellen oder Nu\+G\+ET Pakete für Projektmappe verwalten
 \end{DoxyItemize}
 
-Projekt via Github\+:
+Projekt via Github\+: Projekt ist nach dem Clonen sofort kompilierbar
 \begin{DoxyItemize}
-\item erstens
-\item zweitens
+\item Clonen des Projekts mit {\ttfamily git clone \href{https://github.com/iMazze/Informatik_4_Projekt.git}{\tt https\+://github.\+com/i\+Mazze/\+Informatik\+\_\+4\+\_\+\+Projekt.\+git}}
+\item Öffnen der Datei Source/complex\+\_\+calculator/complex\+\_\+calculator.\+sln mit Visual Studio (2017)
+\end{DoxyItemize}
+
+Beide\+:
+\begin{DoxyItemize}
+\item Compilieren mit {\ttfamily Erstellen -\/$>$ Projektmappe Erstellen}
+\item Debugging mit {\ttfamily Lokaler Windows-\/\+Debugger}
 \end{DoxyItemize}
 
 \subsection*{Ordnerstruktur}
@@ -72,38 +94,40 @@ Informatik\+\_\+4\+\_\+\+Projekt
 
 \subsubsection*{Ausführung des Programms}
 
-text \subsubsection*{Abstrahierung der Layer}
+Ziel des Informatik 4 Projekt war es, ein Rechner für komplexe Zahlen zu entwickeln. Dabei soll sowohl die Eingabe als polar-\/ (a+bi) als auch kartesische (xe$^\wedge$i(phi)) Koordinaten möglich sein. Am Ende soll die Rechnung als X\+M\+L-\/\+Datei gespeichert werden. ~\newline
+ Nach dem Kompilieren des Projekts stehen den Anwender 4 Auswahlmöglichkeiten zur Verfügung. Er kann 0) das Programm schließen, 1) den Komplex Rechner ausführen, 2) eine X\+ML Datei erstellen oder 3) die Testcases durchführen und einsehen. Grafisch aufbereitet ist dieses Verhalten in dem aufgeführte Activity Diagramm. ~\newline
+ Wählt der Nutzer 1) Komplex Rechner, kann er seine gewünschte Rechnung durchführen in dem er die erste komplexe Zahle in polar xe$^\wedge$i(phi) oder kartesischer (a+bi) Form gefolgt von einem Operator (+,-\/,$\ast$,/) und einer zweiten komplexen Zahl in karteischer oder polarer Form über die Konsole eingibt. Das Ergebnis wird ihm in der Konsole gezeigt. ~\newline
+ Nach der Durchführung der Rechnung gelangt der Nutzer wieder zum Ausgangspunkt des Programms und kann sich nun wieder zwischen 0) das Programm zu schließen, 1) eine weitere Rechnung durchzuführen 2) die durchgeführte Rechnung in einer X\+M\+L-\/\+Datei zu speichern oder 3) die Test durchzuführen entscheiden. Lässt der Nutzer eine X\+ML Datei erstellen, wird diese unter\+: {\ttfamily \textbackslash{}Informatik\+\_\+4\+\_\+\+Projekt\textbackslash{}Source\textbackslash{}complex\+\_\+calculator\textbackslash{}complex\+\_\+calculator\textbackslash{}Berechnungen\+\_\+\+Complex\+\_\+2020-\/06-\/05\+\_\+11-\/57.\+xml} abgelegt. In der X\+ML Datei ist sowohl die Rechnung als auch das Ergebnis in polar U\+ND kartesischen Koordinaten gespeichert.
 
-text \subsubsection*{Lebenszeit der Objekte}
+\subsubsection*{Abstrahierung der Layer}
 
-text \subsubsection*{Errorhandling}
+In unserem Programmentwurf war es uns wichtig nach dem I\+S\+O-\/\+O\+SI Schichtmodell eine sinnvolle Softwareabstrahierung zu Generieren. Durch sinnvolle Abstrahierung ist eine verbesserte Lesbarkeit des Programmcodes und eine Widerverwendbarkeit der Klassen gewährleistet. Das Klassen Diagramm kann unter {\ttfamily \textbackslash{}Informatik\+\_\+4\+\_\+\+Projekt\textbackslash{}U\+ML\textbackslash{}export}
 
-text \subsubsection*{Unit -\/ Tests}
+eingesehen werden. ~\newline
+ Als oberste Schicht stellt die {\ttfamily \mbox{\hyperlink{class_calculator___logic}{Calculator\+\_\+\+Logic}}} Klasse die Anwendung dem Nutzer zur Verfügung. Sie erbt von {\ttfamily X\+M\+L\+\_\+\+Write} und {\ttfamily \mbox{\hyperlink{class_u_i___communication}{U\+I\+\_\+\+Communication}}}. In {\ttfamily X\+M\+L\+\_\+ Write} wird der gesamte Prozess zum Erstellen der X\+ML Datei gehandelt. {\ttfamily \mbox{\hyperlink{class_u_i___communication}{U\+I\+\_\+\+Communication}}} dagegen handelt sämtliche Nutzer In/\+Outputs in der Konsole. Es war uns wichtig die Kommunikation mit dem Nutzer smart zu gestalten und wollten nicht mit sämtlichen Abfragen z.\+B. der Darstellung Komplexität erzeugen. Nach dem K\+I\+SS Prinzip (Keep it simple and stupid) soll der Nutzer so intuitiv wie möglich den Rechner nutzen können. Um dies zu gewährleisten arbeiten wir mit String Manipulationen und suchen nach Merkmalen in der Nutzereingabe um auf die jeweilige Darstellung zuschließen. ~\newline
+ Als Basis des Programmes dient die Klasse {\ttfamily \mbox{\hyperlink{class_complex}{Complex}}}, in welcher unser eigenend komplexen Datentyp und sämtliche Operationen mit komplexen Zahlen (+,-\/,$\ast$,/) implementiert sind. Intern nutzt die Klasse die kartesische Darstellung (a+bi) einer komplexen Zahl. Um wiederrum polar Koordinaten verwenden zu können, wurden gewissen Transformationsfunktionen implementiert. Für die eigentlliche Rechenoperation mit den komplexen Zahlen haben wir die Template Klasse \textquotesingle{}\mbox{\hyperlink{class_calculation}{Calculation}}\textquotesingle{} implementiert. Der Vorteil einer Template Klasse ist, dass sie für verschiedene Datentypen eingesetzt werden können. In unserem Rechner wird bsp. unser eigener komplexer Datentyp (complex) verwendet. Andererseits können durch die Template Klasse auch andere Rechner mit z.\+B. dem Double Datentyp implementiert werden. In unseren Testcases haben wir die Klasse mit zwei verschiedenen Datentypen (complex und std\+::float) überprüft.
 
-text
+\subsubsection*{Lebenszeit der Objekte}
+
+Zur Optimierung der Laufzeit haben wir darauf geachtet, dass Objekte der verschiedenen Klassen nur zu dem benötigten Zeitpunkt erstellt werden und für die notwendige Dauer leben. Im Sequenzdiagramm sieht man z.\+B. das ein Objekt der Klasse {\ttfamily \mbox{\hyperlink{class_calculator___logic}{Calculator\+\_\+\+Logic}}} über die gesamte Programmlaufzeit lebt. Dies ist nötig da der Programmablauf in ihr definiert ist. Als anderes Beispiel, ist ein Objekt der Klasse {\ttfamily Rechnung} nur dann aktiv wenn zwei komplexe Zahlen und ein Operator über die Konsole eingeben wurden. Gleichermaßen ist der \mbox{\hyperlink{class_x_m_l___writer}{X\+M\+L\+\_\+\+Writer}} nur dann aktiv wenn der Nutzer sich entscheidet seine Rechnungen als X\+ML Datei zu speichern. ~\newline
+ \subsubsection*{Errorhandling}
+
+Alle möglichen auftretenden Fehler (unseres Wissenstands entsprechend) werden als std\+::\+Exception ausgegeben. Bedeutet dass bei auftreten dieser Fehler via {\ttfamily throw} ausgelöst wird. ~\newline
+ Zur Laufzeit erkennt dann die Klasse \mbox{\hyperlink{class_calculator___logic}{Calculator\+\_\+\+Logic}} (welche auch die komplette Aufrufhierarchie beinhaltet), falls so ein Fehler auftritt. ~\newline
+ Darauf wird die aktuelle Operation abgebrochen sowie ein Fehler wie in der Datei \char`\"{}\+Messages.\+h\char`\"{} beschrieben an den User ausgegeben.
+
+\subsubsection*{Unit -\/ Tests}
+
+Unsere Testcases sind alle via dem Framework Catch2 implementiert, welches sich als eine einzige $\ast$.hpp Datei ins Projekt einbinden lässt.~\newline
+ Die Testcases decken folgende Klassen ab\+: complex, calculation (einmal mit std\+::int, einmal mit complex), \mbox{\hyperlink{class_x_m_l___writer}{X\+M\+L\+\_\+\+Writer}}, \mbox{\hyperlink{class_u_i___communication}{U\+I\+\_\+\+Communication}}, \mbox{\hyperlink{class_calculator___logic}{Calculator\+\_\+\+Logic}}. Wir haben versucht alle möglichen Grenzfälle sowie Spezial-\/\+Fälle abzudecken.
 
 \section*{Nur für Autoren relevant}
 
 \subsection*{push Files with size$>$100\+Mbits\+:}
 
-\$ git rm --cached your\+\_\+giant\+\_\+file \$ git commit --amend -\/\+C\+H\+E\+AD \$ git push
-
-\subsection*{Todoooo for Johannes}
-
 
 \begin{DoxyItemize}
-\item throw exceptions
-\item text Ausführung des Programms
-\item text Abstrahierung der Layer
-\item text Lebenszeit der Objekte
-\end{DoxyItemize}
-
-\subsection*{Todo for Buzz}
-
-
-\begin{DoxyItemize}
-\item Integrate Diagrams in U\+ML
-\item text Compilieren der Software Complex\+\_\+\+Calculator
-\item text Errorhandling
-\item text Unit -\/ Tests 
+\item \$ git rm --cached your\+\_\+giant\+\_\+file
+\item \$ git commit --amend -\/\+C\+H\+E\+AD
+\item \$ git push 
 \end{DoxyItemize}

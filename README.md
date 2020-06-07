@@ -78,15 +78,13 @@ Ziel des Informatik 4 Projekt war es, ein Rechner für komplexe Zahlen zu entwic
 Nach dem Kompilieren des Projekts stehen den Anwender 4 Auswahlmöglichkeiten zur Verfügung. Er kann 0) das Programm schließen, 1) den Komplex Rechner ausführen, 2) eine XML Datei erstellen oder 3) die Testcases durchführen und einsehen. Grafisch aufbereitet ist dieses Verhalten in dem aufgeführte Activity Diagramm. <br>
 Wählt der Nutzer 1) Komplex Rechner, kann er seine gewünschte Rechnung durchführen in dem er die erste komplexe Zahle in polar xe^i(phi) oder kartesischer (a+bi) Form gefolgt von einem Operator (+,-,*,/) und einer zweiten komplexen Zahl in karteischer oder polarer Form über die Konsole eingibt. Das Ergebnis wird ihm in der Konsole gezeigt. <br>
 Nach der Durchführung der Rechnung gelangt der Nutzer wieder zum Ausgangspunkt des Programms und kann sich nun wieder zwischen 0) das Programm zu schließen, 1) eine weitere Rechnung durchzuführen 2) die durchgeführte Rechnung in einer XML-Datei zu speichern oder 3) die Test durchzuführen entscheiden. Lässt der Nutzer eine XML Datei erstellen, wird diese unter:
-
-- \Informatik_4_Projekt\Source\complex_calculator\complex_calculator\Berechnungen_Complex_2020-06-05_11-57.xml <br>
-
+`\Informatik_4_Projekt\Source\complex_calculator\complex_calculator\Berechnungen_Complex_2020-06-05_11-57.xml`
 abgelegt. In der XML Datei ist sowohl die Rechnung als auch das Ergebnis in polar UND kartesischen Koordinaten gespeichert.
 
 
 ### Abstrahierung der Layer
 In unserem Programmentwurf war es uns wichtig nach dem ISO-OSI Schichtmodell eine sinnvolle Softwareabstrahierung zu Generieren. Durch sinnvolle Abstrahierung ist eine verbesserte Lesbarkeit des Programmcodes und eine Widerverwendbarkeit der Klassen gewährleistet. Das Klassen Diagramm kann unter 
-- \Informatik_4_Projekt\UML\export <br> 
+`\Informatik_4_Projekt\UML\export`
 
 eingesehen werden. <br> Als oberste Schicht stellt die `Calculator_Logic` Klasse die Anwendung dem Nutzer zur Verfügung. Sie erbt von `XML_Write` und `UI_Communication`. In `XML_ Write` wird der gesamte Prozess zum Erstellen der XML Datei gehandelt. `UI_Communication` dagegen handelt sämtliche Nutzer In/Outputs in der Konsole. Es war uns wichtig die Kommunikation mit dem Nutzer smart zu gestalten und wollten nicht mit sämtlichen Abfragen z.B. der Darstellung Komplexität erzeugen. Nach dem KISS Prinzip (Keep it simple and stupid) soll der Nutzer so intuitiv wie möglich den Rechner nutzen können. Um dies zu gewährleisten arbeiten wir mit String Manipulationen und suchen nach Merkmalen in der Nutzereingabe um auf die jeweilige Darstellung zuschließen. <br> 
 Als Basis des Programmes dient die Klasse `Complex`, in welcher unser eigenend komplexen Datentyp und sämtliche Operationen mit komplexen Zahlen (+,-,*,/) implementiert sind. Intern nutzt die Klasse die kartesische Darstellung (a+bi) einer komplexen Zahl. Um wiederrum polar Koordinaten verwenden zu können, wurden gewissen Transformationsfunktionen implementiert. Für die eigentlliche Rechenoperation mit den komplexen Zahlen haben wir die Template Klasse 'Calculation' implementiert. Der Vorteil einer Template Klasse ist, dass sie für verschiedene Datentypen eingesetzt werden können. In unserem Rechner wird bsp. unser eigener komplexer Datentyp (complex) verwendet. Andererseits können durch die Template Klasse auch andere Rechner mit z.B. dem Double Datentyp implementiert werden. In unseren Testcases haben wir die Klasse mit zwei verschiedenen Datentypen (complex und std::float) überprüft. 

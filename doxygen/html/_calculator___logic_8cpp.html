@@ -67,20 +67,31 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Calculator_Logic.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="_calculator___logic_8h_source.html">Calculator_Logic.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_messages_8h_source.html">Messages.h</a>&quot;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:af90b47f3a4844b2c8fd3e436848c3fd6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_calculator___logic_8cpp.html#af90b47f3a4844b2c8fd3e436848c3fd6">MSG_READ_OPERATION</a>&#160;&#160;&#160;&quot;Please input the operation. Either + - * /!&quot;</td></tr>
+<tr class="memitem:af90b47f3a4844b2c8fd3e436848c3fd6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_calculator___logic_8cpp.html#af90b47f3a4844b2c8fd3e436848c3fd6">MSG_READ_OPERATION</a>&#160;&#160;&#160;&quot;Please input the operattion. Either + - * /!&quot;</td></tr>
 <tr class="separator:af90b47f3a4844b2c8fd3e436848c3fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9471bbe0776aebbadcdaf4488832dc06"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_calculator___logic_8cpp.html#a9471bbe0776aebbadcdaf4488832dc06">XML_FILE_NAME</a>&#160;&#160;&#160;&quot;test3.xml&quot;</td></tr>
+<tr class="memitem:a9471bbe0776aebbadcdaf4488832dc06"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_calculator___logic_8cpp.html#a9471bbe0776aebbadcdaf4488832dc06">XML_FILE_NAME</a>&#160;&#160;&#160;&quot;Berechnungen_Complex&quot;</td></tr>
 <tr class="separator:a9471bbe0776aebbadcdaf4488832dc06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ab1f05732bed7e6362f865091ed8a86c8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_calculator___logic_8cpp.html#ab1f05732bed7e6362f865091ed8a86c8">return_current_time_and_date</a> ()</td></tr>
+<tr class="separator:ab1f05732bed7e6362f865091ed8a86c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="af90b47f3a4844b2c8fd3e436848c3fd6"></a>
@@ -90,7 +101,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define MSG_READ_OPERATION&#160;&#160;&#160;&quot;Please input the operation. Either + - * /!&quot;</td>
+          <td class="memname">#define MSG_READ_OPERATION&#160;&#160;&#160;&quot;Please input the operattion. Either + - * /!&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -104,7 +115,25 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define XML_FILE_NAME&#160;&#160;&#160;&quot;test3.xml&quot;</td>
+          <td class="memname">#define XML_FILE_NAME&#160;&#160;&#160;&quot;Berechnungen_Complex&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ab1f05732bed7e6362f865091ed8a86c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1f05732bed7e6362f865091ed8a86c8">&#9670;&nbsp;</a></span>return_current_time_and_date()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string return_current_time_and_date </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
